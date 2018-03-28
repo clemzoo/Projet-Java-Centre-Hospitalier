@@ -1,20 +1,25 @@
 package Main;
 
+import java.util.Scanner;
+
 public class Main {
-    private String test;
-
-    public Main(){
-        test = "Bienvenu dans le projet Centre Hospitalier !";
-    }
-
-    public void Test(){
-        System.out.println(test);
-    }
 
     public static void main(String[] args) {
-        Main Test = new Main();
 
-        Test.Test();
+        //Connexion serveur
+        Scanner saisieClavier = new Scanner(System.in);
+
+        System.out.println("Bienvenu dans le projet Centre Hospitalier ! \n\nVeuillez entrer votre identifiant :");
+        String username = saisieClavier.nextLine();
+
+        System.out.println("\n\nVotre mot de passe :");
+        String password = saisieClavier.nextLine();
+
+        SSHTunnel TestConnection = new SSHTunnel(username, password);
+
+        //Test des données récupérées
+        System.out.println("\n\n" + TestConnection.getUsername() + "\n\n" + TestConnection.getFirstHostPort() + "\n\n" + TestConnection.getSecondHostPort() );
+
     }
 }
 
