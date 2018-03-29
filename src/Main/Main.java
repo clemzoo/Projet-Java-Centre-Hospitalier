@@ -1,6 +1,6 @@
 package Main;
 
-import java.util.Scanner;
+        import java.util.Scanner;
 
 public class Main {
 
@@ -9,12 +9,12 @@ public class Main {
         //Connexion serveur
         Scanner saisieClavier = new Scanner(System.in);
 
-        System.out.println("Bienvenu dans le projet Centre Hospitalier ! \n\nVeuillez entrer votre identifiant :");
+        System.out.println("Bienvenue dans le projet Centre Hospitalier ! \n\nVeuillez entrer votre identifiant :");
         String username = saisieClavier.nextLine();
 
         System.out.println("\n\nVotre mot de passe :");
         String password = saisieClavier.nextLine();
-
+        System.out.println("\n\nlol :");
         SSHTunnel TestConnection = new SSHTunnel(username, password);
 
         //Test des données récupérées
