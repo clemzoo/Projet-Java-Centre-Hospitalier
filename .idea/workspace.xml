@@ -1,27 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-<<<<<<< HEAD
-    <list default="true" id="4857d517-4915-437c-8d66-eeba5544df6e" name="Default" comment="" />
-=======
-    <list default="true" id="4857d517-4915-437c-8d66-eeba5544df6e" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/lib1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="4857d517-4915-437c-8d66-eeba5544df6e" name="Default" comment="Linking new librairies, DTB &amp; Id+Pswd request">
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/lib1.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
       <change beforePath="$PROJECT_DIR$/Projet-Java-Centre-Hospitalier.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Projet-Java-Centre-Hospitalier.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Projet-Java-Centre-Hospitalier/Main/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Projet-Java-Centre-Hospitalier/Main/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/Main.java" afterDir="false" />
->>>>>>> 8480cb4295d78b3cb3b1d9138056d1c2c25438f9
-=======
-      <change beforePath="$PROJECT_DIR$/Projet-Java-Centre-Hospitalier.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Projet-Java-Centre-Hospitalier.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Projet-Java-Centre-Hospitalier/Main/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Projet-Java-Centre-Hospitalier/Main/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/Main.java" afterDir="false" />
->>>>>>> 8480cb4295d78b3cb3b1d9138056d1c2c25438f9
     </list>
->>>>>>> 7ce50db809fbfc26b8be573e3f9a374f83e2bfb3
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -33,113 +17,31 @@
   <component name="CodeInsightWorkspaceSettings">
     <option name="optimizeImportsOnTheFly" value="true" />
   </component>
-  <component name="DatabaseView">
-    <option name="SHOW_INTERMEDIATE" value="true" />
-    <option name="GROUP_DATA_SOURCES" value="true" />
-    <option name="GROUP_SCHEMA" value="true" />
-    <option name="GROUP_CONTENTS" value="false" />
-    <option name="SORT_POSITIONED" value="false" />
-    <option name="SHOW_EMPTY_GROUPS" value="false" />
-    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
-    <option name="HIDDEN_KINDS">
-      <set />
-    </option>
-    <expand />
-    <select />
-  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-            <state relative-caret-position="357">
-              <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-            <state relative-caret-position="375">
-              <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
-=======
-            <state relative-caret-position="306">
-              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
->>>>>>> 8480cb4295d78b3cb3b1d9138056d1c2c25438f9
-=======
-            <state relative-caret-position="306">
-              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
->>>>>>> 8480cb4295d78b3cb3b1d9138056d1c2c25438f9
->>>>>>> 7ce50db809fbfc26b8be573e3f9a374f83e2bfb3
+            <state relative-caret-position="272">
+              <caret line="16" column="40" selection-start-line="16" selection-start-column="40" selection-end-line="16" selection-end-column="40" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SSHTunnel.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="SSHTunnel.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Main/SSHTunnel.java">
           <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-<<<<<<< HEAD
-            <state relative-caret-position="150">
-              <caret line="10" column="3" lean-forward="true" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
-=======
-            <state relative-caret-position="-714">
-              <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
->>>>>>> 8480cb4295d78b3cb3b1d9138056d1c2c25438f9
-=======
-            <state relative-caret-position="-714">
-              <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
->>>>>>> 8480cb4295d78b3cb3b1d9138056d1c2c25438f9
+            <state relative-caret-position="391">
+              <caret line="23" column="7" lean-forward="true" selection-start-line="23" selection-start-column="7" selection-end-line="23" selection-end-column="7" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Projet-Java-Centre-Hospitalier.iml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Projet-Java-Centre-Hospitalier.iml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="14" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="workspace.xml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="workspace.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
           <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-            <state relative-caret-position="276">
-              <caret line="78" column="18" lean-forward="true" selection-end-line="586" selection-end-column="10" />
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-            <state relative-caret-position="1080">
-              <caret line="72" column="40" selection-start-line="72" selection-start-column="40" selection-end-line="72" selection-end-column="40" />
-=======
-            <state relative-caret-position="1615">
-              <caret line="95" column="36" selection-start-line="95" selection-start-column="36" selection-end-line="95" selection-end-column="36" />
->>>>>>> 8480cb4295d78b3cb3b1d9138056d1c2c25438f9
-=======
-            <state relative-caret-position="1615">
-              <caret line="95" column="36" selection-start-line="95" selection-start-column="36" selection-end-line="95" selection-end-column="36" />
->>>>>>> 8480cb4295d78b3cb3b1d9138056d1c2c25438f9
->>>>>>> 7ce50db809fbfc26b8be573e3f9a374f83e2bfb3
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor />
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="hopital.sql" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Main/hopital.sql">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="6069">
-              <caret line="357" column="14" selection-start-line="357" selection-start-column="14" selection-end-line="357" selection-end-column="14" />
+            <state relative-caret-position="1037">
+              <caret line="535" column="10" selection-start-line="535" selection-start-column="10" selection-end-line="535" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -177,11 +79,6 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
-    <option name="x" value="951" />
-    <option name="width" value="978" />
-    <option name="height" value="1039" />
-  </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
@@ -205,28 +102,8 @@
             <path>
               <item name="Projet-Java-Centre-Hospitalier" type="b2602c69:ProjectViewProjectNode" />
               <item name="Projet-Java-Centre-Hospitalier" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Projet-Java-Centre-Hospitalier" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Projet-Java-Centre-Hospitalier" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-              <item name="production" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Projet-Java-Centre-Hospitalier" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Projet-Java-Centre-Hospitalier" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-              <item name="production" type="462c0819:PsiDirectoryNode" />
-              <item name="Projet-Java-Centre-Hospitalier" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Projet-Java-Centre-Hospitalier" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Projet-Java-Centre-Hospitalier" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-              <item name="production" type="462c0819:PsiDirectoryNode" />
-              <item name="Projet-Java-Centre-Hospitalier" type="462c0819:PsiDirectoryNode" />
-              <item name="Main" type="462c0819:PsiDirectoryNode" />
+              <item name=".idea" type="462c0819:PsiDirectoryNode" />
+              <item name="libraries" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Projet-Java-Centre-Hospitalier" type="b2602c69:ProjectViewProjectNode" />
@@ -255,15 +132,6 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
-  </component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/Extra_Librairies" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/src/Main" />
-    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -349,19 +217,8 @@
       <workItem from="1522243582402" duration="468000" />
       <workItem from="1522254857608" duration="1611000" />
       <workItem from="1522266511936" duration="4371000" />
-<<<<<<< HEAD
-      <workItem from="1522309583724" duration="982000" />
-=======
       <workItem from="1522309583724" duration="317000" />
-<<<<<<< HEAD
-      <workItem from="1522316945932" duration="1927000" />
-=======
-      <workItem from="1522316945932" duration="427000" />
-<<<<<<< HEAD
->>>>>>> 8480cb4295d78b3cb3b1d9138056d1c2c25438f9
-=======
->>>>>>> 8480cb4295d78b3cb3b1d9138056d1c2c25438f9
->>>>>>> 7ce50db809fbfc26b8be573e3f9a374f83e2bfb3
+      <workItem from="1522316945932" duration="3692000" />
     </task>
     <task id="LOCAL-00001" summary="Testing with IntelliJ">
       <created>1522243683240</created>
@@ -377,37 +234,10 @@
       <option name="project" value="LOCAL" />
       <updated>1522271670627</updated>
     </task>
-    <task id="LOCAL-00003" summary="Adding new librairies">
-      <created>1522313183300</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1522313183300</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Adding new librairies">
-      <created>1522314096195</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1522314096195</updated>
-    </task>
-    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-<<<<<<< HEAD
-    <option name="totallyTimeSpent" value="8740000" />
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-    <option name="totallyTimeSpent" value="7478000" />
-=======
-    <option name="totallyTimeSpent" value="7240000" />
->>>>>>> 8480cb4295d78b3cb3b1d9138056d1c2c25438f9
-=======
-    <option name="totallyTimeSpent" value="7240000" />
->>>>>>> 8480cb4295d78b3cb3b1d9138056d1c2c25438f9
->>>>>>> 7ce50db809fbfc26b8be573e3f9a374f83e2bfb3
+    <option name="totallyTimeSpent" value="949000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1536" height="864" extended-state="6" />
@@ -415,31 +245,19 @@
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.3296593" />
+      <window_info anchor="bottom" id="Messages" order="11" sideWeight="0.49934897" weight="0.3292232" />
       <window_info anchor="right" id="Palette&#9;" order="8" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
-      <window_info active="true" anchor="bottom" id="Event Log" order="9" sideWeight="0.5005952" side_tool="true" visible="true" weight="0.32765532" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5019531" side_tool="true" visible="true" weight="0.32799014" />
       <window_info anchor="right" id="Maven Projects" order="7" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49940476" visible="true" weight="0.32799014" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49804688" visible="true" weight="0.32799014" />
       <window_info anchor="bottom" id="Version Control" order="10" />
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info id="Capture Tool" order="6" />
       <window_info id="Designer" order="3" />
-<<<<<<< HEAD
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19726562" />
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19761905" />
-=======
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19726562" />
->>>>>>> 8480cb4295d78b3cb3b1d9138056d1c2c25438f9
-=======
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19726562" />
->>>>>>> 8480cb4295d78b3cb3b1d9138056d1c2c25438f9
->>>>>>> 7ce50db809fbfc26b8be573e3f9a374f83e2bfb3
       <window_info anchor="right" id="Database" order="6" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -464,8 +282,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Testing with IntelliJ" />
     <MESSAGE value="Linking new librairies, DTB &amp; Id+Pswd request" />
-    <MESSAGE value="Adding new librairies" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adding new librairies" />
+    <option name="LAST_COMMIT_MESSAGE" value="Linking new librairies, DTB &amp; Id+Pswd request" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/Main/Main.java">
@@ -585,13 +402,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main/test.java" />
-    <entry file="file://$PROJECT_DIR$/src/Main/Connexion.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="22" selection-start-line="22" selection-end-line="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -600,90 +410,49 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main/test.java" />
     <entry file="file://$PROJECT_DIR$/Projet-Java-Centre-Hospitalier.iml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="14" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
+        <state relative-caret-position="204">
+          <caret line="12" column="9" lean-forward="true" selection-start-line="12" selection-start-column="9" selection-end-line="12" selection-end-column="9" />
         </state>
       </provider>
     </entry>
-<<<<<<< HEAD
-=======
-    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-      <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-<<<<<<< HEAD
-        <state relative-caret-position="1080">
-          <caret line="72" column="40" selection-start-line="72" selection-start-column="40" selection-end-line="72" selection-end-column="40" />
-=======
-        <state relative-caret-position="1615">
-          <caret line="95" column="36" selection-start-line="95" selection-start-column="36" selection-end-line="95" selection-end-column="36" />
->>>>>>> 8480cb4295d78b3cb3b1d9138056d1c2c25438f9
-=======
-        <state relative-caret-position="1615">
-          <caret line="95" column="36" selection-start-line="95" selection-start-column="36" selection-end-line="95" selection-end-column="36" />
->>>>>>> 8480cb4295d78b3cb3b1d9138056d1c2c25438f9
-        </state>
-      </provider>
-    </entry>
->>>>>>> 7ce50db809fbfc26b8be573e3f9a374f83e2bfb3
-    <entry file="file://$PROJECT_DIR$/src/Main/test.java" />
     <entry file="file://$PROJECT_DIR$/src/Main/hopital.sql">
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> 8480cb4295d78b3cb3b1d9138056d1c2c25438f9
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6069">
+        <state relative-caret-position="4845">
           <caret line="357" column="14" selection-start-line="357" selection-start-column="14" selection-end-line="357" selection-end-column="14" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main/SSHTunnel.java">
-<<<<<<< HEAD
->>>>>>> 8480cb4295d78b3cb3b1d9138056d1c2c25438f9
-=======
->>>>>>> 8480cb4295d78b3cb3b1d9138056d1c2c25438f9
+    <entry file="file://$PROJECT_DIR$/src/Main/Connexion.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-714">
-          <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
+        <state relative-caret-position="364">
+          <caret line="29" column="7" lean-forward="true" selection-start-line="29" selection-start-column="7" selection-end-line="29" selection-end-column="7" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-        <state relative-caret-position="357">
-          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/.gitattributes">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="78" column="18" lean-forward="true" selection-end-line="586" selection-end-column="10" />
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
-        <state relative-caret-position="150">
-          <caret line="10" column="3" lean-forward="true" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
+        <state relative-caret-position="1037">
+          <caret line="535" column="10" selection-start-line="535" selection-start-column="10" selection-end-line="535" selection-end-column="10" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
-=======
-        <state relative-caret-position="306">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
->>>>>>> 8480cb4295d78b3cb3b1d9138056d1c2c25438f9
-=======
-        <state relative-caret-position="306">
-          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
->>>>>>> 8480cb4295d78b3cb3b1d9138056d1c2c25438f9
->>>>>>> 7ce50db809fbfc26b8be573e3f9a374f83e2bfb3
+        <state relative-caret-position="272">
+          <caret line="16" column="40" selection-start-line="16" selection-start-column="40" selection-end-line="16" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main/SSHTunnel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="7" lean-forward="true" selection-start-line="23" selection-start-column="7" selection-end-line="23" selection-end-column="7" />
         </state>
       </provider>
     </entry>
@@ -704,7 +473,7 @@
       </state>
       <state key="FacetStructureConfigurable.UI">
         <settings>
-          <last-edited />
+          <last-edited>No facets are configured</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
