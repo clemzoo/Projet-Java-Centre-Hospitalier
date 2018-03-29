@@ -6,6 +6,12 @@
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+      <change beforePath="$PROJECT_DIR$/Projet-Java-Centre-Hospitalier.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Projet-Java-Centre-Hospitalier.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Projet-Java-Centre-Hospitalier/Main/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Projet-Java-Centre-Hospitalier/Main/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/Main.java" afterDir="false" />
+>>>>>>> 8480cb4295d78b3cb3b1d9138056d1c2c25438f9
 =======
       <change beforePath="$PROJECT_DIR$/Projet-Java-Centre-Hospitalier.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Projet-Java-Centre-Hospitalier.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Projet-Java-Centre-Hospitalier/Main/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Projet-Java-Centre-Hospitalier/Main/Main.class" afterDir="false" />
@@ -43,8 +49,13 @@
         <entry file="file://$PROJECT_DIR$/src/Main/Main.java">
           <provider selected="true" editor-type-id="text-editor">
 <<<<<<< HEAD
+<<<<<<< HEAD
             <state relative-caret-position="375">
               <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+=======
+            <state relative-caret-position="306">
+              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+>>>>>>> 8480cb4295d78b3cb3b1d9138056d1c2c25438f9
 =======
             <state relative-caret-position="306">
               <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
@@ -57,8 +68,13 @@
         <entry file="file://$PROJECT_DIR$/src/Main/SSHTunnel.java">
           <provider selected="true" editor-type-id="text-editor">
 <<<<<<< HEAD
+<<<<<<< HEAD
             <state relative-caret-position="150">
               <caret line="10" column="3" lean-forward="true" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
+=======
+            <state relative-caret-position="-714">
+              <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
+>>>>>>> 8480cb4295d78b3cb3b1d9138056d1c2c25438f9
 =======
             <state relative-caret-position="-714">
               <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
@@ -80,8 +96,13 @@
         <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
           <provider selected="true" editor-type-id="text-editor">
 <<<<<<< HEAD
+<<<<<<< HEAD
             <state relative-caret-position="1080">
               <caret line="72" column="40" selection-start-line="72" selection-start-column="40" selection-end-line="72" selection-end-column="40" />
+=======
+            <state relative-caret-position="1615">
+              <caret line="95" column="36" selection-start-line="95" selection-start-column="36" selection-end-line="95" selection-end-column="36" />
+>>>>>>> 8480cb4295d78b3cb3b1d9138056d1c2c25438f9
 =======
             <state relative-caret-position="1615">
               <caret line="95" column="36" selection-start-line="95" selection-start-column="36" selection-end-line="95" selection-end-column="36" />
@@ -288,6 +309,9 @@
 =======
       <workItem from="1522309583724" duration="317000" />
       <workItem from="1522316945932" duration="427000" />
+<<<<<<< HEAD
+>>>>>>> 8480cb4295d78b3cb3b1d9138056d1c2c25438f9
+=======
 >>>>>>> 8480cb4295d78b3cb3b1d9138056d1c2c25438f9
     </task>
     <task id="LOCAL-00001" summary="Testing with IntelliJ">
@@ -323,7 +347,11 @@
   </component>
   <component name="TimeTrackingManager">
 <<<<<<< HEAD
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="7478000" />
+=======
+    <option name="totallyTimeSpent" value="7240000" />
+>>>>>>> 8480cb4295d78b3cb3b1d9138056d1c2c25438f9
 =======
     <option name="totallyTimeSpent" value="7240000" />
 >>>>>>> 8480cb4295d78b3cb3b1d9138056d1c2c25438f9
@@ -347,7 +375,11 @@
       <window_info id="Capture Tool" order="6" />
       <window_info id="Designer" order="3" />
 <<<<<<< HEAD
+<<<<<<< HEAD
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19761905" />
+=======
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19726562" />
+>>>>>>> 8480cb4295d78b3cb3b1d9138056d1c2c25438f9
 =======
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19726562" />
 >>>>>>> 8480cb4295d78b3cb3b1d9138056d1c2c25438f9
@@ -521,8 +553,13 @@
     <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
 <<<<<<< HEAD
+<<<<<<< HEAD
         <state relative-caret-position="1080">
           <caret line="72" column="40" selection-start-line="72" selection-start-column="40" selection-end-line="72" selection-end-column="40" />
+=======
+        <state relative-caret-position="1615">
+          <caret line="95" column="36" selection-start-line="95" selection-start-column="36" selection-end-line="95" selection-end-column="36" />
+>>>>>>> 8480cb4295d78b3cb3b1d9138056d1c2c25438f9
 =======
         <state relative-caret-position="1615">
           <caret line="95" column="36" selection-start-line="95" selection-start-column="36" selection-end-line="95" selection-end-column="36" />
@@ -533,7 +570,10 @@
     <entry file="file://$PROJECT_DIR$/src/Main/test.java" />
     <entry file="file://$PROJECT_DIR$/src/Main/hopital.sql">
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 8480cb4295d78b3cb3b1d9138056d1c2c25438f9
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="6069">
           <caret line="357" column="14" selection-start-line="357" selection-start-column="14" selection-end-line="357" selection-end-column="14" />
@@ -541,6 +581,9 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main/SSHTunnel.java">
+<<<<<<< HEAD
+>>>>>>> 8480cb4295d78b3cb3b1d9138056d1c2c25438f9
+=======
 >>>>>>> 8480cb4295d78b3cb3b1d9138056d1c2c25438f9
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-714">
@@ -551,6 +594,7 @@
     <entry file="file://$PROJECT_DIR$/src/Main/Main.java">
       <provider selected="true" editor-type-id="text-editor">
 <<<<<<< HEAD
+<<<<<<< HEAD
         <state relative-caret-position="150">
           <caret line="10" column="3" lean-forward="true" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
         </state>
@@ -560,6 +604,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
           <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+=======
+        <state relative-caret-position="306">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+>>>>>>> 8480cb4295d78b3cb3b1d9138056d1c2c25438f9
 =======
         <state relative-caret-position="306">
           <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
