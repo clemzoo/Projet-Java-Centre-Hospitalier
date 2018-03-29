@@ -2,10 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
 <<<<<<< HEAD
+<<<<<<< HEAD
     <list default="true" id="4857d517-4915-437c-8d66-eeba5544df6e" name="Default" comment="Linking new librairies, DTB &amp; Id+Pswd request">
       <change afterPath="$PROJECT_DIR$/src/Main/Graphisme.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+=======
+    <list default="true" id="4857d517-4915-437c-8d66-eeba5544df6e" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/Main.java" afterDir="false" />
+>>>>>>> a91593a8e6ede7ec6daba24c2afccab2dab65777
 =======
     <list default="true" id="4857d517-4915-437c-8d66-eeba5544df6e" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
@@ -28,6 +34,7 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Main/Main.java">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
 <<<<<<< HEAD
             <state relative-caret-position="204">
               <caret line="12" column="51" selection-start-line="12" selection-start-column="51" selection-end-line="12" selection-end-column="51" />
@@ -54,10 +61,15 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="357">
               <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+=======
+            <state relative-caret-position="277">
+              <caret line="74" column="32" selection-start-line="74" selection-start-column="32" selection-end-line="74" selection-end-column="32" />
+>>>>>>> a91593a8e6ede7ec6daba24c2afccab2dab65777
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="SSHTunnel.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main/SSHTunnel.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -79,6 +91,13 @@
             <state relative-caret-position="119">
               <caret line="51" column="88" selection-start-line="51" selection-start-column="11" selection-end-line="51" selection-end-column="88" />
 >>>>>>> a91593a8e6ede7ec6daba24c2afccab2dab65777
+=======
+      <file leaf-file-name="Connexion.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Main/Connexion.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="51" column="88" selection-start-line="51" selection-start-column="11" selection-end-line="51" selection-end-column="88" />
+>>>>>>> a91593a8e6ede7ec6daba24c2afccab2dab65777
             </state>
           </provider>
         </entry>
@@ -87,8 +106,13 @@
         <entry file="file://$PROJECT_DIR$/src/Main/SSHTunnel.java">
           <provider selected="true" editor-type-id="text-editor">
 <<<<<<< HEAD
+<<<<<<< HEAD
             <state relative-caret-position="1037">
               <caret line="597" column="10" selection-start-line="597" selection-start-column="10" selection-end-line="597" selection-end-column="10" />
+=======
+            <state relative-caret-position="-771">
+              <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+>>>>>>> a91593a8e6ede7ec6daba24c2afccab2dab65777
 =======
             <state relative-caret-position="-771">
               <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
@@ -395,6 +419,7 @@
       <option name="presentableId" value="LOCAL-00002" />
       <option name="project" value="LOCAL" />
       <updated>1522317250092</updated>
+<<<<<<< HEAD
     </task>
     <task id="LOCAL-00003" summary="Est ce que ca marche tjrs de ton coté ?">
       <created>1522317269022</created>
@@ -403,12 +428,26 @@
       <option name="project" value="LOCAL" />
       <updated>1522317269022</updated>
     </task>
+=======
+    </task>
+    <task id="LOCAL-00003" summary="Est ce que ca marche tjrs de ton coté ?">
+      <created>1522317269022</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1522317269022</updated>
+    </task>
+>>>>>>> a91593a8e6ede7ec6daba24c2afccab2dab65777
     <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
 <<<<<<< HEAD
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="5264000" />
+=======
+    <option name="totallyTimeSpent" value="5891000" />
+>>>>>>> a91593a8e6ede7ec6daba24c2afccab2dab65777
 =======
     <option name="totallyTimeSpent" value="5891000" />
 >>>>>>> a91593a8e6ede7ec6daba24c2afccab2dab65777
@@ -416,6 +455,7 @@
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
     <layout>
+<<<<<<< HEAD
 <<<<<<< HEAD
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -433,6 +473,24 @@
       <window_info id="Designer" order="3" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19726562" />
       <window_info anchor="right" id="Database" order="6" />
+=======
+      <window_info anchor="right" id="Palette" order="9" />
+      <window_info anchor="bottom" id="TODO" order="12" />
+      <window_info anchor="bottom" id="Messages" order="18" weight="0.3296593" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info id="Image Layers" order="8" />
+      <window_info anchor="right" id="Capture Analysis" order="1" />
+      <window_info anchor="bottom" id="Event Log" order="6" sideWeight="0.5005952" side_tool="true" visible="true" weight="0.3296593" />
+      <window_info anchor="right" id="Maven Projects" order="6" />
+      <window_info anchor="bottom" id="Database Changes" order="5" show_stripe_button="false" />
+      <window_info active="true" anchor="bottom" id="Run" order="0" sideWeight="0.49940476" visible="true" weight="0.3296593" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info id="Capture Tool" order="6" />
+      <window_info id="Designer" order="3" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info anchor="right" id="Database" order="5" />
+>>>>>>> a91593a8e6ede7ec6daba24c2afccab2dab65777
 =======
       <window_info anchor="right" id="Palette" order="9" />
       <window_info anchor="bottom" id="TODO" order="12" />
@@ -688,6 +746,7 @@
     <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/src.zip!/java/sql/SQLException.java">
       <provider selected="true" editor-type-id="text-editor">
 <<<<<<< HEAD
+<<<<<<< HEAD
         <state relative-caret-position="1037">
           <caret line="597" column="10" selection-start-line="597" selection-start-column="10" selection-end-line="597" selection-end-column="10" />
         </state>
@@ -713,11 +772,16 @@
         <state relative-caret-position="119">
           <caret line="51" column="88" selection-start-line="51" selection-start-column="11" selection-end-line="51" selection-end-column="88" />
 >>>>>>> a91593a8e6ede7ec6daba24c2afccab2dab65777
+=======
+        <state relative-caret-position="-1180">
+          <caret line="52" column="13" selection-start-line="52" selection-start-column="13" selection-end-line="52" selection-end-column="13" />
+>>>>>>> a91593a8e6ede7ec6daba24c2afccab2dab65777
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main/Main.java">
+    <entry file="file://$PROJECT_DIR$/src/Main/Connexion.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
 <<<<<<< HEAD
         <state relative-caret-position="-1989">
           <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
@@ -736,6 +800,17 @@
         <state relative-caret-position="357">
           <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
 =======
+        <state relative-caret-position="277">
+          <caret line="74" column="32" selection-start-line="74" selection-start-column="32" selection-end-line="74" selection-end-column="32" />
+>>>>>>> a91593a8e6ede7ec6daba24c2afccab2dab65777
+=======
+        <state relative-caret-position="119">
+          <caret line="51" column="88" selection-start-line="51" selection-start-column="11" selection-end-line="51" selection-end-column="88" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="277">
           <caret line="74" column="32" selection-start-line="74" selection-start-column="32" selection-end-line="74" selection-end-column="32" />
 >>>>>>> a91593a8e6ede7ec6daba24c2afccab2dab65777
