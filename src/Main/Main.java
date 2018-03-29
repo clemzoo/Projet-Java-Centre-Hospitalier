@@ -1,8 +1,9 @@
 package Main;
 
 import java.util.Scanner;
-
+import javax.swing.*;
 public class Main {
+    public static Graphisme fen;
 
     public static char menu() {
 
@@ -64,23 +65,31 @@ public class Main {
 
     public static void main(String[] args) {
 
+        fen = new Graphisme (); // instancier graphismes
         boolean run = true;
 
         do {
             char choice = menu();
-
+            fen.setVisible(true);
             switch (choice) {
+                case '3': // Afficher le menu
+                    fen.setVisible (true);
+
+                    break;
                 case '1': // Connection en SSH
+                    fen.setVisible (true);
                     connexionSSH();
                     run = false;
                     break;
 
                 case '2': // Connection en localhost
+                    fen.setVisible (true);
                     connexionLocalhost();
                     run = false;
                     break;
 
                 case '0':
+                    fen.setVisible (true);
                     run = false;
                     System.exit(0);
                     break;
