@@ -1,5 +1,6 @@
 package Main;
 
+import javax.swing.*;
 import java.util.Scanner;
 public class Main {
     public static Graphisme fen;
@@ -70,6 +71,8 @@ public class Main {
 
         fen.setVisible (true);
         fen.afficherMenu();
+
+        fen.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
         /*
 
