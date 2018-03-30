@@ -17,7 +17,6 @@ public class Graphisme extends JFrame {
         setSize(800, 600);
         setLocation(425, 200);
         pan = new JPanel(); // instancier le panneau
-        //  hopital = new ImageIcon("/Annexe/hopital.png");
         image = new JLabel(new ImageIcon("hopital.jpg"));
 
         welcomeL1 = new JLabel();
