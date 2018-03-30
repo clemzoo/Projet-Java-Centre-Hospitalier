@@ -6,6 +6,7 @@ public class Graphisme extends JFrame {
     private JPanel pan; // panneau
     private ImageIcon hopital;
     private boolean created;
+
 private JLabel image;
     public Graphisme()
     {
