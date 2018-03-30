@@ -71,11 +71,12 @@ public class Main {
 
         fen.setVisible (true);
         fen.afficherMenu();
+        fen.choixMenu();
 
         fen.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
-        /*
 
+/*
         do {
             char choice = menu();
 
@@ -107,7 +108,7 @@ public class Main {
                     System.out.println("Erreur de choix");
             }
         } while (run);
+*/
 
-        */
     }
 }

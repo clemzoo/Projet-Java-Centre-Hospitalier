@@ -1,12 +1,15 @@
 package Main;
 
 import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class Graphisme extends JFrame {
 
     private JPanel pan; // panneau
+    private JFormattedTextField usernameECE, passwordECE, usernameSQL, passwordSQL;
     private JButton buttonSSH, buttonLocalhost;
-    private JLabel welcomeL1, welcomeL2;
+    private JLabel welcomeL1, welcomeL2, userECE;
     private ImageIcon hopital;
     private boolean created;
 
@@ -44,8 +47,14 @@ private JLabel image;
         buttonLocalhost.setText("Localhost");
         buttonLocalhost.setSize(80,20);
 
-        //created = true;
+        usernameECE = new JFormattedTextField();
+        userECE = new JLabel();
+        passwordECE = new JFormattedTextField();
+        usernameSQL = new JFormattedTextField();
+        passwordSQL = new JFormattedTextField();
+
     }
+
     public void afficherMenu(){
         this.add(welcomeL1);
         this.add(welcomeL2);
@@ -54,5 +63,37 @@ private JLabel image;
         this.add(image);
 
         this.setVisible(true);
+    }
+
+    public void choixMenu(){
+        buttonSSH.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                connectionSSHGraphique();
+            }
+        });
+
+        buttonLocalhost.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                connectionLocalhostGraphique();
+            }
+        });
+    }
+
+    public void connectionSSHGraphique() {
+        remove(pan);
+        pan = new JPanel(); // instancier le panneau
+
+        userECE.setLocation(260, 80);
+        userECE.setText("hjvcejhzbvjr :");
+        userECE.setSize(500, 20);
+
+        usernameECE.setLocation(30, 34);
+        usernameECE.setSize(35, 78);
+    }
+
+    public void connectionLocalhostGraphique(){
+
     }
 }
