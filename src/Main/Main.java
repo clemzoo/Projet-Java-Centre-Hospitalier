@@ -1,7 +1,7 @@
 package Main;
 
-import java.util.Scanner;
 import javax.swing.*;
+import java.util.Scanner;
 public class Main {
     public static Graphisme fen;
 
@@ -12,6 +12,7 @@ public class Main {
         String choix;
         System.out.println("1 Pour une connexion en SSH");
         System.out.println("2 Pour une connexion en localhost");
+        System.out.println("3 Pour afficher le menu en mode graphique");
         System.out.println("\n0 Quitter");
 
         Scanner sc = new Scanner(System.in);
@@ -68,16 +69,20 @@ public class Main {
         fen = new Graphisme (); // instancier graphismes
         boolean run = true;
 
+        fen.setVisible (true);
+        fen.afficherMenu();
+
+        fen.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+
+        /*
+
         do {
             char choice = menu();
-            fen.setVisible(true);
-            switch (choice) {
-                case '3': // Afficher le menu
-                    fen.setVisible (true);
 
-                    break;
+            switch (choice) {
                 case '1': // Connection en SSH
                     fen.setVisible (true);
+                    fen.afficherMenu();
                     connexionSSH();
                     run = false;
                     break;
@@ -86,6 +91,11 @@ public class Main {
                     fen.setVisible (true);
                     connexionLocalhost();
                     run = false;
+                    break;
+
+                case '3': // Afficher le menu
+                    fen.setVisible (true);
+                    run =false;
                     break;
 
                 case '0':
@@ -97,5 +107,7 @@ public class Main {
                     System.out.println("Erreur de choix");
             }
         } while (run);
+
+        */
     }
 }
