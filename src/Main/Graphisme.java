@@ -92,7 +92,10 @@ private JLabel image;
 
     public void connectionSSHGraphique() {
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 16b5a4450077faeae946b02364da642eb20d6fc3
         /*
         remove(pan);
         pan = new JPanel(); // instancier le panneau
@@ -114,6 +117,9 @@ private JLabel image;
         usernameECE.setLocation(30, 34);
         usernameECE.setSize(35, 78);
         */
+<<<<<<< HEAD
+>>>>>>> 16b5a4450077faeae946b02364da642eb20d6fc3
+=======
 >>>>>>> 16b5a4450077faeae946b02364da642eb20d6fc3
     }
 
