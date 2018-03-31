@@ -14,6 +14,7 @@ public class Graphisme extends JFrame {
     private boolean created;
 
 
+
 private JLabel image;
 
   //  private JLabel image3;
@@ -69,7 +70,15 @@ private JLabel image;
         buttonSSH.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                remove(welcomeL1);
+                remove(welcomeL2);
+                //remove(buttonSSH);
+                remove(buttonLocalhost);
+                remove(image);
+
                 connectionSSHGraphique();
+
+                this
             }
         });
 
@@ -82,18 +91,35 @@ private JLabel image;
     }
 
     public void connectionSSHGraphique() {
+<<<<<<< HEAD
+=======
+        /*
         remove(pan);
         pan = new JPanel(); // instancier le panneau
+>>>>>>> 16b5a4450077faeae946b02364da642eb20d6fc3
 
-        userECE.setLocation(260, 80);
-        userECE.setText("hjvcejhzbvjr :");
-        userECE.setSize(500, 20);
+        userECE.setLocation(260, 130);
+        userECE.setText("Indentifiant ECE :");
+        userECE.setSize(100, 20);
 
+        usernameECE.setLocation(380, 130);
+        usernameECE.setSize(100, 20);
+
+        add(userECE);
+        add(usernameECE);
+
+<<<<<<< HEAD
+        //this.setVisible(true);
+=======
         usernameECE.setLocation(30, 34);
         usernameECE.setSize(35, 78);
+        */
+>>>>>>> 16b5a4450077faeae946b02364da642eb20d6fc3
     }
 
     public void connectionLocalhostGraphique(){
+
+
 
     }
 }
