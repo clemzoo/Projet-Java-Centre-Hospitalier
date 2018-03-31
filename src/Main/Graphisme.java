@@ -14,6 +14,7 @@ public class Graphisme extends JFrame {
     private boolean created;
 
 
+
 private JLabel image;
 
   //  private JLabel image3;
@@ -82,6 +83,7 @@ private JLabel image;
     }
 
     public void connectionSSHGraphique() {
+        /*
         remove(pan);
         pan = new JPanel(); // instancier le panneau
 
@@ -91,9 +93,12 @@ private JLabel image;
 
         usernameECE.setLocation(30, 34);
         usernameECE.setSize(35, 78);
+        */
     }
 
     public void connectionLocalhostGraphique(){
+
+
 
     }
 }

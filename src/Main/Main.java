@@ -4,7 +4,8 @@ import javax.swing.*;
 import java.util.Scanner;
 public class Main {
     public static Graphisme fen;
-
+    public static Graphisme fen2;
+    public static Graphisme fen3;
     public static char menu() {
 
         System.out.println("Bienvenue dans le projet Centre Hospitalier ! \n");
@@ -67,6 +68,8 @@ public class Main {
     public static void main(String[] args) {
 
         fen = new Graphisme (); // instancier graphismes
+       // fen2 = new Localhost (); // instancier graphismes
+fen3 = new SSH();
         boolean run = true;
 
         fen.setVisible (true);
@@ -74,9 +77,9 @@ public class Main {
         fen.choixMenu();
 
         fen.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+//fen2.connectionLocalhostGraphique();
+fen3.connectionSSHGraphique();
 
-
-/*
         do {
             char choice = menu();
 
@@ -108,7 +111,7 @@ public class Main {
                     System.out.println("Erreur de choix");
             }
         } while (run);
-*/
+
 
     }
 }
