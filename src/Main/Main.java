@@ -2,10 +2,12 @@ package Main;
 
 import javax.swing.*;
 import java.util.Scanner;
+
 public class Main {
-    public static Graphisme fen;
-    public static Graphisme fen2;
-    public static Graphisme fen3;
+
+    public static Graphisme fen, fen2;
+    public static SSH SSH;
+
     public static char menu() {
 
         System.out.println("Bienvenue dans le projet Centre Hospitalier ! \n");
@@ -68,18 +70,20 @@ public class Main {
     public static void main(String[] args) {
 
         fen = new Graphisme (); // instancier graphismes
-       // fen2 = new Localhost (); // instancier graphismes
-fen3 = new SSH();
+        // fen2 = new Localhost (); // instancier graphismes
+        //SSH = new SSH();
         boolean run = true;
 
         fen.setVisible (true);
-        fen.afficherMenu();
+        fen.afficherMenu(true);
         fen.choixMenu();
 
         fen.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-//fen2.connectionLocalhostGraphique();
-fen3.connectionSSHGraphique();
+        //fen2.connectionLocalhostGraphique();
+        //SSH.connectionSSHGraphique();
+        //SSH.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
+/*
         do {
             char choice = menu();
 
@@ -112,6 +116,6 @@ fen3.connectionSSHGraphique();
             }
         } while (run);
 
-
+*/
     }
 }

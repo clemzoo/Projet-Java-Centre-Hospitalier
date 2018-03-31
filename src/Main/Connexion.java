@@ -5,16 +5,16 @@
 package Main;
 
 /*
- * 
+ *
  * Librairies importées
  */
 import java.sql.*;
 import java.util.ArrayList;
 
 /**
- * 
+ *
  * Connexion a votre BDD locale ou à distance sur le serveur de l'ECE via le tunnel SSH
- * 
+ *
  * @author segado
  */
 public class Connexion {
@@ -27,6 +27,7 @@ public class Connexion {
     private Statement stmt;
     private ResultSet rset;
     private ResultSetMetaData rsetMeta;
+    private boolean coco;
     /**
      * ArrayList public pour les tables
      */
@@ -56,7 +57,7 @@ public class Connexion {
         // url de connexion "jdbc:mysql://localhost:3305/usernameECE"
         String urlDatabase = "jdbc:mysql://localhost/" + nameDatabase;
 
-        //création d'une connexion JDBC à la base 
+        //création d'une connexion JDBC à la base
         conn = DriverManager.getConnection(urlDatabase, loginDatabase, passwordDatabase);
 
         // création d'un ordre SQL (statement)
@@ -81,6 +82,7 @@ public class Connexion {
         SSHTunnel ssh = new SSHTunnel(usernameECE, passwordECE);
 
         if (ssh.connect()) {
+            coco = true;
             System.out.println("Connexion reussie");
 
             // url de connexion "jdbc:mysql://localhost:3305/usernameECE"
@@ -93,6 +95,10 @@ public class Connexion {
             stmt = conn.createStatement();
 
         }
+    }
+
+    public boolean coco(){
+        return coco;
     }
 
     /**
@@ -163,7 +169,7 @@ public class Connexion {
     /**
      * Methode qui retourne l'ArrayList des champs de la requete en parametre
      * @param requete
-     * @return 
+     * @return
      * @throws SQLException
      */
     public ArrayList remplirChampsRequete(String requete) throws SQLException {
