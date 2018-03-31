@@ -1,105 +1,131 @@
 package Main;
 
 import javax.swing.*;
-import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 
 public class Localhost extends Graphisme {
 
-    private JPanel pan;
-    public JLabel nomDatabase,  loginDatabase, passwordDatabase, affich;
-    private JTextField textDB, textuserDB,textpwDB;
-    private  JButton valider;
+    private JPanel panLocalhost;
+    private JLabel nomDatabase,  loginDatabase, passwordDatabase, affich, image;
+    private JFormattedTextField textDB, textuserDB;
+    private JPasswordField textpwDB;
+    private JButton valider, annuler;
+    private String DBNAME, DBUSER, DBPW;
+    private boolean onAfficheouPas;
 
     public Localhost()
     {
         setTitle("Gestion d'un centre hospitalier");
         setSize(800, 600);
         setLocation(425, 200);
-        pan = new JPanel(); // instancier le panneau
-        nomDatabase = new JLabel ();
-        loginDatabase = new JLabel ();
-        passwordDatabase = new JLabel ();
+        panLocalhost = new JPanel(); // instancier le panneau
+
+        image = new JLabel(new ImageIcon("hopital.jpg"));
+
+        //Instanciation des JLabel
+        nomDatabase = new JLabel();
+        loginDatabase = new JLabel();
+        passwordDatabase = new JLabel();
         affich = new JLabel();
-        textDB = new JTextField();
-        textuserDB = new JTextField();
-        textpwDB = new JTextField();
+
+        //Instanciation des Textfield
+        textDB = new JFormattedTextField();
+        textuserDB = new JFormattedTextField();
+        textpwDB = new JPasswordField();
+
+        //Instanciation des Boutons
         valider = new JButton();
-        nomDatabase.setLocation(100, 100);
+        annuler = new JButton();
+
+        //Users ECE
+        nomDatabase.setLocation(200, 150);
         nomDatabase.setText("Nom Database :");
         nomDatabase.setSize(100, 35);
 
+        textDB.setSize(200, 35);
+        textDB.setLocation(340, 150);
 
-
-        loginDatabase.setLocation(100, 300);
+        //Password ECE
+        loginDatabase.setLocation(200, 225);
         loginDatabase.setText("Login Database :");
         loginDatabase.setSize(120, 35);
 
-        passwordDatabase.setLocation(100, 450);
+        textuserDB.setSize(200, 35);
+        textuserDB.setLocation(340, 225);
+
+        //User SQL
+        passwordDatabase.setLocation(200, 300);
         passwordDatabase.setText("Password Database :");
-        passwordDatabase.setSize(100, 35);
+        passwordDatabase.setSize(150, 35);
 
-        textuserDB.setPreferredSize(new Dimension(100, 35));
-        textuserDB.setLocation(400,300);
-        textuserDB.setForeground(Color.BLUE);
+        textpwDB.setSize(200, 35);
+        textpwDB.setLocation(340, 300);
 
-
-
-        textpwDB.setPreferredSize(new Dimension(100, 35));
-        textpwDB.setLocation(400,450);
-        textpwDB.setForeground(Color.RED);
-
-
-
-        //  textDB.setFont(police);
-        textDB.setPreferredSize(new Dimension(100, 35));
-        textDB.setLocation(400,100);
-        textDB.setForeground(Color.GREEN);
-
-
-       valider.setLocation(100, 600);
+        //Bouton Validation
+        valider.setLocation(450, 500);
         valider.setText("Valider");
         valider.setSize(100, 35);
 
+        //Bouton Annuler
+        annuler.setLocation(250, 500);
+        annuler.setText("Annuler");
+        annuler.setSize(100, 35);
+
+
+        affich.setLocation(320, 50);
+        affich.setSize(200, 35);
+        affich.setText("Connexion via Localhost");
     }
 
-    public void connectionLocalhostGraphique(){
-//        remove(pan);
+    public JPanel connectionLocalhostGraphique(boolean onAfficheouPas) {
 
+        this.add(affich);
 
+        this.add(nomDatabase);
+        this.add(textDB);
 
-        pan.add(nomDatabase);
-        pan.add(loginDatabase);
-        pan.add(passwordDatabase);
-        pan.add(textDB);
-        pan.add(textpwDB);
-        pan.add(textuserDB);
-        pan.add(valider);
-        pan.add(affich);
-        this.setContentPane(pan);
-        this.setVisible(true);
-        String DBNAME = textDB.getText();
-        String DBUSER = textuserDB.getText();
-        String DBPW = textpwDB.getText();
-        affich.setLocation(500, 500);
+        this.add(loginDatabase);
+        this.add(textuserDB);
 
-        affich.setSize(100, 35);
+        this.add(passwordDatabase);
+        this.add(textpwDB);
+
+        this.add(valider);
+        this.add(annuler);
+
+        this.add(image);
+        image.setVisible(false);
+
+        this.setVisible(onAfficheouPas);
+
+        return panLocalhost;
+    }
+
+    public void getFields(){
 
         valider.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                DBNAME= textDB.getText();
+                DBUSER = textuserDB.getText();
+                DBPW = new String(textpwDB.getPassword());
+
                 try {
                     Connexion connectSQL = new Connexion(DBNAME,DBUSER,DBPW);
                 } catch (Exception  ex){
                     System.out.println(ex.getMessage());
-                    affich.setText(ex.getMessage());
                 }
             }
         });
 
-
+        annuler.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                panLocalhost = connectionLocalhostGraphique(false);
+            }
+        });
 
     }
 

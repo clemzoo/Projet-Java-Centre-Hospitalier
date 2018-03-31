@@ -1,5 +1,7 @@
 package Main;
 
+import oracle.jvm.hotspot.jfr.JFROptions;
+
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -7,18 +9,10 @@ import java.awt.event.ActionListener;
 public class Graphisme extends JFrame {
 
     private JPanel pan; // panneau
-    private JFormattedTextField usernameECE, passwordECE, usernameSQL, passwordSQL;
+    private SSH SSH;
+    private Localhost Localhost;
     private JButton buttonSSH, buttonLocalhost;
-    private JLabel welcomeL1, welcomeL2, userECE;
-    private ImageIcon hopital;
-    private boolean created;
-
-
-
-private JLabel image;
-
-  //  private JLabel image3;
-
+    private JLabel welcomeL1, welcomeL2, image;
 
     public Graphisme()
     {
@@ -41,64 +35,41 @@ private JLabel image;
         buttonSSH = new JButton();
         buttonSSH.setLocation(250, 500);
         buttonSSH.setText("SSH");
-        buttonSSH.setSize(80,20);
+        buttonSSH.setSize(100, 35);
 
         buttonLocalhost = new JButton();
         buttonLocalhost.setLocation(450, 500);
         buttonLocalhost.setText("Localhost");
-        buttonLocalhost.setSize(80,20);
-
-        usernameECE = new JFormattedTextField();
-        userECE = new JLabel();
-        passwordECE = new JFormattedTextField();
-        usernameSQL = new JFormattedTextField();
-        passwordSQL = new JFormattedTextField();
-
+        buttonLocalhost.setSize(100, 35);
     }
 
-    public void afficherMenu(){
+    public void afficherMenu(boolean onAfficheouPas){
         this.add(welcomeL1);
         this.add(welcomeL2);
         this.add(buttonSSH);
         this.add(buttonLocalhost);
         this.add(image);
 
-        this.setVisible(true);
+        this.setVisible(onAfficheouPas);
     }
 
-    public void choixMenu(){
+    public void choixMenu() {
         buttonSSH.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                connectionSSHGraphique();
+                SSH = new SSH();
+                pan.add(SSH.connectionSSHGraphique(true));
+                SSH.getFields();
             }
         });
 
         buttonLocalhost.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                connectionLocalhostGraphique();
+                Localhost = new Localhost();
+                pan.add(Localhost.connectionLocalhostGraphique(true));
+                Localhost.getFields();
             }
         });
-    }
-
-    public void connectionSSHGraphique() {
-        /*
-        remove(pan);
-        pan = new JPanel(); // instancier le panneau
-
-        userECE.setLocation(260, 80);
-        userECE.setText("hjvcejhzbvjr :");
-        userECE.setSize(500, 20);
-
-        usernameECE.setLocation(30, 34);
-        usernameECE.setSize(35, 78);
-        */
-    }
-
-    public void connectionLocalhostGraphique(){
-
-
-
     }
 }
