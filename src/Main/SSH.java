@@ -127,6 +127,8 @@ public class SSH extends JFrame {
                     if(connectSQL.coco()){
                         panSSH = connectionSSHGraphique(false);
                         bienOuej = new SuccesfullConnexion();
+                        bienOuej.setCheckbox();
+                        bienOuej.SQLQueries(connectSQL);
                     }
                 }
                 catch (Exception  ex){
@@ -138,6 +140,9 @@ public class SSH extends JFrame {
         valider.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                textuserSQL.setText(textuserECE.getText() + "-rw");
+
+
                 DBUSERECE= textuserECE.getText();
                 DBUSERSQL = textuserSQL.getText();
                 DBPWECE = new String(textpwECE.getPassword());
@@ -150,8 +155,18 @@ public class SSH extends JFrame {
         annuler.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+
                 panSSH = connectionSSHGraphique(false);
             }
         });
+
+        textuserECE.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                textuserSQL.setText(textuserECE.getText() + "-rw");
+                panSSH = connectionSSHGraphique(true);
+            }
+        });
+
     }
 }

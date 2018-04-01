@@ -5,10 +5,9 @@ import java.util.Scanner;
 
 public class Main {
 
-    public static Graphisme fen, fen2;
-    public static SSH SSH;
+    public static Graphisme mainWindow;
 
-    public static char menu() {
+    public static char menu() {//pour console
 
         System.out.println("Bienvenue dans le projet Centre Hospitalier ! \n");
 
@@ -24,7 +23,7 @@ public class Main {
         return choix.charAt(0);
     }
 
-    public static void connexionSSH(){
+    public static void connexionSSH(){//pour console
         //Connexion serveur
         Scanner saisieClavier = new Scanner(System.in);
 
@@ -47,7 +46,7 @@ public class Main {
         }
     }
 
-    public static void connexionLocalhost(){
+    public static void connexionLocalhost(){//pour console
 
         Scanner saisieClavier = new Scanner(System.in);
 
@@ -69,45 +68,31 @@ public class Main {
 
     public static void main(String[] args) {
 
-        fen = new Graphisme (); // instancier graphismes
-        // fen2 = new Localhost (); // instancier graphismes
-        //SSH = new SSH();
         boolean run = true;
 
-        fen.setVisible (true);
-        fen.afficherMenu(true);
-        fen.choixMenu();
-
-        fen.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-        //fen2.connectionLocalhostGraphique();
-        //SSH.connectionSSHGraphique();
-        //SSH.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-
-/*
         do {
             char choice = menu();
 
             switch (choice) {
                 case '1': // Connection en SSH
-                    fen.setVisible (true);
-                    fen.afficherMenu();
                     connexionSSH();
                     run = false;
                     break;
 
                 case '2': // Connection en localhost
-                    fen.setVisible (true);
                     connexionLocalhost();
                     run = false;
                     break;
 
-                case '3': // Afficher le menu
-                    fen.setVisible (true);
+                case '3': // Afficher le menu en Graphique
+                    mainWindow = new Graphisme (); // instancier graphismes
+                    mainWindow.afficherMenu(true);
+                    mainWindow.choixMenu();
+                    mainWindow.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
                     run =false;
                     break;
 
                 case '0':
-                    fen.setVisible (true);
                     run = false;
                     System.exit(0);
                     break;
@@ -115,7 +100,5 @@ public class Main {
                     System.out.println("Erreur de choix");
             }
         } while (run);
-
-*/
     }
 }

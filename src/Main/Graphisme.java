@@ -1,7 +1,10 @@
 package Main;
 
+<<<<<<< HEAD
 //import oracle.jvm.hotspot.jfr.JFROptions;
 
+=======
+>>>>>>> 4a994440d41a3209f5863599272a76151f241354
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -41,6 +44,7 @@ public class Graphisme extends JFrame {
         buttonLocalhost.setLocation(450, 500);
         buttonLocalhost.setText("Localhost");
         buttonLocalhost.setSize(100, 35);
+
     }
 
     public void afficherMenu(boolean onAfficheouPas){
@@ -51,6 +55,7 @@ public class Graphisme extends JFrame {
         this.add(image);
 
         this.setVisible(onAfficheouPas);
+
     }
 
     public void choixMenu() {

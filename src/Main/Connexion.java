@@ -8,6 +8,7 @@ package Main;
  *
  * Librairies importées
  */
+import java.awt.*;
 import java.sql.*;
 import java.util.ArrayList;
 
@@ -28,6 +29,8 @@ public class Connexion {
     private ResultSet rset;
     private ResultSetMetaData rsetMeta;
     private boolean coco;
+    private CheckboxGroup values;
+
     /**
      * ArrayList public pour les tables
      */
@@ -60,7 +63,7 @@ public class Connexion {
         //création d'une connexion JDBC à la base
         conn = DriverManager.getConnection(urlDatabase, loginDatabase, passwordDatabase);
 
-        // création d'un ordre SQL (statement)
+        /** création d'un ordre SQL (statement)*/
         stmt = conn.createStatement();
     }
 
@@ -97,7 +100,7 @@ public class Connexion {
         }
     }
 
-    public boolean coco(){
+    public boolean coco(){//return true or false depending on the connexion statement for SSH config
         return coco;
     }
 
@@ -215,4 +218,69 @@ public class Connexion {
     public void executeUpdate(String requeteMaj) throws SQLException {
         stmt.executeUpdate(requeteMaj);
     }
-}
+
+    /**
+     *
+     *
+     *
+     *
+     *
+     *
+     *
+     *
+     *
+     *
+     *
+     */
+
+    /**
+     * Nos Queries SQL
+     */
+
+    public void readDTB(){
+        try {
+            /* Exécution d'une requête de lecture */
+            ResultSet resultat = stmt.executeQuery( "SELECT numero, specialite FROM docteur;");
+            /* Récupération des données du résultat de la requête de lecture */
+
+            while ( resultat.next() ) {
+                int numero = resultat.getInt( "numero" );
+                String specialite = resultat.getString( "specialite" );
+
+                System.out.println("Numéro : " + numero);
+                System.out.println("Spécialité : " + specialite);
+
+
+            }
+        } catch (Exception  ex){
+            System.out.println(ex.getMessage());
+        }
+    }
+/*
+    //Remplir checkbox en fonction de la liste précédente
+    public CheckboxGroup remplir_Jcomb() {
+        String req= "SELECT Nom_Champ1,Nom_Champ2 FROM Nom_Table ORDER BY Nom_Champ1";
+
+        try {
+            stmt = conn.createStatement();
+            ResultSet res = stmt.executeQuery(req);
+            values = new CheckboxGroup();
+
+            while(res.next()){
+                add(new Checkbox("one", values, false));
+
+                values.addItem(res.getString(indexe de la colonne));
+                // le nom du jComboBox est jComboName et <indexe de la colonne > est l'indexe de la colonne dont vous voulez afficher dans le combobox ,elle peut prendre l'une des valeurs 1,2 . . }
+                res.close();
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return values;
+    }
+*/
+
+
+
+    }
