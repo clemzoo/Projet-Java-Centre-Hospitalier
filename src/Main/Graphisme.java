@@ -1,10 +1,10 @@
 package Main;
 
-<<<<<<< HEAD
+//<<<<<<< HEAD
 //import oracle.jvm.hotspot.jfr.JFROptions;
 
-=======
->>>>>>> 4a994440d41a3209f5863599272a76151f241354
+//=======
+//>>>>>>> 4a994440d41a3209f5863599272a76151f241354
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;

@@ -240,18 +240,17 @@ public class Connexion {
     public void readDTB(){
         try {
             /* Exécution d'une requête de lecture */
-            ResultSet resultat = stmt.executeQuery( "SELECT numero, specialite FROM docteur;");
+            ResultSet resultat = stmt.executeQuery( "SELECT COLUMN_NAME FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = 'chambre';");
+          //  ResultSet resultat = stmt.executeQuery( "SELECT numero, specialite FROM docteur;");
             /* Récupération des données du résultat de la requête de lecture */
 
-            while ( resultat.next() ) {
+           /* while ( resultat.next() ) {
                 int numero = resultat.getInt( "numero" );
                 String specialite = resultat.getString( "specialite" );
 
                 System.out.println("Numéro : " + numero);
                 System.out.println("Spécialité : " + specialite);
-
-
-            }
+            }*/
         } catch (Exception  ex){
             System.out.println(ex.getMessage());
         }
