@@ -13,6 +13,7 @@ public class Localhost extends Graphisme {
     private JPasswordField textpwDB;
     private JButton valider, annuler;
     private String DBNAME, DBUSER, DBPW;
+    private SuccesfullConnexion bienOuej;
     private boolean onAfficheouPas;
 
     public Localhost()
@@ -105,20 +106,34 @@ public class Localhost extends Graphisme {
 
     public void getFields(){
 
-        valider.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                DBNAME= textDB.getText();
-                DBUSER = textuserDB.getText();
-                DBPW = new String(textpwDB.getPassword());
-
+        class ConnexionThread extends Thread {
+            public void run()
+            {
                 try {
                     Connexion connectSQL = new Connexion(DBNAME,DBUSER,DBPW);
-                } catch (Exception  ex){
+                    if(connectSQL.coco()){
+                        panLocalhost = connectionLocalhostGraphique(false);
+                        bienOuej = new SuccesfullConnexion();
+                        bienOuej.setCheckbox();
+                        bienOuej.SQLQueries(connectSQL);
+                    }
+                }
+                catch (Exception  ex){
                     System.out.println(ex.getMessage());
                 }
             }
-        });
+        }
+
+        valider.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                DBNAME = textDB.getText();
+                DBUSER = textuserDB.getText();
+                DBPW = new String(textpwDB.getPassword());
+
+                new ConnexionThread().start();
+            }
+            });
 
         annuler.addActionListener(new ActionListener() {
             @Override

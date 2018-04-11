@@ -30,6 +30,8 @@ public class Connexion {
     private ResultSetMetaData rsetMeta;
     private boolean coco;
     private CheckboxGroup values;
+    private String [] myColomuns, nameOfColonnes, nameOfTables;
+    private int i;
 
     /**
      * ArrayList public pour les tables
@@ -58,13 +60,16 @@ public class Connexion {
         Class.forName("com.mysql.jdbc.Driver");
 
         // url de connexion "jdbc:mysql://localhost:3305/usernameECE"
-        String urlDatabase = "jdbc:mysql://localhost/" + nameDatabase;
+        //String urlDatabase = "jdbc:mysql://localhost/" + nameDatabase;
+        String urlDatabase = "jdbc:mysql://127.0.0.1:8889/" + nameDatabase;
 
         //création d'une connexion JDBC à la base
         conn = DriverManager.getConnection(urlDatabase, loginDatabase, passwordDatabase);
 
         /** création d'un ordre SQL (statement)*/
         stmt = conn.createStatement();
+
+        coco = true;
     }
 
     /**
@@ -236,25 +241,83 @@ public class Connexion {
     /**
      * Nos Queries SQL
      */
+    public String[] getTablesNames(){
+        int i = 1;
 
-    public void readDTB(){
+        try {
+            DatabaseMetaData md = conn.getMetaData();
+            ResultSet resultat = md.getTables(null, null, "%", null);
+
+            nameOfTables = new String[12];//jusqu'a 12 tables (arbitraire)
+
+            while (resultat.next()) {
+                System.out.println(i + " " + resultat.getString(3));
+                nameOfTables[i-1] = resultat.getString(3);
+                i++;
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return nameOfTables;
+    }
+
+    public void readDTB(String table, String colonne, int nbElem){
         try {
             /* Exécution d'une requête de lecture */
-            ResultSet resultat = stmt.executeQuery( "SELECT COLUMN_NAME FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = 'chambre';");
-          //  ResultSet resultat = stmt.executeQuery( "SELECT numero, specialite FROM docteur;");
-            /* Récupération des données du résultat de la requête de lecture */
+           ResultSet resultat = stmt.executeQuery( "SELECT " +  colonne + " FROM " + table +";");
 
-           /* while ( resultat.next() ) {
-                int numero = resultat.getInt( "numero" );
-                String specialite = resultat.getString( "specialite" );
+           nameOfColonnes = colonne.split(",");
 
-                System.out.println("Numéro : " + numero);
-                System.out.println("Spécialité : " + specialite);
-            }*/
+           /* Récupération des données du résultat de la requête de lecture */
+            int nbRes = 1;
+            while ( resultat.next() ) {
+
+                System.out.println("Résultat " + nbRes + " :\n");
+
+                for (int i = 1; i <= nbElem; i++){
+                    System.out.println(nameOfColonnes[i-1].trim() + " : " + resultat.getString(i));
+                    }
+
+                System.out.println("\n");
+                nbRes++;
+            }
         } catch (Exception  ex){
             System.out.println(ex.getMessage());
         }
     }
+
+
+    public String[] getColumnValues(String myChoice){
+
+        try {
+            ResultSet resultat = stmt.executeQuery( "select column_name from information_schema.columns where table_name='" + myChoice + "';");
+
+            int nbColonnes = 0;
+
+            while ( resultat.next() ) {
+                nbColonnes++;
+            }
+
+           myColomuns = new String[nbColonnes];
+
+            int i = 0;
+
+            while ( resultat.previous() ) {
+                myColomuns[i] = resultat.getString(1);
+                i++;
+            }
+
+        } catch (Exception  ex){
+            System.out.println(ex.getMessage());
+        }
+
+        return myColomuns;
+    }
+
+
+
+
+
 /*
     //Remplir checkbox en fonction de la liste précédente
     public CheckboxGroup remplir_Jcomb() {

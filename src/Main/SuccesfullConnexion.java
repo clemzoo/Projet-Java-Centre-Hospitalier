@@ -95,7 +95,7 @@ public class SuccesfullConnexion extends JFrame {
     }
 
     public void SQLQueries (Connexion connection){
-        connection.readDTB();
+        //connection.readDTB();
         //panSuccess = refreshWindow();
     }
 
