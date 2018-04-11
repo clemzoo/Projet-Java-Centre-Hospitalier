@@ -31,7 +31,7 @@ public class localhostConsole {
                     myColumns = new String[connectLocalhost.getColumnValues(myChoice).length];
                     myColumns = connectLocalhost.getColumnValues(myChoice);
                     afficherColonnes(myColumns);
-                    connectLocalhost.readDTB(myChoice, finalRequest, nbElements);
+                    connectLocalhost.readDTB(myChoice, finalRequest, nbElements, false);
 
                     run2 = false;
                     break;

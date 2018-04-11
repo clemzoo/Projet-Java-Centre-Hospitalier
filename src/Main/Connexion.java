@@ -8,6 +8,8 @@ package Main;
  *
  * Librairies importées
  */
+import javax.swing.*;
+import javax.swing.table.DefaultTableModel;
 import java.awt.*;
 import java.sql.*;
 import java.util.ArrayList;
@@ -18,7 +20,7 @@ import java.util.ArrayList;
  *
  * @author segado
  */
-public class Connexion {
+public class Connexion extends JFrame{
 
     /**
      * Attributs prives : connexion JDBC, statement, ordre requete et resultat
@@ -32,6 +34,8 @@ public class Connexion {
     private CheckboxGroup values;
     private String [] myColomuns, nameOfColonnes, nameOfTables;
     private int i;
+    private JTable myResults;
+
 
     /**
      * ArrayList public pour les tables
@@ -261,32 +265,6 @@ public class Connexion {
         return nameOfTables;
     }
 
-    public void readDTB(String table, String colonne, int nbElem){
-        try {
-            /* Exécution d'une requête de lecture */
-           ResultSet resultat = stmt.executeQuery( "SELECT " +  colonne + " FROM " + table +";");
-
-           nameOfColonnes = colonne.split(",");
-
-           /* Récupération des données du résultat de la requête de lecture */
-            int nbRes = 1;
-            while ( resultat.next() ) {
-
-                System.out.println("Résultat " + nbRes + " :\n");
-
-                for (int i = 1; i <= nbElem; i++){
-                    System.out.println(nameOfColonnes[i-1].trim() + " : " + resultat.getString(i));
-                    }
-
-                System.out.println("\n");
-                nbRes++;
-            }
-        } catch (Exception  ex){
-            System.out.println(ex.getMessage());
-        }
-    }
-
-
     public String[] getColumnValues(String myChoice){
 
         try {
@@ -298,7 +276,7 @@ public class Connexion {
                 nbColonnes++;
             }
 
-           myColomuns = new String[nbColonnes];
+            myColomuns = new String[nbColonnes];
 
             int i = 0;
 
@@ -314,35 +292,50 @@ public class Connexion {
         return myColomuns;
     }
 
-
-
-
-
-/*
-    //Remplir checkbox en fonction de la liste précédente
-    public CheckboxGroup remplir_Jcomb() {
-        String req= "SELECT Nom_Champ1,Nom_Champ2 FROM Nom_Table ORDER BY Nom_Champ1";
-
+    public void readDTB(String table, String colonne, int nbElem, boolean graphismes){
         try {
-            stmt = conn.createStatement();
-            ResultSet res = stmt.executeQuery(req);
-            values = new CheckboxGroup();
+            /* Exécution d'une requête de lecture */
+           ResultSet resultat = stmt.executeQuery( "SELECT " +  colonne + " FROM " + table +";");
 
-            while(res.next()){
-                add(new Checkbox("one", values, false));
+           nameOfColonnes = colonne.split(",");
 
-                values.addItem(res.getString(indexe de la colonne));
-                // le nom du jComboBox est jComboName et <indexe de la colonne > est l'indexe de la colonne dont vous voulez afficher dans le combobox ,elle peut prendre l'une des valeurs 1,2 . . }
-                res.close();
+           /* Récupération des données du résultat de la requête de lecture */
+            int nbRes = 1;
+            while ( resultat.next() ) {
+
+                System.out.println("Résultat " + nbRes + " :\n");
+
+                for (int i = 1; i <= nbElem; i++){
+                    System.out.println(nameOfColonnes[i-1].trim() + " : " + resultat.getString(i));
+
+                    }
+
+                System.out.println("\n");
+
+                if(graphismes){
+
+
+
+                    DefaultTableModel model = new DefaultTableModel();
+                    myResults = new JTable(model);
+
+                    // Create a couple of columns
+                    for (int i = 1; i <= nbElem; i++) {
+                        model.addColumn(nameOfColonnes[i-1].trim());
+                        model.addRow(new Object[]{resultat.getString(i)});
+                    }
+
+                    /*
+
+                    add(new JScrollPane(table));
+
+                    */
+                }
+
+                nbRes++;
             }
-
-        } catch (SQLException e) {
-            e.printStackTrace();
+        } catch (Exception  ex){
+            System.out.println(ex.getMessage());
         }
-        return values;
     }
-*/
-
-
-
-    }
+}

@@ -100,6 +100,7 @@ public class Localhost extends Graphisme {
         image.setVisible(false);
 
         this.setVisible(onAfficheouPas);
+        repaint();
 
         return panLocalhost;
     }
@@ -112,10 +113,9 @@ public class Localhost extends Graphisme {
                 try {
                     Connexion connectSQL = new Connexion(DBNAME,DBUSER,DBPW);
                     if(connectSQL.coco()){
+                        bienOuej = new SuccesfullConnexion(connectSQL);
                         panLocalhost = connectionLocalhostGraphique(false);
-                        bienOuej = new SuccesfullConnexion();
-                        bienOuej.setCheckbox();
-                        bienOuej.SQLQueries(connectSQL);
+                        bienOuej.setCheckbox(connectSQL);
                     }
                 }
                 catch (Exception  ex){
@@ -127,9 +127,9 @@ public class Localhost extends Graphisme {
         valider.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                DBNAME = textDB.getText();
-                DBUSER = textuserDB.getText();
-                DBPW = new String(textpwDB.getPassword());
+                DBNAME = "hopital";//textDB.getText();
+                DBUSER = "root";//textuserDB.getText();
+                DBPW = "root";//new String(textpwDB.getPassword());
 
                 new ConnexionThread().start();
             }
