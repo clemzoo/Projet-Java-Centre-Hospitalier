@@ -292,7 +292,7 @@ public class Connexion extends JFrame{
         return myColomuns;
     }
 
-    public void readDTB(String table, String colonne, int nbElem, boolean graphismes){
+    public JTable readDTB(String table, String colonne, int nbElem, boolean graphismes){
         try {
             /* Exécution d'une requête de lecture */
            ResultSet resultat = stmt.executeQuery( "SELECT " +  colonne + " FROM " + table +";");
@@ -301,6 +301,9 @@ public class Connexion extends JFrame{
 
            /* Récupération des données du résultat de la requête de lecture */
             int nbRes = 1;
+            DefaultTableModel model = new DefaultTableModel();
+            myResults = new JTable(model);
+            add(new JScrollPane(myResults));
             while ( resultat.next() ) {
 
                 System.out.println("Résultat " + nbRes + " :\n");
@@ -312,24 +315,14 @@ public class Connexion extends JFrame{
 
                 System.out.println("\n");
 
+
                 if(graphismes){
-
-
-
-                    DefaultTableModel model = new DefaultTableModel();
-                    myResults = new JTable(model);
 
                     // Create a couple of columns
                     for (int i = 1; i <= nbElem; i++) {
                         model.addColumn(nameOfColonnes[i-1].trim());
                         model.addRow(new Object[]{resultat.getString(i)});
                     }
-
-                    /*
-
-                    add(new JScrollPane(table));
-
-                    */
                 }
 
                 nbRes++;
@@ -337,5 +330,6 @@ public class Connexion extends JFrame{
         } catch (Exception  ex){
             System.out.println(ex.getMessage());
         }
+        return myResults;
     }
 }

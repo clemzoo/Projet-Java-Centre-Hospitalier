@@ -22,22 +22,24 @@ public class displaySQLQuery extends JFrame {
         bravo.setText("Résultat de votre recherche :");
         bravo.setSize(500, 35);
 
-        connexion.readDTB(table, colonne, nbElem, true);
-
-        panSQL = displayQueries(true);
+        panSQL = displayQueries(true, table, colonne, nbElem, connexion);
     }
 
-    public JPanel displayQueries(boolean onAfficheouPas) {
+    public JPanel displayQueries(boolean onAfficheouPas, String table, String colonne, int nbElem, Connexion connexion) {
 
         this.add(bravo);
+
+        connexion.readDTB(table, colonne, nbElem, true).setLocation(80,100);
+        connexion.readDTB(table, colonne, nbElem, true).setSize(600,400);
+        this.add(connexion.readDTB(table, colonne, nbElem, true));
 
         this.add(image);
         image.setVisible(false);
 
-        this.setVisible(true);
-
         this.setVisible(onAfficheouPas);
         repaint();
+
+        System.out.println("fgcjhkgjhghjsbvnkjbqljvbqsjvbqflvkhbvhbjhsrvblqbvkhjelqbrjkvqbkhrvb djfhl");
 
         return panSQL;
     }
