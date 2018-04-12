@@ -4,9 +4,12 @@ package Main;
 import java.sql.*;
 import java.util.Scanner;
 
-public class SSHConsole extends Main {
+public class SSHConsole {
 
-    public static void choix()
+    private Connexion connectSQL;
+    private String myChoice;
+
+    public void choix()
 
     {
         boolean run2 = true;
@@ -15,65 +18,74 @@ public class SSHConsole extends Main {
             char choice = menu2();
 
             switch (choice) {
-                case '1':
-                 /*   try {
-                        /* Exécution d'une requête de lecture */
-                      //  ResultSet resultat = stmt.executeQuery( "SELECT COLUMN_NAME FROM chambre;");
-                        /* Récupération des données du résultat de la requête de lecture */
-
-                   /*     while ( resultat.next() ) {
-                            int numero = resultat.getInt( "numero" );
-                            String specialite = resultat.getString( "specialite" );
-
-                            System.out.println("Numéro : " + numero);
-                            System.out.println("Spécialité : " + specialite);
-                        }
-                    } catch (Exception  ex){
-                        System.out.println(ex.getMessage());
-                    } */
-                    run2 = false;
-                    break;
-
-                case '2':
-                    run2 = false;
-                    break;
-
-                case '3':
-
-                    run2 = false;
-                    break;
-                case '4':
-
-                    run2 = false;
-                    break;
-
-                case '5':
-                    run2 = false;
-                    break;
-
-                case '6':
-
-                    run2 = false;
-                    break;
-                case '7':
-
-                    run2 = false;
-                    break;
-
-                case '8':
-                    run2 = false;
-                    break;
-
-                case '9':
-
-                    run2 = false;
-                    break;
                 case 'a':
+                    myChoice = new String("chambre");
+                    String [] myColumns = new String[4];
+                    myColumns = connectSQL.getColumnValues(myChoice);
 
-                    run2 = false;
+                    for (int i = 0; i<myColumns.length;i++)
+                    System.out.println(myColumns[i]);
+                    //afficherColonnes(myColumns);
+                    //run2 = false;
                     break;
 
                 case 'b':
+                    myChoice = new String("Dept");
+                    connectSQL.getColumnValues(myChoice);
+                    run2 = false;
+                    break;
+
+                case 'c':
+                    myChoice = new String("docteur");
+                    connectSQL.getColumnValues(myChoice);
+                    run2 = false;
+                    break;
+
+                case 'd':
+                    myChoice = new String("Emp");
+                    connectSQL.getColumnValues(myChoice);
+                    run2 = false;
+                    break;
+
+                case 'e':
+                    myChoice = new String("employe");
+                    connectSQL.getColumnValues(myChoice);
+                    run2 = false;
+                    break;
+
+                case 'f':
+                    myChoice = new String("hospitalisation");
+                    connectSQL.getColumnValues(myChoice);
+                    run2 = false;
+                    break;
+
+                case 'g':
+                    myChoice = new String("infirmier");
+                    connectSQL.getColumnValues(myChoice);
+                    run2 = false;
+                    break;
+
+                case 'h':
+                    myChoice = new String("malade");
+                    connectSQL.getColumnValues(myChoice);
+                    run2 = false;
+                    break;
+
+                case 'i':
+                    myChoice = new String("Mission");
+                    connectSQL.getColumnValues(myChoice);
+                    run2 = false;
+                    break;
+
+                case 'j':
+                    myChoice = new String("service");
+                    connectSQL.getColumnValues(myChoice);
+                    run2 = false;
+                    break;
+
+                case 'k':
+                    myChoice = new String("soigne");
+                    connectSQL.getColumnValues(myChoice);
                     run2 = false;
                     break;
 
@@ -81,6 +93,7 @@ public class SSHConsole extends Main {
                     run2 = false;
                     System.exit(0);
                     break;
+
                 default:
                     System.out.println("Erreur de choix");
             }
@@ -89,25 +102,64 @@ public class SSHConsole extends Main {
 
     public static char menu2() {//pour console
 
-
         String choix;
-        System.out.println("1 Chambre");
-        System.out.println("2 Departement");
-        System.out.println("3 Docteur");
-        System.out.println("4 Employé");
-        System.out.println("5 Employé bis");
-        System.out.println("6 Hospitalisation");
-        System.out.println("7 Infirmier");
-        System.out.println("8 Malade");
-        System.out.println("9 Mission");
-        System.out.println("a Service");
-        System.out.println("b Soigné");
+        System.out.println("a Chambre");
+        System.out.println("b Departement");
+        System.out.println("c Docteur");
+        System.out.println("d Employé");
+        System.out.println("e Employé bis");
+        System.out.println("f Hospitalisation");
+        System.out.println("g Infirmier");
+        System.out.println("h Malade");
+        System.out.println("i Mission");
+        System.out.println("j Service");
+        System.out.println("k Soigné");
 
-        System.out.println("\n0 Quitter");
+        System.out.println("\n0 Quitter\n");
 
         Scanner sc = new Scanner(System.in);
         choix = sc.next();
 
+        System.out.println("\n");
+
         return choix.charAt(0);
+    }
+
+    public void connexionSSH(){//pour console
+        //Connexion serveur
+        Scanner saisieClavier = new Scanner(System.in);
+
+        System.out.println("\nVeuillez entrer votre identifiant ECE :");
+        String usernameECE = saisieClavier.nextLine();
+
+        System.out.println("\nVotre mot de passe ECE :");
+        String passwordECE = saisieClavier.nextLine();
+
+        System.out.println("\nVotre identifiant SQL:");
+        String usernameSQL = usernameECE + "-rw";
+        System.out.println(usernameSQL);
+
+        System.out.println("\nVotre mot de passe SQL:");
+        String passwordSQL = saisieClavier.nextLine();
+
+        try {
+            connectSQL = new Connexion(usernameECE, passwordECE, usernameSQL, passwordSQL);
+        } catch (Exception  ex){
+            System.out.println(ex.getMessage());
+        }
+    }
+
+    public void afficherColonnes(String [] myColumns){
+        Scanner saisieClavier = new Scanner(System.in);
+
+        System.out.println("\nVeuillez choisir les colonnes a traiter :");
+
+        for(int i = 0; i<myColumns.length; i++){
+            System.out.println("\n" + (i+1) + myColumns[i]);
+        }
+
+        String choiceOfColonnes = saisieClavier.nextLine();
+
+        System.out.println( choiceOfColonnes );
     }
 }

@@ -55,7 +55,7 @@ public class Graphisme extends JFrame {
         this.add(image);
 
         this.setVisible(onAfficheouPas);
-
+        repaint();
     }
 
     public void choixMenu() {
