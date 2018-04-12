@@ -1,6 +1,6 @@
 package Main;
 
-import com.sun.org.apache.xerces.internal.impl.XMLEntityManager;
+//import com.sun.org.apache.xerces.internal.impl.XMLEntityManager;
 
 import javax.swing.*;
 import javax.swing.text.html.parser.Entity;
