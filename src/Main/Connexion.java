@@ -293,6 +293,10 @@ public class Connexion extends JFrame{
     }
 
     public JTable readDTB(String table, String colonne, int nbElem, boolean graphismes){
+
+        DefaultTableModel model = new DefaultTableModel();
+        JTable tableRes = new JTable(model);
+
         try {
             /* Exécution d'une requête de lecture */
            ResultSet resultat = stmt.executeQuery( "SELECT " +  colonne + " FROM " + table +";");
@@ -301,9 +305,7 @@ public class Connexion extends JFrame{
 
            /* Récupération des données du résultat de la requête de lecture */
             int nbRes = 1;
-            DefaultTableModel model = new DefaultTableModel();
-            myResults = new JTable(model);
-            add(new JScrollPane(myResults));
+
             while ( resultat.next() ) {
 
                 System.out.println("Résultat " + nbRes + " :\n");

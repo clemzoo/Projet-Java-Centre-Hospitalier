@@ -2,30 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7be5b23c-9691-43a6-a6be-071001315534" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Projet-Java-Centre-Hospitalier/Main/Graphisme$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Projet-Java-Centre-Hospitalier/Main/Graphisme$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Projet-Java-Centre-Hospitalier/Main/Graphisme.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Projet-Java-Centre-Hospitalier/Main/Localhost$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Projet-Java-Centre-Hospitalier/Main/Localhost$1ConnexionThread.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Projet-Java-Centre-Hospitalier/Main/Localhost$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Projet-Java-Centre-Hospitalier/Main/Localhost.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Projet-Java-Centre-Hospitalier/Main/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Projet-Java-Centre-Hospitalier/Main/SSH$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Projet-Java-Centre-Hospitalier/Main/SSH$1ConnexionThread.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Projet-Java-Centre-Hospitalier/Main/SSH$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Projet-Java-Centre-Hospitalier/Main/SSH$3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Projet-Java-Centre-Hospitalier/Main/SSH.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Projet-Java-Centre-Hospitalier/Main/SSHConsole.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Projet-Java-Centre-Hospitalier/Main/SSHTunnel$SilentUserInfo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Projet-Java-Centre-Hospitalier/Main/SSHTunnel.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Projet-Java-Centre-Hospitalier/Main/SuccesfullConnexion$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Projet-Java-Centre-Hospitalier/Main/SuccesfullConnexion$3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Projet-Java-Centre-Hospitalier/Main/displaySQLQuery.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Projet-Java-Centre-Hospitalier/Main/hopital.sql" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Projet-Java-Centre-Hospitalier/Main/hopital.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Projet-Java-Centre-Hospitalier/Main/localhostConsole.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Projet-Java-Centre-Hospitalier/Main/Connexion.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main/Connexion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/Connexion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main/displaySQLQuery.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/displaySQLQuery.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -67,7 +47,7 @@
       <file leaf-file-name="SuccesfullConnexion.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main/SuccesfullConnexion.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="921">
+            <state relative-caret-position="751">
               <caret line="103" column="21" selection-start-line="103" selection-start-column="21" selection-end-line="103" selection-end-column="21" />
               <folding>
                 <element signature="method#succesfullConnexion#0;class#SuccesfullConnexion#0" />
@@ -79,8 +59,8 @@
       <file leaf-file-name="displaySQLQuery.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main/displaySQLQuery.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="29" column="24" lean-forward="true" selection-start-line="29" selection-start-column="24" selection-end-line="29" selection-end-column="24" />
+            <state relative-caret-position="224">
+              <caret line="49" selection-start-line="49" selection-end-line="49" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -88,20 +68,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="hopital.sql" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Main/hopital.sql">
+      <file leaf-file-name="Connexion.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Main/Connexion.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="29" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SSHTunnel.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Main/SSHTunnel.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+            <state relative-caret-position="440">
+              <caret line="329" column="24" lean-forward="true" selection-start-line="329" selection-start-column="24" selection-end-line="329" selection-end-column="24" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -109,50 +83,8 @@
       <file leaf-file-name="Localhost.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main/Localhost.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1710">
+            <state relative-caret-position="617">
               <caret line="116" column="75" selection-start-line="116" selection-start-column="75" selection-end-line="116" selection-end-column="75" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Connexion.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Main/Connexion.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-264">
-              <caret line="16" column="3" lean-forward="true" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="misc.xml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.idea/misc.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="111" selection-start-line="2" selection-start-column="111" selection-end-line="2" selection-end-column="111" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Graphisme.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Main/Graphisme.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1080">
-              <caret line="74" column="44" selection-start-line="74" selection-start-column="44" selection-end-line="74" selection-end-column="44" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SSH.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Main/SSH.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1695">
-              <caret line="115" column="18" selection-start-line="115" selection-start-column="18" selection-end-line="115" selection-end-column="18" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -190,9 +122,9 @@
         <option value="$PROJECT_DIR$/src/Main/Localhost.java" />
         <option value="$PROJECT_DIR$/src/Main/localhostConsole.java" />
         <option value="$PROJECT_DIR$/src/Main/SuccesfullConnexion.java" />
+        <option value="$PROJECT_DIR$/.idea/misc.xml" />
         <option value="$PROJECT_DIR$/src/Main/displaySQLQuery.java" />
         <option value="$PROJECT_DIR$/src/Main/Connexion.java" />
-        <option value="$PROJECT_DIR$/.idea/misc.xml" />
       </list>
     </option>
   </component>
@@ -467,14 +399,14 @@
       <workItem from="1523429254029" duration="6754000" />
       <workItem from="1523465572162" duration="17196000" />
       <workItem from="1523514670760" duration="1121000" />
-      <workItem from="1523521299318" duration="2094000" />
+      <workItem from="1523521299318" duration="7772000" />
     </task>
-    <task id="LOCAL-00001" summary="Ajout des fonctions de lecture automatique des tables de la bdd, selection des resultats par l'utilisateur et affichage en mode console.">
-      <created>1523436783175</created>
+    <task id="LOCAL-00001" summary="Repush du swag">
+      <created>1523524893294</created>
       <option name="number" value="00001" />
       <option name="presentableId" value="LOCAL-00001" />
       <option name="project" value="LOCAL" />
-      <updated>1523436783175</updated>
+      <updated>1523524893294</updated>
     </task>
     <task id="LOCAL-00002" summary="Ajout de quelques elements graphiques">
       <created>1523485900017</created>
@@ -490,10 +422,11 @@
       <option name="project" value="LOCAL" />
       <updated>1523523199525</updated>
     </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="591000" />
+    <option name="totallyTimeSpent" value="6269000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
@@ -507,18 +440,18 @@
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" weight="0.32965517" />
       <window_info anchor="right" id="Maven Projects" order="7" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.45390782" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.45390782" />
       <window_info anchor="bottom" id="Version Control" order="10" weight="0.3296593" />
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info id="Capture Tool" order="6" />
       <window_info id="Designer" order="3" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19702381" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19702381" />
       <window_info anchor="right" id="Database" order="6" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="4" />
       <window_info anchor="right" id="Theme Preview" order="5" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39816934" />
+      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.3977956" />
       <window_info id="Favorites" order="5" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
@@ -539,6 +472,24 @@
     <MESSAGE value="Ajout de quelques elements graphiques" />
     <MESSAGE value="Repush du swag" />
     <option name="LAST_COMMIT_MESSAGE" value="Repush du swag" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Main/displaySQLQuery.java</url>
+          <line>49</line>
+          <properties />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Main/Connexion.java</url>
+          <line>334</line>
+          <properties />
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="3" />
+    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/Main/Main.java">
@@ -738,23 +689,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main/Graphisme.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1080">
-          <caret line="74" column="44" selection-start-line="74" selection-start-column="44" selection-end-line="74" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main/Localhost.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1710">
-          <caret line="116" column="75" selection-start-line="116" selection-start-column="75" selection-end-line="116" selection-end-column="75" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="501">
@@ -779,10 +713,41 @@
     <entry file="file://$PROJECT_DIR$/out/production/Projet-Java-Centre-Hospitalier/Main/Connexion.class">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main/localhostConsole.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="86">
+          <caret line="36" column="20" lean-forward="true" selection-start-line="36" selection-start-column="20" selection-end-line="36" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/misc.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="10" lean-forward="true" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main/Graphisme.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="921">
+          <caret line="74" column="44" selection-start-line="74" selection-start-column="44" selection-end-line="74" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main/Localhost.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="617">
+          <caret line="116" column="75" selection-start-line="116" selection-start-column="75" selection-end-line="116" selection-end-column="75" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Main/displaySQLQuery.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="29" column="24" lean-forward="true" selection-start-line="29" selection-start-column="24" selection-end-line="29" selection-end-column="24" />
+        <state relative-caret-position="224">
+          <caret line="49" selection-start-line="49" selection-end-line="49" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -791,7 +756,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main/SuccesfullConnexion.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="921">
+        <state relative-caret-position="751">
           <caret line="103" column="21" selection-start-line="103" selection-start-column="21" selection-end-line="103" selection-end-column="21" />
           <folding>
             <element signature="method#succesfullConnexion#0;class#SuccesfullConnexion#0" />
@@ -799,27 +764,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main/localhostConsole.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="86">
-          <caret line="36" column="20" lean-forward="true" selection-start-line="36" selection-start-column="20" selection-end-line="36" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Main/Connexion.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-264">
-          <caret line="16" column="3" lean-forward="true" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
+        <state relative-caret-position="440">
+          <caret line="329" column="24" lean-forward="true" selection-start-line="329" selection-start-column="24" selection-end-line="329" selection-end-column="24" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/misc.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="111" selection-start-line="2" selection-start-column="111" selection-end-line="2" selection-end-column="111" />
         </state>
       </provider>
     </entry>
