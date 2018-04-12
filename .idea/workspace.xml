@@ -1,17 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f0061cb8-37ee-4c8e-913e-f84b302d519b" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Projet-Java-Centre-Hospitalier/Main/Connexion.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Projet-Java-Centre-Hospitalier/Main/Connexion.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Projet-Java-Centre-Hospitalier/Main/Localhost$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Projet-Java-Centre-Hospitalier/Main/Localhost$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Projet-Java-Centre-Hospitalier/Main/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Projet-Java-Centre-Hospitalier/Main/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Projet-Java-Centre-Hospitalier/Main/SSH$1ConnexionThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Projet-Java-Centre-Hospitalier/Main/SSH$1ConnexionThread.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Projet-Java-Centre-Hospitalier/Main/SSHConsole.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Projet-Java-Centre-Hospitalier/Main/SSHConsole.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Projet-Java-Centre-Hospitalier/Main/SuccesfullConnexion$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Projet-Java-Centre-Hospitalier/Main/SuccesfullConnexion$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Projet-Java-Centre-Hospitalier/Main/SuccesfullConnexion.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Projet-Java-Centre-Hospitalier/Main/SuccesfullConnexion.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main/SuccesfullConnexion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/SuccesfullConnexion.java" afterDir="false" />
+    <list default="true" id="40f33bf4-5c9c-4dc6-bf8e-53853567c7c9" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main/Connexion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/Connexion.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -23,55 +15,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="displaySQLQuery.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Main/displaySQLQuery.java">
+      <file leaf-file-name="Connexion.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Main/Connexion.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="5" column="20" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SuccesfullConnexion.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Main/SuccesfullConnexion.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Main.class" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/out/production/Projet-Java-Centre-Hospitalier/Main/Main.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <folding>
-                <element signature="e#0#2539#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="localhostConsole.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Main/localhostConsole.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="47" selection-start-line="47" selection-end-line="47" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Connexion.class" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/out/production/Projet-Java-Centre-Hospitalier/Main/Connexion.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2031">
-              <caret line="38" column="39" selection-start-line="38" selection-end-line="39" />
-              <folding>
-                <element signature="e#0#6097#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="294">
+              <caret line="67" column="77" selection-start-line="67" selection-start-column="7" selection-end-line="67" selection-end-column="77" />
             </state>
           </provider>
         </entry>
@@ -84,7 +32,7 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Main/SuccesfullConnexion.java" />
+        <option value="$PROJECT_DIR$/src/Main/Connexion.java" />
       </list>
     </option>
   </component>
@@ -99,7 +47,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -115,45 +63,20 @@
             <path>
               <item name="Projet-Java-Centre-Hospitalier" type="b2602c69:ProjectViewProjectNode" />
               <item name="Projet-Java-Centre-Hospitalier" type="462c0819:PsiDirectoryNode" />
-              <item name="Annexe" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Projet-Java-Centre-Hospitalier" type="b2602c69:ProjectViewProjectNode" />
               <item name="Projet-Java-Centre-Hospitalier" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Projet-Java-Centre-Hospitalier" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Projet-Java-Centre-Hospitalier" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Projet-Java-Centre-Hospitalier" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Projet-Java-Centre-Hospitalier" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-              <item name="production" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Projet-Java-Centre-Hospitalier" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Projet-Java-Centre-Hospitalier" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-              <item name="production" type="462c0819:PsiDirectoryNode" />
-              <item name="Projet-Java-Centre-Hospitalier" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Projet-Java-Centre-Hospitalier" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Projet-Java-Centre-Hospitalier" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-              <item name="production" type="462c0819:PsiDirectoryNode" />
-              <item name="Projet-Java-Centre-Hospitalier" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Main" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="AndroidView" />
       <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="RunDashboard">
@@ -171,6 +94,7 @@
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main.Main" />
+      <module name="Projet-Java-Centre-Hospitalier" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -231,21 +155,20 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="f0061cb8-37ee-4c8e-913e-f84b302d519b" name="Default" comment="" />
-      <created>1523525561818</created>
+      <changelist id="40f33bf4-5c9c-4dc6-bf8e-53853567c7c9" name="Default" comment="" />
+      <created>1523527002771</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1523525561818</updated>
-      <workItem from="1523525575689" duration="1135000" />
+      <updated>1523527002771</updated>
+      <workItem from="1523527011025" duration="259000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1135000" />
+    <option name="totallyTimeSpent" value="259000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -256,19 +179,19 @@
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" />
       <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3298969" />
       <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3298969" />
       <window_info anchor="bottom" id="Terminal" />
       <window_info id="Capture Tool" />
       <window_info id="Designer" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24966443" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24966443" />
       <window_info anchor="right" id="Database" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" />
       <window_info anchor="right" id="Theme Preview" />
-      <window_info id="Favorites" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info id="Favorites" side_tool="true" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -287,46 +210,10 @@
     <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main/displaySQLQuery.java">
+    <entry file="file://$PROJECT_DIR$/src/Main/Connexion.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="5" column="20" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main/SuccesfullConnexion.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/out/production/Projet-Java-Centre-Hospitalier/Main/Main.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#2539#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main/localhostConsole.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="47" selection-start-line="47" selection-end-line="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/out/production/Projet-Java-Centre-Hospitalier/Main/Connexion.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2031">
-          <caret line="38" column="39" selection-start-line="38" selection-end-line="39" />
-          <folding>
-            <element signature="e#0#6097#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="294">
+          <caret line="67" column="77" selection-start-line="67" selection-start-column="7" selection-end-line="67" selection-end-column="77" />
         </state>
       </provider>
     </entry>
