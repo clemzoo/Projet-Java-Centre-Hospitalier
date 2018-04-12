@@ -81,7 +81,7 @@ public class Main {
                     mainWindow.afficherMenu(true);
                     mainWindow.choixMenu();
                     mainWindow.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-                    
+
                     run =false;
                     break;
 
