@@ -113,6 +113,7 @@ public class SSH extends JFrame {
         image.setVisible(false);
 
         this.setVisible(onAfficheouPas);
+        repaint();
 
         return panSSH;
     }
@@ -126,9 +127,8 @@ public class SSH extends JFrame {
                     Connexion connectSQL = new Connexion(DBUSERECE, DBPWECE, DBUSERSQL, DBPWSQL);
                     if(connectSQL.coco()){
                         panSSH = connectionSSHGraphique(false);
-                        bienOuej = new SuccesfullConnexion();
-                        bienOuej.setCheckbox();
-                        bienOuej.SQLQueries(connectSQL);
+                        bienOuej = new SuccesfullConnexion(connectSQL);
+                        bienOuej.setCheckbox(connectSQL);
                     }
                 }
                 catch (Exception  ex){

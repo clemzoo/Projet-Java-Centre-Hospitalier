@@ -1,21 +1,24 @@
 package Main;
 
 import javax.swing.*;
+import java.io.IOException;
 import java.util.Scanner;
 
 public class Main {
 
     public static Graphisme mainWindow;
+    public static SSHConsole sshConsole;
+    public static localhostConsole localhostConsole;
 
     public static char menu() {//pour console
 
-        System.out.println("Bienvenue dans le projet Centre Hospitalier ! \n");
+        System.out.println("\nBienvenue dans le projet Centre Hospitalier ! \n");
 
         String choix;
         System.out.println("1 Pour une connexion en SSH");
         System.out.println("2 Pour une connexion en localhost");
         System.out.println("3 Pour afficher le menu en mode graphique");
-        System.out.println("\n0 Quitter");
+        System.out.println("\n0 Quitter\n");
 
         Scanner sc = new Scanner(System.in);
         choix = sc.next();
@@ -23,28 +26,6 @@ public class Main {
         return choix.charAt(0);
     }
 
-    public static void connexionSSH(){//pour console
-        //Connexion serveur
-        Scanner saisieClavier = new Scanner(System.in);
-
-        System.out.println("\nVeuillez entrer votre identifiant ECE :");
-        String usernameECE = saisieClavier.nextLine();
-
-        System.out.println("\nVotre mot de passe ECE :");
-        String passwordECE = saisieClavier.nextLine();
-
-        System.out.println("\nVotre identifiant SQL:");
-        String usernameSQL = saisieClavier.nextLine();
-
-        System.out.println("\nVotre mot de passe SQL:");
-        String passwordSQL = saisieClavier.nextLine();
-
-        try {
-            Connexion connectSQL = new Connexion(usernameECE, passwordECE, usernameSQL, passwordSQL);
-        } catch (Exception  ex){
-            System.out.println(ex.getMessage());
-        }
-    }
 
     public static void connexionLocalhost(){//pour console
 
@@ -75,12 +56,23 @@ public class Main {
 
             switch (choice) {
                 case '1': // Connection en SSH
-                    connexionSSH();
+                    sshConsole = new SSHConsole();
+                    //Clean
+                    sshConsole.connexionSSH();
+                    //clean
+                    sshConsole.choix();
+                    //Clean
                     run = false;
                     break;
 
                 case '2': // Connection en localhost
-                    connexionLocalhost();
+                    localhostConsole = new localhostConsole();
+                    //Clean
+                    localhostConsole.connexionLocalhost();
+                    //clean
+                    localhostConsole.choix();
+                    //Clean
+                    //connexionLocalhost();
                     run = false;
                     break;
 
