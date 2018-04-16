@@ -1,15 +1,26 @@
-package Main;
+package Graphisms;
+
+import ActionTypes.AddElements;
+import ActionTypes.BrowseElements;
+import Main.Connexion;
 
 import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public class TypeRequete extends JFrame{
 
     private JPanel panel; // panneau
     private JButton Consulter, Rechercher, Ajouter, Supprimer, annuler;
     private JLabel image,titre;
+    private BrowseElements bienOuej;
+    private AddElements newElem;
+    private Connexion connectMySQL;
 
-    public TypeRequete()
+    public TypeRequete(Connexion connectSQL)
     {
+        connectMySQL = connectSQL;
+
         setTitle("Les types de requête");
         setSize(800, 600);
         setLocation(425, 200);
@@ -44,13 +55,13 @@ public class TypeRequete extends JFrame{
         Supprimer.setText("Supprimer");
         Supprimer.setSize(150, 40);
 
-        annuler.setLocation(320, 500);
+        annuler.setLocation(340, 500);
         annuler.setText("Annuler");
         annuler.setSize(100, 35);
 
         titre.setText("Choisissez votre type de requête");
         titre.setLocation(300,100);
-        titre.setSize(200,35);
+        titre.setSize(250,35);
 
         panel = afficher(true);
 
@@ -73,5 +84,25 @@ public class TypeRequete extends JFrame{
         repaint();
 
         return panel;
+    }
+
+    public void buttonAction(){
+        Consulter.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                bienOuej = new BrowseElements(connectMySQL);
+                panel = afficher(false);
+                bienOuej.setCheckbox(connectMySQL);
+            }
+        });
+
+        Ajouter.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                newElem = new AddElements(connectMySQL);
+                panel = afficher(false);
+                newElem.setCheckbox(connectMySQL);
+            }
+        });
     }
 }

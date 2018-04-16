@@ -8,6 +8,8 @@ package Main;
  *
  * Librairies importées
  */
+import Background.SSHTunnel;
+
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.awt.*;
@@ -333,5 +335,17 @@ public class Connexion extends JFrame{
             System.out.println(ex.getMessage());
         }
         return tableRes;
+    }
+
+    public void ajoutDTB(String Tab, String Colonnes, String Ajout){
+        try {
+            /* Exécution d'une requête de lecture */
+            //stmt.executeUpdate("INSERT INTO " +  Tab + "(" + Colonnes + ") VALUES ('clem', '123');");
+            stmt.executeUpdate("INSERT INTO docteur(specialite, numero ) VALUES ('123', '123');");
+
+
+        } catch (Exception  ex){
+            System.out.println(ex.getMessage());
+        }
     }
 }

@@ -1,13 +1,12 @@
-package Main;
+package Reporting;
 
 import javax.swing.*;
-import java.awt.*;
 
 
 public class Graph extends JFrame{
     private JPanel pan; // panneau
-    private SSH SSH;
-    private Localhost Localhost;
+    private Graphisms.SSH SSH;
+    private Graphisms.Localhost Localhost;
 
 
     public Graph()

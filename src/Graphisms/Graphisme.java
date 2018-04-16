@@ -1,10 +1,11 @@
-package Main;
+package Graphisms;
 
 //<<<<<<< HEAD
 //import oracle.jvm.hotspot.jfr.JFROptions;
 
 //=======
 //>>>>>>> 4a994440d41a3209f5863599272a76151f241354
+
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -12,8 +13,8 @@ import java.awt.event.ActionListener;
 public class Graphisme extends JFrame {
 
     private JPanel pan; // panneau
-    private SSH SSH;
-    private Localhost Localhost;
+    private Graphisms.SSH SSH;
+    private Graphisms.Localhost Localhost;
     private JButton buttonSSH, buttonLocalhost;
     private JLabel welcomeL1, welcomeL2, image;
 

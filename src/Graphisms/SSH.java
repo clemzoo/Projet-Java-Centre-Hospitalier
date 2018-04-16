@@ -1,4 +1,7 @@
-package Main;
+package Graphisms;
+
+import ActionTypes.BrowseElements;
+import Main.Connexion;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -13,7 +16,7 @@ public class SSH extends JFrame {
     private JButton valider, annuler;
     private String DBUSERECE,DBUSERSQL,DBPWECE, DBPWSQL;
     private boolean onAfficheouPas;
-    private SuccesfullConnexion bienOuej;
+    private BrowseElements bienOuej;
 
     public SSH() {
 
@@ -127,7 +130,7 @@ public class SSH extends JFrame {
                     Connexion connectSQL = new Connexion(DBUSERECE, DBPWECE, DBUSERSQL, DBPWSQL);
                     if(connectSQL.coco()){
                         panSSH = connectionSSHGraphique(false);
-                        bienOuej = new SuccesfullConnexion(connectSQL);
+                        bienOuej = new BrowseElements(connectSQL);
                         bienOuej.setCheckbox(connectSQL);
                     }
                 }

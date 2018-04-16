@@ -1,4 +1,6 @@
-package Main;
+package Graphisms;
+
+import Main.Connexion;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;

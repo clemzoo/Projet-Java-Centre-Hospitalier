@@ -1,4 +1,7 @@
-package Main;
+package Graphisms;
+
+import ActionTypes.BrowseElements;
+import Main.Connexion;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -13,7 +16,8 @@ public class Localhost extends Graphisme {
     private JPasswordField textpwDB;
     private JButton valider, annuler;
     private String DBNAME, DBUSER, DBPW;
-    private SuccesfullConnexion bienOuej;
+    private BrowseElements bienOuej;
+    private TypeRequete rech;
     private boolean onAfficheouPas;
 
     public Localhost()
@@ -113,9 +117,14 @@ public class Localhost extends Graphisme {
                 try {
                     Connexion connectSQL = new Connexion(DBNAME,DBUSER,DBPW);
                     if(connectSQL.coco()){
+                        rech = new TypeRequete(connectSQL);
+                        rech.buttonAction();
+                        /*
                         bienOuej = new SuccesfullConnexion(connectSQL);
                         panLocalhost = connectionLocalhostGraphique(false);
                         bienOuej.setCheckbox(connectSQL);
+
+                        */
                     }
                 }
                 catch (Exception  ex){
@@ -129,7 +138,7 @@ public class Localhost extends Graphisme {
             public void actionPerformed(ActionEvent e) {
                 DBNAME = "hopital";//textDB.getText();
                 DBUSER = "root";//textuserDB.getText();
-                DBPW = new String(textpwDB.getPassword());
+                DBPW = "root" ;//new String(textpwDB.getPassword());
 
                 new ConnexionThread().start();
             }
