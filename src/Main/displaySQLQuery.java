@@ -50,7 +50,7 @@ public class displaySQLQuery extends JFrame {
         maTable = connexion.readDTB(table, colonne, nbElem, true);
         maTable.setLocation(80,130);
         maTable.setSize(640,350);
-        this.add(new JScrollPane(maTable));
+        this.add(maTable);
 
         this.add(image);
         image.setVisible(false);
@@ -58,7 +58,7 @@ public class displaySQLQuery extends JFrame {
         this.setVisible(onAfficheouPas);
         repaint();
 
-        System.out.println("fgcjhkgjhghjsbvnkjbqljvbqsjvbqflvkhbvhbjhsrvblqbvkhjelqbrjkvqbkhrvb djfhl");
+        System.out.println("fgcjhkgjhghjsbvnkjbqljvbqsjvbqflvkhbvhbjhsrvblqbvkhjelqbrjkvqbkhrvb");
 
         return panSQL;
     }
