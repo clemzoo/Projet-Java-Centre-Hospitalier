@@ -33,34 +33,17 @@ public class displaySQLQuery extends JFrame {
 
         this.add(bravo);
 
-/*
-        DefaultTableModel model = new DefaultTableModel();
-        JTable tableRes = new JTable(model);
-
-// Create a couple of columns
-        model.addColumn("Col1");
-        model.addColumn("Col2");
-
-// Append a row
-        model.addRow(new Object[]{"v1", "v2"});
-
-        tableRes.setLocation(80,130);
-        tableRes.setSize(640,350);
-        this.add(tableRes);
-
-*/
         maTable = connexion.readDTB(table, colonne, nbElem, true);
-        maTable.setLocation(80,130);
-        maTable.setSize(640,350);
-        this.add(maTable);
+        JScrollPane scrollPane = new JScrollPane(maTable);
+        scrollPane.setLocation(80,130);
+        scrollPane.setSize(640,350);
+        this.add(scrollPane);
 
         this.add(image);
         image.setVisible(false);
 
         this.setVisible(onAfficheouPas);
         repaint();
-
-        System.out.println("fgcjhkgjhghjsbvnkjbqljvbqsjvbqflvkhbvhbjhsrvblqbvkhjelqbrjkvqbkhrvb");
 
         return panSQL;
     }

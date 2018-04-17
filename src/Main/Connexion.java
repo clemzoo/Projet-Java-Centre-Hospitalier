@@ -308,6 +308,14 @@ public class Connexion extends JFrame{
            /* Récupération des données du résultat de la requête de lecture */
             int nbRes = 1;
 
+            if(graphismes) {
+
+                // Create a couple of columns
+                for (int i = 1; i <= nbElem; i++) {
+                    model.addColumn(nameOfColonnes[i-1].trim());
+                }
+            }
+
             while ( resultat.next() ) {
 
                 System.out.println("Résultat " + nbRes + " :\n");
@@ -322,11 +330,63 @@ public class Connexion extends JFrame{
 
                 if(graphismes){
 
-                    // Create a couple of columns
-                    for (int i = 1; i <= nbElem; i++) {
-                        model.addColumn(nameOfColonnes[i-1].trim());
-                        model.addRow(new Object[]{resultat.getString(i)});
-                    }
+                    if(nbElem == 1)
+                        model.addRow(new Object[]{resultat.getString(1)});
+
+                    if(nbElem == 2)
+                        model.addRow(new Object[]{resultat.getString(1),resultat.getString(2)});
+
+                    if(nbElem == 3)
+                        model.addRow(new Object[]{resultat.getString(1),resultat.getString(2),
+                                resultat.getString(3)});
+
+                    if(nbElem == 4)
+                        model.addRow(new Object[]{resultat.getString(1),resultat.getString(2),
+                                resultat.getString(3),resultat.getString(4)});
+
+                    if(nbElem == 5)
+                        model.addRow(new Object[]{resultat.getString(1),resultat.getString(2),
+                                resultat.getString(3),resultat.getString(4),resultat.getString(5)});
+
+                    if(nbElem == 6)
+                        model.addRow(new Object[]{resultat.getString(1),resultat.getString(2),
+                                resultat.getString(3),resultat.getString(4),resultat.getString(5),
+                                resultat.getString(6)});
+
+                    if(nbElem == 7)
+                        model.addRow(new Object[]{resultat.getString(1),resultat.getString(2),
+                                resultat.getString(3),resultat.getString(4),resultat.getString(5),
+                                resultat.getString(6),resultat.getString(7)});
+
+                    if(nbElem == 8)
+                        model.addRow(new Object[]{resultat.getString(1),resultat.getString(2),
+                                resultat.getString(3),resultat.getString(4),resultat.getString(5),
+                                resultat.getString(6),resultat.getString(7),resultat.getString(8)});
+
+                    if(nbElem == 9)
+                        model.addRow(new Object[]{resultat.getString(1),resultat.getString(2),
+                                resultat.getString(3),resultat.getString(4),resultat.getString(5),
+                                resultat.getString(6),resultat.getString(7),resultat.getString(8),
+                                resultat.getString(9)});
+
+                    if(nbElem == 10)
+                        model.addRow(new Object[]{resultat.getString(1),resultat.getString(2),
+                                resultat.getString(3),resultat.getString(4),resultat.getString(5),
+                                resultat.getString(6),resultat.getString(7),resultat.getString(8),
+                                resultat.getString(9),resultat.getString(10)});
+
+                    if(nbElem == 11)
+                        model.addRow(new Object[]{resultat.getString(1),resultat.getString(2),
+                                resultat.getString(3),resultat.getString(4),resultat.getString(5),
+                                resultat.getString(6),resultat.getString(7),resultat.getString(8),
+                                resultat.getString(9),resultat.getString(10),resultat.getString(11)});
+
+                    if(nbElem == 12)
+                        model.addRow(new Object[]{resultat.getString(1),resultat.getString(2),
+                                resultat.getString(3),resultat.getString(4),resultat.getString(5),
+                                resultat.getString(6),resultat.getString(7),resultat.getString(8),
+                                resultat.getString(9),resultat.getString(10),resultat.getString(11),
+                                resultat.getString(12)});
                 }
 
                 nbRes++;
