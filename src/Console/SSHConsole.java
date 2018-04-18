@@ -1,5 +1,7 @@
-package Main;
+package Console;
 
+
+import Main.Connexion;
 
 import java.sql.*;
 import java.util.Scanner;

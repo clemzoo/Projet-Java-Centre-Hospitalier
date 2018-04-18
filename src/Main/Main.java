@@ -1,14 +1,17 @@
 package Main;
 
+import Console.SSHConsole;
+import Console.localhostConsole;
+import Graphisms.Graphisme;
+
 import javax.swing.*;
-import java.io.IOException;
 import java.util.Scanner;
 
 public class Main {
 
     public static Graphisme mainWindow;
     public static SSHConsole sshConsole;
-    public static localhostConsole localhostConsole;
+    public static Console.localhostConsole localhostConsole;
 
     public static char menu() {//pour console
 

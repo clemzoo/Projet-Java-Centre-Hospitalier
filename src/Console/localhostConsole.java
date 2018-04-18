@@ -1,4 +1,6 @@
-package Main;
+package Console;
+
+import Main.Connexion;
 
 import java.util.Scanner;
 
