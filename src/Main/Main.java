@@ -82,12 +82,13 @@ public class Main {
 
                 case '3': // Afficher le menu en Graphique
                     mainWindow = new Graphisme (); // instancier graphismes
+                    Statistique report = new Statistique();
                     mainWindow.afficherMenu(true);
                     //TypeRequete lol = new TypeRequete();
                     //lol.afficher(true);
                     mainWindow.choixMenu();
-                    mainWindow.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
+                    mainWindow.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
                     run =false;
                     break;
 

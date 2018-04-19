@@ -9,6 +9,8 @@ public class Statistique extends JFrame {
         setTitle("Statistique de la BDD");
         setSize(400, 300);
         pan = new JPanel();
+        this.setVisible(true);
+
     }
 
 
