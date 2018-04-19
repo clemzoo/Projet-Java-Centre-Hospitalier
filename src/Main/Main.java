@@ -85,6 +85,7 @@ public class Main {
                     //TypeRequete lol = new TypeRequete();
                     //lol.afficher(true);
                     mainWindow.choixMenu();
+
                     mainWindow.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
                     run =false;
