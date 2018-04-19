@@ -6,9 +6,11 @@ public class Statistique extends JFrame {
     private JPanel pan; // panneau
 
     public Statistique(){
-        setTitle("Gestion d'un centre hospitalier");
-        setSize(800, 600);
+        setTitle("Statistique de la BDD");
+        setSize(400, 300);
         pan = new JPanel();
     }
+
+
 
 }

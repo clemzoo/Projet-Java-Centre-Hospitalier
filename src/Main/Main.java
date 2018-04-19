@@ -3,6 +3,7 @@ package Main;
 import Console.SSHConsole;
 import Console.localhostConsole;
 import Graphisms.*;
+import Reporting.*;
 
 import javax.swing.*;
 import java.util.Scanner;
@@ -85,7 +86,6 @@ public class Main {
                     //TypeRequete lol = new TypeRequete();
                     //lol.afficher(true);
                     mainWindow.choixMenu();
-
                     mainWindow.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
                     run =false;
