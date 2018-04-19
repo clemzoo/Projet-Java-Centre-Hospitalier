@@ -2,7 +2,7 @@ package Main;
 
 import Console.SSHConsole;
 import Console.localhostConsole;
-import Graphisms.Graphisme;
+import Graphisms.*;
 
 import javax.swing.*;
 import java.util.Scanner;
@@ -82,8 +82,8 @@ public class Main {
                 case '3': // Afficher le menu en Graphique
                     mainWindow = new Graphisme (); // instancier graphismes
                     mainWindow.afficherMenu(true);
-                    TypeRequete lol = new TypeRequete();
-                    lol.afficher(true);
+                    //TypeRequete lol = new TypeRequete();
+                    //lol.afficher(true);
                     mainWindow.choixMenu();
                     mainWindow.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
