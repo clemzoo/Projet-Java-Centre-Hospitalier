@@ -33,12 +33,35 @@ public class displaySQLQuery extends JFrame {
 
         this.add(bravo);
 
+<<<<<<< HEAD:src/Main/displaySQLQuery.java
+
+        DefaultTableModel model = new DefaultTableModel();
+        JTable tableRes = new JTable(model);
+
+// Create a couple of columns
+        model.addColumn("Col1");
+        model.addColumn("Col2");
+
+// Append a row
+        model.addRow(new Object[]{"v1", "v2"});
+
+        tableRes.setLocation(80,130);
+        tableRes.setSize(640,350);
+        this.add(tableRes);
+
+        /*maTable = connexion.readDTB(table, colonne, nbElem, true);
+        maTable.setLocation(80,130);
+        maTable.setSize(640,350);
+        this.add(new JScrollPane(maTable));
+*/
+=======
         maTable = connexion.readDTB(table, colonne, nbElem, true);
         JScrollPane scrollPane = new JScrollPane(maTable);
         scrollPane.setLocation(80,130);
         scrollPane.setSize(640,350);
         this.add(scrollPane);
 
+>>>>>>> 5533a3e73a3677eee6b2a0755ed3228472ed0407:src/Graphisms/displaySQLQuery.java
         this.add(image);
         image.setVisible(false);
 

@@ -85,6 +85,9 @@ public class TypeRequete extends JFrame{
 
         return panel;
     }
+<<<<<<< HEAD:src/Main/TypeRequete.java
+}
+=======
 
     public void buttonAction(){
         Consulter.addActionListener(new ActionListener() {
@@ -106,3 +109,4 @@ public class TypeRequete extends JFrame{
         });
     }
 }
+>>>>>>> 5533a3e73a3677eee6b2a0755ed3228472ed0407:src/Graphisms/TypeRequete.java
