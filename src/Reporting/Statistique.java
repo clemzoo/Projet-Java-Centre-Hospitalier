@@ -9,27 +9,41 @@ public class Statistique extends JFrame {
     private JPanel droite;
     private JPanel droite_haut;
     private JPanel droite_bas;
+    private JLabel bgauche;
+    private JLabel bdr;
+    private JLabel hdr;
+    private JLabel total_malade_lab;
+    private JLabel personel_lab;
 
     public Statistique(){
         setTitle("Statistique de la BDD");
-        setSize(800, 300);
+        setSize(600, 400);
+
         fen = new JPanel();
         gauche = new JPanel();
-        JButton bgauche = new JButton("gauche");
-        gauche.add(bgauche);
+        bgauche = new JLabel("Nombre de patients par service :");
         droite = new JPanel();
         droite_bas = new JPanel();
-        JButton hdr = new JButton("haut droite");
+        hdr = new JLabel("Masse salariale par service :");
         droite_haut = new JPanel();
-        JButton bdr = new JButton("bas droite");
+        bdr = new JLabel("Statistiques :");
+        total_malade_lab = new JLabel("Nb malades : ");
+        personel_lab = new JLabel("Nb personnel : ");
+
+        droite_bas.setLayout(new GridLayout(3,1));
+        droite.setLayout(new GridLayout(2,1));
+        fen.setLayout(new GridLayout(1,2));
+
         droite_haut.add(hdr);
-        droite_haut.add(bdr);
-        droite.setLayout(new GridLayout(2,0));
+        droite_bas.add(bdr);
+        droite_bas.add(total_malade_lab);
+        droite_bas.add(personel_lab);
         droite.add(droite_haut);
         droite.add(droite_bas);
-        fen.setLayout(new GridLayout(0,2));
+        gauche.add(bgauche);
         fen.add(gauche);
         fen.add(droite);
+        this.setContentPane(fen);
         this.setVisible(true);
 
     }
