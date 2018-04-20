@@ -126,6 +126,7 @@ public class Localhost extends Graphisme {
                         bienOuej.setCheckbox(connectSQL);
 
                         */
+                        Statistique stat = new Statistique(connectSQL);
                     }
                 }
                 catch (Exception  ex){

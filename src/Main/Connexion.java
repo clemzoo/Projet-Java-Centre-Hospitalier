@@ -408,4 +408,8 @@ public class Connexion extends JFrame{
             System.out.println(ex.getMessage());
         }
     }
+
+    public Statement getStmt(){
+        return stmt;
+    }
 }

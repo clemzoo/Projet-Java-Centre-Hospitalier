@@ -82,7 +82,6 @@ public class Main {
 
                 case '3': // Afficher le menu en Graphique
                     mainWindow = new Graphisme (); // instancier graphisme
-                    new Statistique();
                     mainWindow.afficherMenu(true);
                     //TypeRequete lol = new TypeRequete();
                     //lol.afficher(true);
