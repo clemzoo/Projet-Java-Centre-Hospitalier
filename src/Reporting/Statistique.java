@@ -55,16 +55,37 @@ public class Statistique extends JFrame {
     }
 
     public void RequeteStat() throws SQLException {
+        int nb_service = 0;
+
         ResultSet resultat1 = connect.getStmt().executeQuery( "SELECT COUNT(*) AS total FROM malade");
         resultat1.next();
-        resultat1.getInt("total");
         total_malade_lab.setText("Nb malades : " + resultat1.getInt("total"));
 
 
         ResultSet resultat2 = connect.getStmt().executeQuery( "SELECT COUNT(*) AS total FROM employe");
         resultat2.next();
-        resultat2.getInt("total");
         personel_lab.setText("Nb personnel : " + resultat2.getInt("total"));
+
+        ResultSet resultat3 = connect.getStmt().executeQuery( "SELECT COUNT(*) AS total FROM service");
+        resultat3.next();
+        nb_service = resultat3.getInt("total");
+
+        ResultSet resultat4 = connect.getStmt().executeQuery( "SELECT * FROM service");
+        String[] tab_service_nom = new String[nb_service];
+        for(int i = 0; i<nb_service; i++) {
+            resultat4.next();
+            tab_service_nom[i] = resultat4.getString("code");
+        }
+
+        for(int i =0; i<nb_service; i++){
+            ResultSet resultat5 = connect.getStmt().executeQuery( "SELECT SUM(salaire) AS total FROM infirmier WHERE code_service = '"+ tab_service_nom[i]+"'");
+            resultat5.next();
+            JLabel a = new JLabel(tab_service_nom[i]+" : " + resultat5.getInt("total") + "€"); //Nom service
+
+            droite_haut.add(a);
+        }
+
+        
     }
 
 
