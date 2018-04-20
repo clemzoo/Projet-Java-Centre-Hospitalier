@@ -2,6 +2,7 @@ package Graphisms;
 
 import ActionTypes.BrowseElements;
 import Main.Connexion;
+import Reporting.Statistique;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;

@@ -1,5 +1,7 @@
 package Reporting;
 
+import Main.Connexion;
+
 import javax.swing.*;
 import java.awt.*;
 
@@ -14,8 +16,10 @@ public class Statistique extends JFrame {
     private JLabel hdr;
     private JLabel total_malade_lab;
     private JLabel personel_lab;
+    //private Connexion connect;
 
     public Statistique(){
+       // connect = a;
         setTitle("Statistique de la BDD");
         setSize(600, 400);
 

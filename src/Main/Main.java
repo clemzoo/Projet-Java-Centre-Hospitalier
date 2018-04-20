@@ -81,8 +81,8 @@ public class Main {
                     break;
 
                 case '3': // Afficher le menu en Graphique
-                    mainWindow = new Graphisme (); // instancier graphismes
-                    Statistique report = new Statistique();
+                    mainWindow = new Graphisme (); // instancier graphisme
+                    new Statistique();
                     mainWindow.afficherMenu(true);
                     //TypeRequete lol = new TypeRequete();
                     //lol.afficher(true);
