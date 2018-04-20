@@ -138,7 +138,7 @@ public class Localhost extends Graphisme {
             public void actionPerformed(ActionEvent e) {
                 DBNAME = "hopital";//textDB.getText();
                 DBUSER = "root";//textuserDB.getText();
-                DBPW = "root" ;//new String(textpwDB.getPassword());
+                DBPW = new String(textpwDB.getPassword());
 
                 new ConnexionThread().start();
             }
