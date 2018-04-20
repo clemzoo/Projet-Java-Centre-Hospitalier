@@ -85,7 +85,17 @@ public class Statistique extends JFrame {
             droite_haut.add(a);
         }
 
-        
+        for(int i =0; i<nb_service; i++){
+            ResultSet resultat6 = connect.getStmt().executeQuery( "SELECT COUNT(*) AS total FROM hospitalisation WHERE code_service = '"+ tab_service_nom[i]+"'");
+            resultat6.next();
+            JLabel a = new JLabel(tab_service_nom[i]+" : " + resultat6.getInt("total")); //Nom service
+
+            gauche.add(a);
+        }
+
+
+
+
     }
 
 
