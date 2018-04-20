@@ -90,7 +90,10 @@ public class TypeRequete extends JFrame{
         return panel;
     }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> fa5596047fd1fc590998815eaca7c048dc349491
 
     public void buttonAction(){
         Consulter.addActionListener(new ActionListener() {
@@ -130,3 +133,7 @@ public class TypeRequete extends JFrame{
         });
     }
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> fa5596047fd1fc590998815eaca7c048dc349491

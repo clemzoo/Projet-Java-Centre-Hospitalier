@@ -2,6 +2,7 @@ package Graphisms;
 
 import ActionTypes.BrowseElements;
 import Main.Connexion;
+import Reporting.Statistique;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -125,6 +126,7 @@ public class Localhost extends Graphisme {
                         bienOuej.setCheckbox(connectSQL);
 
                         */
+                        Statistique stat = new Statistique(connectSQL);
                     }
                 }
                 catch (Exception  ex){

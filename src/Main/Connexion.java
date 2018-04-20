@@ -409,6 +409,7 @@ public class Connexion extends JFrame{
         }
     }
 
+<<<<<<< HEAD
     public void rechercheDTB(String lol){
         try {
             /* Exécution d'une requête de lecture */
@@ -419,5 +420,9 @@ public class Connexion extends JFrame{
         } catch (Exception  ex){
             System.out.println(ex.getMessage());
         }
+=======
+    public Statement getStmt(){
+        return stmt;
+>>>>>>> fa5596047fd1fc590998815eaca7c048dc349491
     }
 }
