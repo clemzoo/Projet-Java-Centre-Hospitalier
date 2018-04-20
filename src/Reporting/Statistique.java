@@ -71,14 +71,16 @@ public class Statistique extends JFrame {
         nb_service = resultat3.getInt("total");
 
         ResultSet resultat4 = connect.getStmt().executeQuery( "SELECT * FROM service");
+        String[] tab_service_code = new String[nb_service];
         String[] tab_service_nom = new String[nb_service];
         for(int i = 0; i<nb_service; i++) {
             resultat4.next();
-            tab_service_nom[i] = resultat4.getString("code");
+            tab_service_code[i] = resultat4.getString("code");
+            tab_service_nom[i] = resultat4.getString("nom");
         }
 
         for(int i =0; i<nb_service; i++){
-            ResultSet resultat5 = connect.getStmt().executeQuery( "SELECT SUM(salaire) AS total FROM infirmier WHERE code_service = '"+ tab_service_nom[i]+"'");
+            ResultSet resultat5 = connect.getStmt().executeQuery( "SELECT SUM(salaire) AS total FROM infirmier WHERE code_service = '"+ tab_service_code[i]+"'");
             resultat5.next();
             JLabel a = new JLabel(tab_service_nom[i]+" : " + resultat5.getInt("total") + "€"); //Nom service
 
@@ -86,7 +88,7 @@ public class Statistique extends JFrame {
         }
 
         for(int i =0; i<nb_service; i++){
-            ResultSet resultat6 = connect.getStmt().executeQuery( "SELECT COUNT(*) AS total FROM hospitalisation WHERE code_service = '"+ tab_service_nom[i]+"'");
+            ResultSet resultat6 = connect.getStmt().executeQuery( "SELECT COUNT(*) AS total FROM hospitalisation WHERE code_service = '"+ tab_service_code[i]+"'");
             resultat6.next();
             JLabel a = new JLabel(tab_service_nom[i]+" : " + resultat6.getInt("total")); //Nom service
 
