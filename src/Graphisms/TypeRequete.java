@@ -2,6 +2,8 @@ package Graphisms;
 
 import ActionTypes.AddElements;
 import ActionTypes.BrowseElements;
+import ActionTypes.DeleteElements;
+import ActionTypes.SearchElements;
 import Main.Connexion;
 
 import javax.swing.*;
@@ -15,6 +17,8 @@ public class TypeRequete extends JFrame{
     private JLabel image,titre;
     private BrowseElements bienOuej;
     private AddElements newElem;
+    private DeleteElements suppr;
+    private SearchElements chercher;
     private Connexion connectMySQL;
 
     public TypeRequete(Connexion connectSQL)
@@ -86,6 +90,10 @@ public class TypeRequete extends JFrame{
         return panel;
     }
 
+<<<<<<< HEAD
+
+=======
+>>>>>>> fa5596047fd1fc590998815eaca7c048dc349491
 
     public void buttonAction(){
         Consulter.addActionListener(new ActionListener() {
@@ -105,6 +113,27 @@ public class TypeRequete extends JFrame{
                 newElem.setCheckbox(connectMySQL);
             }
         });
+
+        Supprimer.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+              //  suppr = new DeleteElements(connectMySQL);
+                panel = afficher(false);
+            //    suppr.setCheckbox(connectMySQL);
+            }
+        });
+
+        Rechercher.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                chercher = new SearchElements(connectMySQL);
+                panel = afficher(false);
+                chercher.setCheckbox(connectMySQL);
+            }
+        });
     }
 }
+<<<<<<< HEAD
+=======
 
+>>>>>>> fa5596047fd1fc590998815eaca7c048dc349491

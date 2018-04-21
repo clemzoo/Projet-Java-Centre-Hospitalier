@@ -66,8 +66,8 @@ public class Connexion extends JFrame{
         Class.forName("com.mysql.jdbc.Driver");
 
         // url de connexion "jdbc:mysql://localhost:3305/usernameECE"
-       //String urlDatabase = "jdbc:mysql://localhost/" + nameDatabase;
-       String urlDatabase = "jdbc:mysql://127.0.0.1:8889/" + nameDatabase;
+       String urlDatabase = "jdbc:mysql://localhost/" + nameDatabase;
+       //String urlDatabase = "jdbc:mysql://127.0.0.1:8889/" + nameDatabase;
 
         //création d'une connexion JDBC à la base
         conn = DriverManager.getConnection(urlDatabase, loginDatabase, passwordDatabase);
@@ -409,7 +409,20 @@ public class Connexion extends JFrame{
         }
     }
 
+<<<<<<< HEAD
+    public void rechercheDTB(String lol){
+        try {
+            /* Exécution d'une requête de lecture */
+            //stmt.executeUpdate("INSERT INTO " +  Tab + "(" + Colonnes + ") VALUES ('clem', '123');");
+            stmt.executeQuery("SELECT * FROM `hopital`.`malade` WHERE `nom` = '"+ lol +"'");
+
+
+        } catch (Exception  ex){
+            System.out.println(ex.getMessage());
+        }
+=======
     public Statement getStmt(){
         return stmt;
+>>>>>>> fa5596047fd1fc590998815eaca7c048dc349491
     }
 }
