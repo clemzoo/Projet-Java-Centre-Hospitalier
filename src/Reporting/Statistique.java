@@ -32,11 +32,14 @@ public class Statistique extends JFrame {
         total_malade_lab = new JLabel("Nb malades : ");
         personel_lab = new JLabel("Nb personnel : ");
 
-        droite_bas.setLayout(new GridLayout(3,1));
-        droite.setLayout(new GridLayout(2,1));
-        fen.setLayout(new GridLayout(1,2));
+
+        droite_bas.setLayout(new GridLayout(0,1));
+        droite_haut.setLayout(new GridLayout(0,1));
+        droite.setLayout(new GridLayout(0,1));
+        fen.setLayout(new GridLayout(0,2));
 
         droite_haut.add(hdr);
+        droite_bas.add(new JLabel("Statistiques gloables :"));
         droite_bas.add(total_malade_lab);
         droite_bas.add(personel_lab);
         droite.add(droite_haut);
@@ -79,24 +82,27 @@ public class Statistique extends JFrame {
             tab_service_nom[i] = resultat4.getString("nom");
         }
 
+        JPanel salaire = new JPanel();
+        salaire.setLayout(new GridLayout(0,1));
         for(int i =0; i<nb_service; i++){
             ResultSet resultat5 = connect.getStmt().executeQuery( "SELECT SUM(salaire) AS total FROM infirmier WHERE code_service = '"+ tab_service_code[i]+"'");
             resultat5.next();
             JLabel a = new JLabel(tab_service_nom[i]+" : " + resultat5.getInt("total") + "€"); //Nom service
 
-            droite_haut.add(a);
+            salaire.add(a);
         }
+        droite_haut.add(salaire);
 
+        JPanel patient = new JPanel();
+        patient.setLayout(new GridLayout(0,1));
         for(int i =0; i<nb_service; i++){
             ResultSet resultat6 = connect.getStmt().executeQuery( "SELECT COUNT(*) AS total FROM hospitalisation WHERE code_service = '"+ tab_service_code[i]+"'");
             resultat6.next();
             JLabel a = new JLabel(tab_service_nom[i]+" : " + resultat6.getInt("total")); //Nom service
 
-            gauche.add(a);
+            patient.add(a);
         }
-
-
-
+        gauche.add(patient);
 
     }
 
