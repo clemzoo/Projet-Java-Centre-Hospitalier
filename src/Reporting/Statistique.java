@@ -13,8 +13,7 @@ import org.jfree.data.general.DefaultPieDataset;
 
 public class Statistique extends JFrame {
     private JPanel fen; // panneau
-    private JPanel gauche;
-    private JPanel droite;
+    private JPanel bas;
     private JLabel total_malade_lab;
     private JLabel personel_lab;
     private Connexion connect;
@@ -24,24 +23,18 @@ public class Statistique extends JFrame {
     public Statistique(Connexion a) throws SQLException {
         connect = a;
         setTitle("Statistique de la BDD");
-        setSize(800, 600);
+        setSize(800,600);
 
         fen = new JPanel();
-        gauche = new JPanel();
-        droite = new JPanel();
-        droite.setLayout(new GridLayout(0,1));
-        fen.setLayout(new GridLayout(0,2));
-
+        bas = new JPanel();
 
         total_malade_lab = new JLabel("Nb malades : ");
         personel_lab = new JLabel("Nb personnel : ");
 
-        droite.add(total_malade_lab);
-        droite.add(personel_lab);
-
         RequeteStat();
-        fen.add(gauche);
-        fen.add(droite);
+        bas.add("WEST", total_malade_lab);
+        bas.add("WEST", personel_lab);
+        fen.add("SOUTH",bas);
 
         this.setContentPane(fen);
         this.setVisible(true);
@@ -101,8 +94,8 @@ public class Statistique extends JFrame {
         final JFreeChart barChart = ChartFactory.createBarChart("Masse salariale", "Service", "€", dataset, PlotOrientation.VERTICAL, true, true, false);
         final ChartPanel barPanel = new ChartPanel(barChart);
 
-        gauche.add(cPanel);
-        droite.add(barPanel);
+        fen.add("EAST", cPanel);
+        fen.add("WEST", barPanel);
 
     }
 
