@@ -4,53 +4,44 @@ import Main.Connexion;
 import java.sql.*;
 import javax.swing.*;
 import java.awt.*;
+import org.jfree.chart.ChartFactory;
+import org.jfree.chart.ChartPanel;
+import org.jfree.chart.JFreeChart;
+import org.jfree.chart.plot.PlotOrientation;
+import org.jfree.data.category.DefaultCategoryDataset;
+import org.jfree.data.general.DefaultPieDataset;
 
 public class Statistique extends JFrame {
     private JPanel fen; // panneau
     private JPanel gauche;
     private JPanel droite;
-    private JPanel droite_haut;
-    private JPanel droite_bas;
-    private JLabel bgauche;
-    private JLabel hdr;
     private JLabel total_malade_lab;
     private JLabel personel_lab;
     private Connexion connect;
+    final DefaultPieDataset pieDataset = new DefaultPieDataset();
+    final DefaultCategoryDataset dataset = new DefaultCategoryDataset();
 
     public Statistique(Connexion a) throws SQLException {
         connect = a;
         setTitle("Statistique de la BDD");
-        setSize(600, 400);
+        setSize(800, 600);
 
         fen = new JPanel();
         gauche = new JPanel();
-        bgauche = new JLabel("Nombre de patients par service :");
         droite = new JPanel();
-        droite_bas = new JPanel();
-        hdr = new JLabel("Masse salariale par service :");
-        droite_haut = new JPanel();
-        total_malade_lab = new JLabel("Nb malades : ");
-        personel_lab = new JLabel("Nb personnel : ");
-
-
-        droite_bas.setLayout(new GridLayout(0,1));
-        droite_haut.setLayout(new GridLayout(0,1));
         droite.setLayout(new GridLayout(0,1));
         fen.setLayout(new GridLayout(0,2));
 
-        droite_haut.add(hdr);
-        droite_bas.add(new JLabel("Statistiques gloables :"));
-        droite_bas.add(total_malade_lab);
-        droite_bas.add(personel_lab);
-        droite.add(droite_haut);
-        droite.add(droite_bas);
-        gauche.add(bgauche);
-        fen.add(gauche);
-        fen.add(droite);
 
+        total_malade_lab = new JLabel("Nb malades : ");
+        personel_lab = new JLabel("Nb personnel : ");
+
+        droite.add(total_malade_lab);
+        droite.add(personel_lab);
 
         RequeteStat();
-
+        fen.add(gauche);
+        fen.add(droite);
 
         this.setContentPane(fen);
         this.setVisible(true);
@@ -82,27 +73,36 @@ public class Statistique extends JFrame {
             tab_service_nom[i] = resultat4.getString("nom");
         }
 
-        JPanel salaire = new JPanel();
-        salaire.setLayout(new GridLayout(0,1));
+        //JPanel salaire = new JPanel();
+        //salaire.setLayout(new GridLayout(0,1));
         for(int i =0; i<nb_service; i++){
             ResultSet resultat5 = connect.getStmt().executeQuery( "SELECT SUM(salaire) AS total FROM infirmier WHERE code_service = '"+ tab_service_code[i]+"'");
             resultat5.next();
-            JLabel a = new JLabel(tab_service_nom[i]+" : " + resultat5.getInt("total") + "€"); //Nom service
-
-            salaire.add(a);
+            //JLabel a = new JLabel(tab_service_nom[i]+" : " + resultat5.getInt("total") + "€"); //Nom service
+            dataset.addValue(resultat5.getInt("total"), tab_service_nom[i], new Integer(i));
+            //salaire.add(a);
         }
-        droite_haut.add(salaire);
+        //droite.add(salaire);
 
-        JPanel patient = new JPanel();
-        patient.setLayout(new GridLayout(0,1));
+        //JPanel patient = new JPanel();
+        //patient.setLayout(new GridLayout(0,1));
         for(int i =0; i<nb_service; i++){
             ResultSet resultat6 = connect.getStmt().executeQuery( "SELECT COUNT(*) AS total FROM hospitalisation WHERE code_service = '"+ tab_service_code[i]+"'");
             resultat6.next();
-            JLabel a = new JLabel(tab_service_nom[i]+" : " + resultat6.getInt("total")); //Nom service
-
-            patient.add(a);
+            //JLabel a = new JLabel(tab_service_nom[i]+" : " + resultat6.getInt("total")); //Nom service
+            pieDataset.setValue(tab_service_nom[i], resultat6.getInt("total"));
+            //patient.add(a);
         }
-        gauche.add(patient);
+        //gauche.add(patient);
+
+
+        final JFreeChart pieChart = ChartFactory.createPieChart("Nombre de patients par service", pieDataset, true, false, false);
+        final ChartPanel cPanel = new ChartPanel(pieChart);
+        final JFreeChart barChart = ChartFactory.createBarChart("Masse salariale", "Service", "€", dataset, PlotOrientation.VERTICAL, true, true, false);
+        final ChartPanel barPanel = new ChartPanel(barChart);
+
+        gauche.add(cPanel);
+        droite.add(barPanel);
 
     }
 
