@@ -33,11 +33,6 @@ public class displaySQLQuery extends JFrame {
 
         this.add(bravo);
 
-<<<<<<< HEAD
-
-
-=======
->>>>>>> fa5596047fd1fc590998815eaca7c048dc349491
         DefaultTableModel model = new DefaultTableModel();
         JTable tableRes = new JTable(model);
 
@@ -57,20 +52,13 @@ public class displaySQLQuery extends JFrame {
         maTable.setSize(640,350);
         this.add(new JScrollPane(maTable));
 */
-<<<<<<< HEAD
 
-=======
->>>>>>> fa5596047fd1fc590998815eaca7c048dc349491
         maTable = connexion.readDTB(table, colonne, nbElem, true);
         JScrollPane scrollPane = new JScrollPane(maTable);
         scrollPane.setLocation(80,130);
         scrollPane.setSize(640,350);
         this.add(scrollPane);
 
-<<<<<<< HEAD
-
-=======
->>>>>>> fa5596047fd1fc590998815eaca7c048dc349491
         this.add(image);
         image.setVisible(false);
 
