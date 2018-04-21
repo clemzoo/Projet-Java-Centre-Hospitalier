@@ -34,7 +34,7 @@ public class Connexion extends JFrame{
     private ResultSetMetaData rsetMeta;
     private boolean coco;
     private CheckboxGroup values;
-    private String [] myColomuns, nameOfColonnes, nameOfTables;
+    private String [] myColomuns, nameOfColonnes, nameOfTables, specificElem;
     private int i;
     private JTable myResults;
 
@@ -400,14 +400,50 @@ public class Connexion extends JFrame{
     public void ajoutDTB(String Tab, String Colonnes, String Ajout){
         try {
             /* Exécution d'une requête de lecture */
-            //stmt.executeUpdate("INSERT INTO " +  Tab + "(" + Colonnes + ") VALUES ('clem', '123');");
-            stmt.executeUpdate("INSERT INTO docteur(specialite, numero ) VALUES ('123', '123');");
+            stmt.executeUpdate("INSERT INTO " +  Tab + "(" + Colonnes + ") VALUES (" + Ajout + ");");
+            //stmt.executeUpdate("INSERT INTO docteur VALUES ('1','Orthopediste');");
+            //stmt.executeUpdate("INSERT INTO employe (numero, nom, prenom, adresse, tel) VALUES ('1','Clem','clem','ici','06 89 13 52 17');");
+
 
 
         } catch (Exception  ex){
             System.out.println(ex.getMessage());
         }
     }
+<<<<<<< HEAD
+/*
+    public String [] getSpecificElem (String colonne, String table) {
+        try {
+           // /* Exécution d'une requête de lecture
+            ResultSet resultat = stmt.executeQuery("SELECT " + colonne + " FROM " + table + ";");
+
+            int nbColonnes=0;
+            int i=0;
+
+            while ( resultat.next() ) {
+                nbColonnes++;
+            }
+
+            specificElem = new String[nbColonnes];
+
+            while (resultat.previous()) {
+                for (int j = 0; j<nbColonnes; j++){
+                    if(specificElem[j].contains(resultat.getString(1))){
+                    } else {
+                        specificElem[i] = resultat.getString(1);
+                    }
+                }
+
+                i++;
+            }
+        } catch (Exception ex) {
+            System.out.println(ex.getMessage());
+        }
+        return specificElem;
+    }
+*/
+
+=======
 
     public void rechercheDTB(String lol) {
         try {
@@ -424,4 +460,5 @@ public class Connexion extends JFrame{
     public Statement getStmt(){
         return stmt;
     }
+>>>>>>> e11ac802daa848c98d851c045ec1e93d3410761b
 }
