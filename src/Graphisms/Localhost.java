@@ -2,6 +2,7 @@ package Graphisms;
 
 import ActionTypes.BrowseElements;
 import Main.Connexion;
+import Reporting.Statistique;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -125,6 +126,7 @@ public class Localhost extends Graphisme {
                         bienOuej.setCheckbox(connectSQL);
 
                         */
+                        Statistique stat = new Statistique(connectSQL);
                     }
                 }
                 catch (Exception  ex){
@@ -138,7 +140,7 @@ public class Localhost extends Graphisme {
             public void actionPerformed(ActionEvent e) {
                 DBNAME = "hopital";//textDB.getText();
                 DBUSER = "root";//textuserDB.getText();
-                DBPW = "root" ;//new String(textpwDB.getPassword());
+                DBPW = new String(textpwDB.getPassword());
 
                 new ConnexionThread().start();
             }

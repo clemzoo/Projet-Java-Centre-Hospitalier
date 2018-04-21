@@ -33,7 +33,7 @@ public class Graphisme extends JFrame {
 
         welcomeL2 = new JLabel();
         welcomeL2.setLocation(260,80);
-        welcomeL2.setText("Veuilliez choisir le type de connexion souhaitée :");
+        welcomeL2.setText("Veuillez choisir le type de connexion souhaitée :");
         welcomeL2.setSize(500,20);
 
         buttonSSH = new JButton();

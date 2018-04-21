@@ -2,7 +2,8 @@ package Main;
 
 import Console.SSHConsole;
 import Console.localhostConsole;
-import Graphisms.Graphisme;
+import Graphisms.*;
+import Reporting.*;
 
 import javax.swing.*;
 import java.util.Scanner;
@@ -80,11 +81,14 @@ public class Main {
                     break;
 
                 case '3': // Afficher le menu en Graphique
-                    mainWindow = new Graphisme (); // instancier graphismes
+                    mainWindow = new Graphisme (); // instancier graphisme
                     mainWindow.afficherMenu(true);
-                    mainWindow.choixMenu();
-                    mainWindow.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+                    //TypeRequete lol = new TypeRequete();
+                    //lol.afficher(true);
 
+                    mainWindow.choixMenu();
+
+                    mainWindow.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
                     run =false;
                     break;
 
