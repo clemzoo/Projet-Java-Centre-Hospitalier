@@ -66,8 +66,8 @@ public class Connexion extends JFrame{
         Class.forName("com.mysql.jdbc.Driver");
 
         // url de connexion "jdbc:mysql://localhost:3305/usernameECE"
-       String urlDatabase = "jdbc:mysql://localhost/" + nameDatabase;
-       //String urlDatabase = "jdbc:mysql://127.0.0.1:8889/" + nameDatabase;
+       //String urlDatabase = "jdbc:mysql://localhost/" + nameDatabase;
+       String urlDatabase = "jdbc:mysql://127.0.0.1:8889/" + nameDatabase;
 
         //création d'une connexion JDBC à la base
         conn = DriverManager.getConnection(urlDatabase, loginDatabase, passwordDatabase);
@@ -301,11 +301,11 @@ public class Connexion extends JFrame{
 
         try {
             /* Exécution d'une requête de lecture */
-           ResultSet resultat = stmt.executeQuery( "SELECT " +  colonne + " FROM " + table +";");
+            ResultSet resultat = stmt.executeQuery( "SELECT " +  colonne + " FROM " + table +";");
 
-           nameOfColonnes = colonne.split(",");
+            nameOfColonnes = colonne.split(",");
 
-           /* Récupération des données du résultat de la requête de lecture */
+            /* Récupération des données du résultat de la requête de lecture */
             int nbRes = 1;
 
             if(graphismes) {
@@ -323,7 +323,7 @@ public class Connexion extends JFrame{
                 for (int i = 1; i <= nbElem; i++){
                     System.out.println(nameOfColonnes[i-1].trim() + " : " + resultat.getString(i));
 
-                    }
+                }
 
                 System.out.println("\n");
 
@@ -410,7 +410,11 @@ public class Connexion extends JFrame{
             System.out.println(ex.getMessage());
         }
     }
+<<<<<<< HEAD
 
+=======
+//<<<<<<< HEAD
+>>>>>>> a80ea67b0ea89b32f9f80b00154132bf85ef6285
 /*
     public String [] getSpecificElem (String colonne, String table) {
         try {
@@ -443,7 +447,11 @@ public class Connexion extends JFrame{
     }
 */
 
+<<<<<<< HEAD
 
+=======
+//=======
+>>>>>>> a80ea67b0ea89b32f9f80b00154132bf85ef6285
 
     public void rechercheDTB(String lol) {
         try {
@@ -460,5 +468,9 @@ public class Connexion extends JFrame{
     public Statement getStmt(){
         return stmt;
     }
+<<<<<<< HEAD
 
+=======
+//>>>>>>> e11ac802daa848c98d851c045ec1e93d3410761b
+>>>>>>> a80ea67b0ea89b32f9f80b00154132bf85ef6285
 }
