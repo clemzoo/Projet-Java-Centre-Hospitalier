@@ -410,7 +410,7 @@ public class Connexion extends JFrame{
             System.out.println(ex.getMessage());
         }
     }
-<<<<<<< HEAD
+
 /*
     public String [] getSpecificElem (String colonne, String table) {
         try {
@@ -443,7 +443,7 @@ public class Connexion extends JFrame{
     }
 */
 
-=======
+
 
     public void rechercheDTB(String lol) {
         try {
@@ -460,5 +460,5 @@ public class Connexion extends JFrame{
     public Statement getStmt(){
         return stmt;
     }
->>>>>>> e11ac802daa848c98d851c045ec1e93d3410761b
+
 }
