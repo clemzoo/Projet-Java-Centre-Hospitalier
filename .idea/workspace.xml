@@ -3,30 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="ba29c177-4737-433b-baaf-dcb87f448535" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Projet-Java-Centre-Hospitalier/ActionTypes/BrowseElements$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Projet-Java-Centre-Hospitalier/ActionTypes/BrowseElements$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Projet-Java-Centre-Hospitalier/ActionTypes/BrowseElements$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Projet-Java-Centre-Hospitalier/ActionTypes/BrowseElements$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Projet-Java-Centre-Hospitalier/ActionTypes/BrowseElements.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Projet-Java-Centre-Hospitalier/ActionTypes/BrowseElements.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Projet-Java-Centre-Hospitalier/ActionTypes/DeleteElements.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Projet-Java-Centre-Hospitalier/ActionTypes/DeleteElements.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Projet-Java-Centre-Hospitalier/ActionTypes/SearchElements$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Projet-Java-Centre-Hospitalier/ActionTypes/SearchElements$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Projet-Java-Centre-Hospitalier/ActionTypes/SearchElements$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Projet-Java-Centre-Hospitalier/ActionTypes/SearchElements$2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Projet-Java-Centre-Hospitalier/ActionTypes/SearchElements$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Projet-Java-Centre-Hospitalier/ActionTypes/SearchElements$3.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Projet-Java-Centre-Hospitalier/ActionTypes/SearchElements.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Projet-Java-Centre-Hospitalier/ActionTypes/SearchElements.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Projet-Java-Centre-Hospitalier/Background/SSHTunnel.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Projet-Java-Centre-Hospitalier/Background/SSHTunnel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Projet-Java-Centre-Hospitalier/Console/SSHConsole.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Projet-Java-Centre-Hospitalier/Console/SSHConsole.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Projet-Java-Centre-Hospitalier/Console/localhostConsole.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Projet-Java-Centre-Hospitalier/Console/localhostConsole.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Projet-Java-Centre-Hospitalier/Graphisms/Localhost$1ConnexionThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Projet-Java-Centre-Hospitalier/Graphisms/Localhost$1ConnexionThread.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Projet-Java-Centre-Hospitalier/Graphisms/SSH$1ConnexionThread.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Projet-Java-Centre-Hospitalier/Graphisms/SSH$1ConnexionThread.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Projet-Java-Centre-Hospitalier/Graphisms/TypeRequete$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Projet-Java-Centre-Hospitalier/Graphisms/TypeRequete$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Projet-Java-Centre-Hospitalier/Graphisms/TypeRequete$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Projet-Java-Centre-Hospitalier/Graphisms/TypeRequete$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Projet-Java-Centre-Hospitalier/Graphisms/TypeRequete.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Projet-Java-Centre-Hospitalier/Graphisms/TypeRequete.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Projet-Java-Centre-Hospitalier/Main/Connexion.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Projet-Java-Centre-Hospitalier/Main/Connexion.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Projet-Java-Centre-Hospitalier/Main/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Projet-Java-Centre-Hospitalier/Main/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Projet-Java-Centre-Hospitalier/Reporting/Statistique.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Projet-Java-Centre-Hospitalier/Reporting/Statistique.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ActionTypes/DeleteElements.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ActionTypes/DeleteElements.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ActionTypes/SearchElements.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ActionTypes/SearchElements.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Graphisms/TypeRequete.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Graphisms/TypeRequete.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main/Connexion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/Connexion.java" afterDir="false" />
     </list>
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -86,11 +68,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BrowseElements.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="BrowseElements.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ActionTypes/BrowseElements.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="54">
-              <caret line="141" column="36" selection-start-line="141" selection-start-column="36" selection-end-line="141" selection-end-column="36" />
+            <state relative-caret-position="51">
+              <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
             </state>
           </provider>
         </entry>
@@ -109,11 +91,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SearchElements.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SearchElements.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ActionTypes/SearchElements.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1411">
-              <caret line="83" column="15" selection-start-line="83" selection-start-column="15" selection-end-line="83" selection-end-column="15" />
+              <caret line="83" selection-start-line="83" selection-end-line="83" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#3164#3165#0" expanded="true" />
@@ -127,7 +109,7 @@
         <entry file="file://$PROJECT_DIR$/src/Main/Connexion.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="171">
-              <caret line="450" selection-start-line="450" selection-end-line="450" />
+              <caret line="450" lean-forward="true" selection-start-line="450" selection-end-line="450" />
               <folding>
                 <element signature="e#3510#3511#0" expanded="true" />
                 <element signature="e#3611#3612#0" expanded="true" />
@@ -341,7 +323,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8413000" />
+    <option name="totallyTimeSpent" value="9682000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -357,11 +339,11 @@
       <window_info anchor="right" id="Maven Projects" />
       <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.20913108" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.20913108" />
       <window_info anchor="bottom" id="Terminal" />
       <window_info id="Capture Tool" />
       <window_info id="Designer" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13624161" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13624161" />
       <window_info anchor="right" id="Database" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -755,13 +737,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Graphisms/TypeRequete.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="319">
-          <caret line="129" column="40" selection-start-line="129" selection-start-column="40" selection-end-line="129" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Main/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="217">
@@ -773,13 +748,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ActionTypes/BrowseElements.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="54">
-          <caret line="141" column="36" selection-start-line="141" selection-start-column="36" selection-end-line="141" selection-end-column="36" />
         </state>
       </provider>
     </entry>
@@ -807,10 +775,29 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/ActionTypes/SearchElements.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1411">
+          <caret line="83" selection-start-line="83" selection-end-line="83" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3164#3165#0" expanded="true" />
+            <element signature="e#3248#3249#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Graphisms/TypeRequete.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="319">
+          <caret line="129" column="40" selection-start-line="129" selection-start-column="40" selection-end-line="129" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Main/Connexion.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
-          <caret line="450" selection-start-line="450" selection-end-line="450" />
+          <caret line="450" lean-forward="true" selection-start-line="450" selection-end-line="450" />
           <folding>
             <element signature="e#3510#3511#0" expanded="true" />
             <element signature="e#3611#3612#0" expanded="true" />
@@ -826,15 +813,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ActionTypes/SearchElements.java">
+    <entry file="file://$PROJECT_DIR$/src/ActionTypes/BrowseElements.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1411">
-          <caret line="83" column="15" selection-start-line="83" selection-start-column="15" selection-end-line="83" selection-end-column="15" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3164#3165#0" expanded="true" />
-            <element signature="e#3248#3249#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="51">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
         </state>
       </provider>
     </entry>
