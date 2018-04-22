@@ -11,10 +11,11 @@ public class AddElements extends JFrame {
 
         private final JButton valider, annuler;
         private JPanel panSuccess;
-        private JLabel bravo,image, ajoutSucces, metier, doc, inf;
+        private JLabel bravo,image, ajoutSucces, metier, doc, inf, rot, sal;
         private JComboBox chooseTab, code_service;
         private JLabel [] chooseColonne, chooseColonneOld;
-        private JTextField [] newEl, oldEl ;
+        private JTextField [] newEl, oldEl;
+        private JTextField docteur, infi, rota, sala;
         private JRadioButton [] profess;
         private String [] myColumns , tab;
         private String choiceTab, finalColonne, colonne;
@@ -122,8 +123,10 @@ public class AddElements extends JFrame {
 
                     connexion.ajoutDTBsimple(choiceTab, colonne, finalColonne);
 
-                    if(choiceTab.equals("service"))
+                    if(choiceTab.equals("service")){
                         panSuccess = succesfullConnexion (true, true, true,true,false,false,false);
+
+                    }
                     if(choiceTab.equals("chambre"))
                         panSuccess = succesfullConnexion (true, true, true,false,true,false,false);
                     if(choiceTab.equals("employe"))
@@ -143,54 +146,11 @@ public class AddElements extends JFrame {
 
         try {
 
-            profess[0].addActionListener(new ActionListener() {
-                @Override
-                public void actionPerformed(ActionEvent e) {
-                    try {
 
-                        if (buttonGroup.isSelected(profess[0].getModel())) {
-                            doc = new JLabel("spécialité :");
-                            doc.setLocation(550, 300);
-                            doc.setSize(100, 35);
-                            doc.setVisible(true);
-                            panSuccess.add(doc);
-                            panSuccess.setVisible(true);
-                            panSuccess.revalidate();
-                            panSuccess.repaint();
-                        }
+        } catch (Exception ex) {
 
-                    } catch (Exception ex) {
-
-                        System.out.println(ex.getMessage());
-
-                    }
-                }
-            });
-
-        profess[1].addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                try {
-
-                    if (profess[1].isSelected()) {
-
-                        inf = new JLabel("spécialité :");
-                        inf.setLocation(400, 300);
-                        inf.setSize(100, 35);
-                        inf.setVisible(true);
-                        panSuccess.add(inf);
-                        panSuccess.repaint();
-                    }
-                } catch (Exception ex) {
-
-                    System.out.println(ex.getMessage());
-                }
-            }
-        });
-    } catch (Exception ex) {
-
-        System.out.println(ex.getMessage());
-    }
+            System.out.println(ex.getMessage());
+        }
 }
 
         private void afficherColonnes() {
@@ -208,6 +168,19 @@ public class AddElements extends JFrame {
 
         this.add(bravo);
         this.add(chooseTab);
+
+            try {
+                inf.setVisible(false);
+                infi.setVisible(false);
+                rot.setVisible(false);
+                rota.setVisible(false);
+                sal.setVisible(false);
+                sala.setVisible(false);
+                docteur.setVisible(false);
+                doc.setVisible(false);
+            } catch (Exception e1) {
+                System.out.println(e1);
+            }
 
         if(oldEmp){
             profess[0].setVisible(false);
@@ -278,12 +251,120 @@ public class AddElements extends JFrame {
 
             profess = new JRadioButton[2];
 
-            profess[0] = new JRadioButton ("docteur",true);
+            profess[0] = new JRadioButton ("docteur",false);
             profess[1] = new JRadioButton ("infirmier",false);
             profess[0].setLocation(190,365);
             profess[0].setSize(90,35);
             profess[1].setLocation(190+90,365);
             profess[1].setSize(90,35);
+////
+            profess[0].addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent e) {
+                    try {
+
+                        if (profess[0].isSelected()) {
+
+                            try {
+                                inf.setVisible(false);
+                                infi.setVisible(false);
+                                rot.setVisible(false);
+                                rota.setVisible(false);
+                                sal.setVisible(false);
+                                sala.setVisible(false);
+                            } catch (Exception e1) {
+                                System.out.println(e1);
+                            }
+
+                            doc = new JLabel("spécialité :");
+                            doc.setLocation(425, 258);
+                            doc.setSize(100, 35);
+
+                            docteur = new JTextField();
+                            docteur.setLocation(525, 258);
+                            docteur.setSize(180, 35);
+
+                            doc.setVisible(true);
+                            docteur.setVisible(true);
+                            image.setVisible(false);
+                            add(doc);
+                            add(docteur);
+                            add(image);
+
+                            revalidate();
+                            repaint();
+                        }
+
+
+                    } catch (Exception ex) {
+
+                        System.out.println(ex.getMessage());
+
+                    }
+                }
+            });
+
+            profess[1].addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent e) {
+                    try {
+
+                        if (profess[1].isSelected()) {
+
+                            try {
+                                docteur.setVisible(false);
+                                doc.setVisible(false);
+                            } catch (Exception e1) {
+                                System.out.println(e1);
+                            }
+
+                            inf = new JLabel("code du service :");
+                            inf.setLocation(425, 223);
+                            inf.setSize(120, 35);
+                            inf.setVisible(true);
+                            infi = new JTextField();
+                            infi.setLocation(525 + 15, 223);
+                            infi.setSize(180, 35);
+                            infi.setVisible(true);
+
+                            rot = new JLabel("rotation :");
+                            rot.setLocation(425, 223 + 35);
+                            rot.setSize(100, 35);
+                            rot.setVisible(true);
+                            rota = new JTextField();
+                            rota.setLocation(525 + 15, 223 + 35);
+                            rota.setSize(180, 35);
+                            rota.setVisible(true);
+
+                            sal = new JLabel("salaire :");
+                            sal.setLocation(425, 223 + 70);
+                            sal.setSize(100, 35);
+                            sal.setVisible(true);
+                            sala = new JTextField();
+                            sala.setLocation(525 + 15, 223 + 70);
+                            sala.setSize(180, 35);
+                            sala.setVisible(true);
+
+                            image.setVisible(false);
+                            add(inf);
+                            add(infi);
+                            add(rot);
+                            add(rota);
+                            add(sal);
+                            add(sala);
+                            add(image);
+
+                            revalidate();
+                            repaint();
+                        }
+                    } catch (Exception ex) {
+
+                        System.out.println(ex.getMessage());
+                    }
+                }
+            });
+
+///////////////////
 
             buttonGroup = new ButtonGroup();
 

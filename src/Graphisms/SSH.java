@@ -2,6 +2,7 @@ package Graphisms;
 
 import ActionTypes.BrowseElements;
 import Main.Connexion;
+import Main.Main;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -158,6 +159,7 @@ public class SSH extends JFrame {
         annuler.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                Main.mainWindow.afficherMenu(true);
 
                 panSSH = connectionSSHGraphique(false);
             }

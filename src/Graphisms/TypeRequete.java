@@ -5,6 +5,7 @@ import ActionTypes.BrowseElements;
 import ActionTypes.DeleteElements;
 import ActionTypes.SearchElements;
 import Main.Connexion;
+import Main.Main;
 import Reporting.Statistique;
 
 import javax.swing.*;
@@ -147,6 +148,15 @@ public class TypeRequete extends JFrame{
                 chercher = new SearchElements(connectMySQL);
                 panel = afficher(false);
                 chercher.setCheckbox(connectMySQL);
+            }
+        });
+
+        annuler.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                afficher(false);
+                Main.mainWindow.afficherMenu(true);
+
             }
         });
     }
