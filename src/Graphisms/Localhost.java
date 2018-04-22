@@ -29,7 +29,7 @@ public class Localhost extends Graphisme {
         setLocation(425, 200);
         panLocalhost = new JPanel(); // instancier le panneau
 
-        image = new JLabel(new ImageIcon("hopital.jpg"));
+        image = new JLabel(new ImageIcon("connexion.jpg"));
 
         //Instanciation des JLabel
         nomDatabase = new JLabel();
@@ -103,7 +103,7 @@ public class Localhost extends Graphisme {
         this.add(annuler);
 
         this.add(image);
-        image.setVisible(false);
+        image.setVisible(true);
 
         this.setVisible(onAfficheouPas);
         repaint();

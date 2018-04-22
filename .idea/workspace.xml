@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="1eda5664-1c09-4e86-a2d9-99924282b58c" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Projet-Java-Centre-Hospitalier/ActionTypes/AddElements$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Projet-Java-Centre-Hospitalier/ActionTypes/AddElements$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Projet-Java-Centre-Hospitalier/ActionTypes/AddElements$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Projet-Java-Centre-Hospitalier/ActionTypes/AddElements$2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Projet-Java-Centre-Hospitalier/ActionTypes/AddElements$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Projet-Java-Centre-Hospitalier/ActionTypes/AddElements$3.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Projet-Java-Centre-Hospitalier/ActionTypes/AddElements$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Projet-Java-Centre-Hospitalier/ActionTypes/AddElements$4.class" afterDir="false" />
@@ -11,11 +10,23 @@
       <change beforePath="$PROJECT_DIR$/out/production/Projet-Java-Centre-Hospitalier/ActionTypes/AddElements$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Projet-Java-Centre-Hospitalier/ActionTypes/AddElements$6.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Projet-Java-Centre-Hospitalier/ActionTypes/AddElements$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Projet-Java-Centre-Hospitalier/ActionTypes/AddElements$7.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Projet-Java-Centre-Hospitalier/ActionTypes/AddElements.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Projet-Java-Centre-Hospitalier/ActionTypes/AddElements.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Projet-Java-Centre-Hospitalier/ActionTypes/BrowseElements$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Projet-Java-Centre-Hospitalier/ActionTypes/BrowseElements$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Projet-Java-Centre-Hospitalier/ActionTypes/BrowseElements$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Projet-Java-Centre-Hospitalier/ActionTypes/BrowseElements$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Projet-Java-Centre-Hospitalier/ActionTypes/BrowseElements$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Projet-Java-Centre-Hospitalier/ActionTypes/BrowseElements$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Projet-Java-Centre-Hospitalier/ActionTypes/BrowseElements.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Projet-Java-Centre-Hospitalier/ActionTypes/BrowseElements.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Projet-Java-Centre-Hospitalier/ActionTypes/DeleteElements$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Projet-Java-Centre-Hospitalier/ActionTypes/DeleteElements$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Projet-Java-Centre-Hospitalier/ActionTypes/DeleteElements$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Projet-Java-Centre-Hospitalier/ActionTypes/DeleteElements$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Projet-Java-Centre-Hospitalier/ActionTypes/DeleteElements$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Projet-Java-Centre-Hospitalier/ActionTypes/DeleteElements$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Projet-Java-Centre-Hospitalier/ActionTypes/DeleteElements.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Projet-Java-Centre-Hospitalier/ActionTypes/DeleteElements.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Projet-Java-Centre-Hospitalier/Graphisms/Graphisme$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Projet-Java-Centre-Hospitalier/Graphisms/Graphisme$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Projet-Java-Centre-Hospitalier/Graphisms/Graphisme$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Projet-Java-Centre-Hospitalier/Graphisms/Graphisme$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Projet-Java-Centre-Hospitalier/Graphisms/Graphisme.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Projet-Java-Centre-Hospitalier/Graphisms/Graphisme.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Projet-Java-Centre-Hospitalier/Main/Connexion.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Projet-Java-Centre-Hospitalier/Main/Connexion.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ActionTypes/AddElements.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ActionTypes/AddElements.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ActionTypes/BrowseElements.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ActionTypes/BrowseElements.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/ActionTypes/DeleteElements.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ActionTypes/DeleteElements.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main/Connexion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/Connexion.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Graphisms/Graphisme.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Graphisms/Graphisme.java" afterDir="false" />
     </list>
-    <ignored path="$PROJECT_DIR$/out/" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,7 +39,7 @@
         <entry file="file://$PROJECT_DIR$/src/Main/Connexion.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="288">
-              <caret line="470" column="4" lean-forward="true" selection-start-line="470" selection-start-column="4" selection-end-line="470" selection-end-column="4" />
+              <caret line="472" column="4" lean-forward="true" selection-start-line="472" selection-start-column="4" selection-end-line="472" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -42,11 +53,38 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DeleteElements.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="DeleteElements.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ActionTypes/DeleteElements.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="99" column="16" lean-forward="true" selection-start-line="99" selection-start-column="16" selection-end-line="99" selection-end-column="16" />
+            <state relative-caret-position="152">
+              <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AddElements.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ActionTypes/AddElements.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="39" lean-forward="true" selection-start-line="39" selection-end-line="39" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BrowseElements.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ActionTypes/BrowseElements.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="149" column="2" lean-forward="true" selection-start-line="149" selection-start-column="2" selection-end-line="149" selection-end-column="2" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Graphisme.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Graphisms/Graphisme.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="339">
+              <caret line="41" column="79" lean-forward="true" selection-start-line="41" selection-start-column="79" selection-end-line="41" selection-end-column="79" />
             </state>
           </provider>
         </entry>
@@ -59,8 +97,10 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Main/Connexion.java" />
         <option value="$PROJECT_DIR$/src/ActionTypes/DeleteElements.java" />
+        <option value="$PROJECT_DIR$/src/ActionTypes/AddElements.java" />
+        <option value="$PROJECT_DIR$/src/ActionTypes/BrowseElements.java" />
+        <option value="$PROJECT_DIR$/src/Graphisms/Graphisme.java" />
       </list>
     </option>
   </component>
@@ -104,6 +144,12 @@
               <item name="Projet-Java-Centre-Hospitalier" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Background" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Projet-Java-Centre-Hospitalier" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Projet-Java-Centre-Hospitalier" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Graphisms" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Projet-Java-Centre-Hospitalier" type="b2602c69:ProjectViewProjectNode" />
@@ -200,12 +246,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1524421788514</updated>
-      <workItem from="1524421800964" duration="3714000" />
+      <workItem from="1524421800964" duration="8707000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3714000" />
+    <option name="totallyTimeSpent" value="8707000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -251,7 +297,7 @@
     <entry file="file://$PROJECT_DIR$/src/Main/Connexion.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
-          <caret line="470" column="4" lean-forward="true" selection-start-line="470" selection-start-column="4" selection-end-line="470" selection-end-column="4" />
+          <caret line="472" column="4" lean-forward="true" selection-start-line="472" selection-start-column="4" selection-end-line="472" selection-end-column="4" />
         </state>
       </provider>
     </entry>
@@ -262,10 +308,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/ActionTypes/DeleteElements.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="99" column="16" lean-forward="true" selection-start-line="99" selection-start-column="16" selection-end-line="99" selection-end-column="16" />
+        <state relative-caret-position="152">
+          <caret line="33" lean-forward="true" selection-start-line="33" selection-end-line="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ActionTypes/BrowseElements.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="149" column="2" lean-forward="true" selection-start-line="149" selection-start-column="2" selection-end-line="149" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ActionTypes/AddElements.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="39" lean-forward="true" selection-start-line="39" selection-end-line="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Graphisms/Graphisme.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="339">
+          <caret line="41" column="79" lean-forward="true" selection-start-line="41" selection-start-column="79" selection-end-line="41" selection-end-column="79" />
         </state>
       </provider>
     </entry>

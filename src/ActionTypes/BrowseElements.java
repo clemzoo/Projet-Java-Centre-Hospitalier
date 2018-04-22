@@ -27,7 +27,7 @@ public class BrowseElements extends JFrame {
         setLocation(425, 200);
         panSuccess = new JPanel(); // instancier le panneau
 
-        image = new JLabel(new ImageIcon("hopital.jpg"));
+        image = new JLabel(new ImageIcon("consulter.jpg"));
 
         chooseTab = new JComboBox(connexion.getTablesNames());
         chooseTab.setLocation(270,130);
@@ -148,7 +148,7 @@ public class BrowseElements extends JFrame {
         this.add(annuler);
 
         this.add(image);
-        image.setVisible(false);
+        image.setVisible(true);
 
         this.setVisible(true);
 

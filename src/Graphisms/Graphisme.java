@@ -9,6 +9,7 @@ package Graphisms;
 import Main.Main;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -26,18 +27,22 @@ public class Graphisme extends JFrame {
         setSize(800, 600);
         setLocation(425, 200);
         pan = new JPanel(); // instancier le panneau
-        image = new JLabel(new ImageIcon("hopital.jpg"));
+        image = new JLabel(new ImageIcon("garde.jpg"));
+
 
         welcomeL1 = new JLabel();
-        welcomeL1.setLocation(200,60);
-        welcomeL1.setText("Bienvenue dans le système de gestion de votre Centre Hospitalier");
-        welcomeL1.setSize(500,20);
+        welcomeL1.setLocation(130,150);
+        welcomeL1.setText("Bienvenue dans la gestion de votre Centre Hospitalier");
+        welcomeL1.setSize(600,20);
+        welcomeL1.setForeground(Color.DARK_GRAY);
+        welcomeL1.setFont(new Font("Century",Font.PLAIN,18));
 
         welcomeL2 = new JLabel();
-        welcomeL2.setLocation(260,80);
+        welcomeL2.setLocation(130,430);
         welcomeL2.setText("Veuillez choisir le type de connexion souhaitée :");
-        welcomeL2.setSize(500,20);
-
+        welcomeL2.setSize(600,20);
+        welcomeL2.setForeground(Color.DARK_GRAY);
+        welcomeL2.setFont(new Font("Century",Font.PLAIN,24));
         buttonSSH = new JButton();
         buttonSSH.setLocation(250, 500);
         buttonSSH.setText("SSH");

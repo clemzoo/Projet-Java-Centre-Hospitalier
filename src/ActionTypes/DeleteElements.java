@@ -20,7 +20,11 @@ public class DeleteElements extends JFrame  {
     private String choiceTab, ok;
     private int oldLength = 0;
     private displaySQLQuery sql;
+
     private JLabel hola;
+
+    private JButton suppr;
+
 
     public DeleteElements(Connexion connexion){
         setTitle("Gestion d'un centre hospitalier");
@@ -28,7 +32,7 @@ public class DeleteElements extends JFrame  {
         setLocation(425, 200);
         panSuccess = new JPanel(); // instancier le panneau
 
-        image = new JLabel(new ImageIcon("hopital.jpg"));
+        image = new JLabel(new ImageIcon("ajouter.jpg"));
 
         chooseTab = new JComboBox(connexion.getTablesNames());
         chooseTab.setLocation(270,130);
@@ -108,10 +112,6 @@ public class DeleteElements extends JFrame  {
             }
         });
 
-
-
-
-
     }
 
 
@@ -148,7 +148,7 @@ public class DeleteElements extends JFrame  {
         this.add(annuler);
 
         this.add(image);
-        image.setVisible(false);
+        image.setVisible(true);
 
         this.setVisible(true);
 
