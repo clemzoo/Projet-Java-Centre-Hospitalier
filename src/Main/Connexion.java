@@ -256,9 +256,11 @@ public class Connexion extends JFrame{
 
             nameOfTables = new String[12];//jusqu'a 12 tables (arbitraire)
 
+            nameOfTables[0] = "None";
+
             while (resultat.next()) {
                 System.out.println(i + " " + resultat.getString(3));
-                nameOfTables[i-1] = resultat.getString(3);
+                nameOfTables[i] = resultat.getString(3);
                 i++;
             }
         } catch (SQLException e) {
@@ -400,18 +402,18 @@ public class Connexion extends JFrame{
     public void ajoutDTBsimple(String Tab, String Colonnes, String Ajout){
         try {
             /* Exécution d'une requête d'ajout */
-            stmt.executeUpdate("INSERT INTO " +  Tab + "(" + Colonnes + ") VALUES (" + Ajout + ");");
+            String query = "INSERT INTO " +  Tab + " "+ "(" + Colonnes + ") VALUES (" + Ajout + ");";
+            stmt.executeUpdate(query);
 
         } catch (Exception  ex){
             System.out.println(ex.getMessage());
         }
     }
 
-    public void ajoutDTBmultiple(String TabMain, String ColonnesMain, String AjoutMain,String TabSecond, String ColonnesSecond, String AjoutSecond){
+    public void ajoutDTBALaMano(String requete){
         try {
             /* Exécution d'une requête d'ajout */
-            stmt.executeUpdate("INSERT INTO " +  TabMain + "(" + ColonnesMain + ") VALUES (" + AjoutMain + ");");
-            stmt.executeUpdate("INSERT INTO " +  TabSecond + "(" + ColonnesSecond + ") VALUES (" + AjoutSecond + ");");
+            stmt.executeUpdate(requete);
 
         } catch (Exception  ex){
             System.out.println(ex.getMessage());
