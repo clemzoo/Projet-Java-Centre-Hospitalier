@@ -410,11 +410,6 @@ public class Connexion extends JFrame{
             System.out.println(ex.getMessage());
         }
     }
-<<<<<<< HEAD
-
-=======
-//<<<<<<< HEAD
->>>>>>> a80ea67b0ea89b32f9f80b00154132bf85ef6285
 /*
     public String [] getSpecificElem (String colonne, String table) {
         try {
@@ -447,12 +442,6 @@ public class Connexion extends JFrame{
     }
 */
 
-<<<<<<< HEAD
-
-=======
-//=======
->>>>>>> a80ea67b0ea89b32f9f80b00154132bf85ef6285
-
     public void rechercheDTB(String lol) {
         try {
             /* Exécution d'une requête de lecture */
@@ -468,9 +457,5 @@ public class Connexion extends JFrame{
     public Statement getStmt(){
         return stmt;
     }
-<<<<<<< HEAD
 
-=======
-//>>>>>>> e11ac802daa848c98d851c045ec1e93d3410761b
->>>>>>> a80ea67b0ea89b32f9f80b00154132bf85ef6285
 }
