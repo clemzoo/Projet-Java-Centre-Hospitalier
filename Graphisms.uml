@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>Graphisms</OriginalElement>
+  <nodes>
+    <node x="2048.5929783950614" y="4260.0">Graphisms.SSH</node>
+    <node x="263.0" y="1332.0">Console.localhostConsole</node>
+    <node x="2067.0" y="1981.0">ActionTypes.BrowseElements</node>
+    <node x="0.0" y="1409.0">Console.SSHConsole</node>
+    <node x="505.0128858024691" y="477.0">Main.Connexion</node>
+    <node x="1156.0" y="1728.0">ActionTypes.AddElements</node>
+    <node x="775.0" y="1926.0">ActionTypes.SearchElements</node>
+    <node x="2093.0" y="3705.0">Graphisms.Graphisme</node>
+    <node x="2022.125" y="3184.0">Graphisms.Localhost</node>
+    <node x="1736.0" y="1970.0">ActionTypes.DeleteElements</node>
+    <node x="1763.214197530864" y="1408.5">Graphisms.displaySQLQuery</node>
+    <node x="1064.339197530864" y="2729.0">Graphisms.TypeRequete</node>
+    <node x="989.8391975308641" y="4048.0">Main.Main</node>
+    <node x="515.0" y="1375.5">Reporting.Statistique</node>
+    <node x="552.5128858024691" y="0.0">Background.SSHTunnel</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="Graphisms.Localhost" target="Main.Main">
+      <point x="-119.625" y="235.5" />
+      <point x="2062.0" y="3680.0" />
+      <point x="2040.0804783950616" y="3680.0" />
+      <point x="2040.0804783950616" y="3998.0" />
+      <point x="1143.839197530864" y="3998.0" />
+      <point x="28.0" y="-81.0" />
+    </edge>
+    <edge source="Graphisms.TypeRequete" target="Main.Connexion">
+      <point x="-42.91666666666663" y="-202.5" />
+      <point x="1124.4225308641974" y="2679.0" />
+      <point x="764.5" y="2679.0" />
+      <point x="764.5" y="1312.0" />
+      <point x="749.0441358024691" y="1312.0" />
+      <point x="38.53125" y="367.5" />
+    </edge>
+    <edge source="ActionTypes.BrowseElements" target="Main.Connexion">
+      <point x="103.66666666666674" y="-202.5" />
+      <point x="2326.166666666667" y="1708.0" />
+      <point x="2244.538811728395" y="1708.0" />
+      <point x="2244.538811728395" y="1262.0" />
+      <point x="903.1691358024691" y="1262.0" />
+      <point x="192.65625" y="367.5" />
+    </edge>
+    <edge source="Console.localhostConsole" target="Main.Connexion">
+      <point x="-57.75" y="-158.0" />
+      <point x="320.75" y="1272.0" />
+      <point x="620.6066358024691" y="1272.0" />
+      <point x="-89.90625" y="367.5" />
+    </edge>
+    <edge source="ActionTypes.AddElements" target="Main.Connexion">
+      <point x="0.0" y="-455.5" />
+      <point x="1436.0" y="1668.0" />
+      <point x="1424.1795524691358" y="1668.0" />
+      <point x="1424.1795524691358" y="1292.0" />
+      <point x="826.1066358024691" y="1292.0" />
+      <point x="115.59375" y="367.5" />
+    </edge>
+    <edge source="ActionTypes.DeleteElements" target="Graphisms.displaySQLQuery">
+      <point x="-103.66666666666663" y="-213.5" />
+      <point x="1787.8333333333335" y="1698.0" />
+      <point x="1924.464197530864" y="1698.0" />
+      <point x="-32.25" y="81.5" />
+    </edge>
+    <edge source="ActionTypes.BrowseElements" target="Graphisms.displaySQLQuery">
+      <point x="-103.66666666666674" y="-202.5" />
+      <point x="2118.833333333333" y="1698.0" />
+      <point x="2053.464197530864" y="1698.0" />
+      <point x="96.75" y="81.5" />
+    </edge>
+    <edge source="Graphisms.TypeRequete" target="Reporting.Statistique">
+      <point x="-77.25000000000011" y="-202.5" />
+      <point x="1090.0891975308639" y="2699.0" />
+      <point x="629.0" y="2699.0" />
+      <point x="629.0" y="1708.0" />
+      <point x="574.75" y="1708.0" />
+      <point x="-59.75" y="114.5" />
+    </edge>
+    <edge source="Graphisms.Localhost" target="ActionTypes.BrowseElements">
+      <point x="79.75" y="-235.5" />
+      <point x="38.875" y="202.5" />
+    </edge>
+    <edge source="Main.Main" target="Main.Connexion">
+      <point x="-56.0" y="-81.0" />
+      <point x="1059.839197530864" y="4008.0" />
+      <point x="252.5" y="4008.0" />
+      <point x="252.5" y="1262.0" />
+      <point x="594.9191358024691" y="1262.0" />
+      <point x="-115.59375" y="367.5" />
+    </edge>
+    <edge source="Graphisms.Graphisme" target="Graphisms.Localhost">
+      <point x="0.0" y="-136.5" />
+      <point x="2201.0" y="3680.0" />
+      <point x="2221.5" y="3680.0" />
+      <point x="39.875" y="235.5" />
+    </edge>
+    <edge source="Graphisms.TypeRequete" target="ActionTypes.DeleteElements">
+      <point x="60.08333333333337" y="-202.5" />
+      <point x="1227.4225308641974" y="2689.0" />
+      <point x="1969.25" y="2689.0" />
+      <point x="77.75" y="213.5" />
+    </edge>
+    <edge source="ActionTypes.DeleteElements" target="Main.Connexion">
+      <point x="103.66666666666686" y="-213.5" />
+      <point x="1995.166666666667" y="1708.0" />
+      <point x="2160.714197530864" y="1708.0" />
+      <point x="2160.714197530864" y="1272.0" />
+      <point x="877.4816358024691" y="1272.0" />
+      <point x="166.96875" y="367.5" />
+    </edge>
+    <edge source="ActionTypes.AddElements" target="Graphisms.displaySQLQuery">
+      <point x="186.66666666666663" y="-455.5" />
+      <point x="1622.6666666666667" y="1688.0" />
+      <point x="1859.964197530864" y="1688.0" />
+      <point x="-96.75" y="81.5" />
+    </edge>
+    <edge source="Main.Main" target="Graphisms.Graphisme">
+      <point x="56.0" y="-81.0" />
+      <point x="1171.839197530864" y="4008.0" />
+      <point x="2114.6" y="4008.0" />
+      <point x="-86.40000000000009" y="136.5" />
+    </edge>
+    <edge source="Main.Main" target="Console.localhostConsole">
+      <point x="-28.0" y="-81.0" />
+      <point x="1087.839197530864" y="3998.0" />
+      <point x="378.5" y="3998.0" />
+      <point x="0.0" y="158.0" />
+    </edge>
+    <edge source="Graphisms.SSH" target="Main.Main">
+      <point x="-109.125" y="-257.5" />
+      <point x="2084.9679783950614" y="4240.0" />
+      <point x="1115.839197530864" y="4240.0" />
+      <point x="0.0" y="81.0" />
+    </edge>
+    <edge source="Main.Connexion" target="Background.SSHTunnel">
+      <point x="102.75" y="-367.5" />
+      <point x="813.2628858024691" y="452.0" />
+      <point x="789.5128858024691" y="452.0" />
+      <point x="79.0" y="213.5" />
+    </edge>
+    <edge source="Graphisms.SSH" target="ActionTypes.BrowseElements">
+      <point x="109.125" y="-257.5" />
+      <point x="2303.2179783950614" y="4240.0" />
+      <point x="2351.625" y="4240.0" />
+      <point x="2351.625" y="2709.0" />
+      <point x="2339.125" y="2709.0" />
+      <point x="116.625" y="202.5" />
+    </edge>
+    <edge source="Console.SSHConsole" target="Main.Connexion">
+      <point x="-57.75" y="-81.0" />
+      <point x="57.75" y="1232.0" />
+      <point x="517.8566358024691" y="1232.0" />
+      <point x="-192.65625" y="367.5" />
+    </edge>
+    <edge source="Graphisms.Localhost" target="Graphisms.TypeRequete">
+      <point x="-79.75" y="-235.5" />
+      <point x="2101.875" y="3159.0" />
+      <point x="1218.839197530864" y="3159.0" />
+      <point x="51.5" y="202.5" />
+    </edge>
+    <edge source="ActionTypes.SearchElements" target="Main.Connexion">
+      <point x="-90.25" y="-257.5" />
+      <point x="865.25" y="1312.0" />
+      <point x="774.7316358024691" y="1312.0" />
+      <point x="64.21875" y="367.5" />
+    </edge>
+    <edge source="Graphisms.TypeRequete" target="ActionTypes.AddElements">
+      <point x="25.75" y="-202.5" />
+      <point x="1193.089197530864" y="2669.0" />
+      <point x="1576.0" y="2669.0" />
+      <point x="140.0" y="455.5" />
+    </edge>
+    <edge source="Graphisms.Graphisme" target="Main.Main">
+      <point x="0.0" y="136.5" />
+      <point x="2201.0" y="4028.0" />
+      <point x="1227.839197530864" y="4028.0" />
+      <point x="112.0" y="-81.0" />
+    </edge>
+    <edge source="ActionTypes.SearchElements" target="Graphisms.displaySQLQuery">
+      <point x="90.25" y="-257.5" />
+      <point x="1045.75" y="1678.0" />
+      <point x="1795.464197530864" y="1678.0" />
+      <point x="-161.25" y="81.5" />
+    </edge>
+    <edge source="Main.Main" target="Console.SSHConsole">
+      <point x="-112.0" y="-81.0" />
+      <point x="1003.8391975308641" y="4028.0" />
+      <point x="115.5" y="4028.0" />
+      <point x="0.0" y="81.0" />
+    </edge>
+    <edge source="Graphisms.TypeRequete" target="ActionTypes.BrowseElements">
+      <point x="77.25" y="-202.5" />
+      <point x="1244.589197530864" y="2699.0" />
+      <point x="2105.875" y="2699.0" />
+      <point x="-116.625" y="202.5" />
+    </edge>
+    <edge source="Graphisms.Graphisme" target="Graphisms.SSH">
+      <point x="43.200000000000045" y="136.5" />
+      <point x="2244.2" y="4028.0" />
+      <point x="2250.3429783950614" y="4028.0" />
+      <point x="2250.3429783950614" y="4230.0" />
+      <point x="2157.7179783950614" y="4230.0" />
+      <point x="-36.375" y="-257.5" />
+    </edge>
+    <edge source="Graphisms.Localhost" target="Graphisms.Graphisme">
+      <point x="119.625" y="235.5" />
+      <point x="2301.25" y="3680.0" />
+      <point x="2273.0" y="3680.0" />
+      <point x="72.0" y="-136.5" />
+    </edge>
+    <edge source="Reporting.Statistique" target="Main.Connexion">
+      <point x="-59.75" y="-114.5" />
+      <point x="574.75" y="1302.0" />
+      <point x="697.6691358024691" y="1302.0" />
+      <point x="-12.84375" y="367.5" />
+    </edge>
+    <edge source="Graphisms.displaySQLQuery" target="Main.Connexion">
+      <point x="0.0" y="-81.5" />
+      <point x="1956.714197530864" y="1282.0" />
+      <point x="851.7941358024691" y="1282.0" />
+      <point x="141.28125" y="367.5" />
+    </edge>
+    <edge source="Graphisms.TypeRequete" target="Main.Main">
+      <point x="-51.5" y="202.5" />
+      <point x="0.0" y="-81.0" />
+    </edge>
+    <edge source="Graphisms.TypeRequete" target="ActionTypes.SearchElements">
+      <point x="-8.583333333333371" y="-202.5" />
+      <point x="1158.7558641975306" y="2659.0" />
+      <point x="1045.75" y="2659.0" />
+      <point x="90.25" y="257.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.8" x="481.40476190476176" y="950.5238095238096" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Constructors</Category>
+    <Category>Fields</Category>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
