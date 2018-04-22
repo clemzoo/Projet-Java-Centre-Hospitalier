@@ -17,7 +17,8 @@ public class DeleteElements extends JFrame {
     private String choiceTab, finalColonne;
     private int oldLength = 0;
     private displaySQLQuery sql;
-private JButton suppr;
+    private JButton suppr;
+
     public DeleteElements(Connexion connexion){
         setTitle("Gestion d'un centre hospitalier");
         setSize(800, 600);

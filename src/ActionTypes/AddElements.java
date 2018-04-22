@@ -11,14 +11,14 @@ public class AddElements extends JFrame {
 
         private final JButton valider, annuler;
         private JPanel panSuccess;
-        private JLabel bravo,image, ajoutSucces, metier, doc, inf, rot, sal, mala, chambr, li;
-        private JComboBox chooseTab, code_service;
+        private JLabel bravo,image, ajoutSucces, metier, doc, inf, rot, sal, mala, chambr, li, numdoc;
+        private JComboBox chooseTab;
         private JLabel [] chooseColonne, chooseColonneOld;
         private JTextField [] newEl, oldEl;
-        private JTextField docteur, infi, rota, sala, malad, chamb, lit;
+        private JTextField docteur, infi, rota, sala, malad, chamb, lit, code_service, numdocteur;
         private JRadioButton [] profess;
         private String [] myColumns , tab;
-        private String choiceTab, finalColonne, colonne;
+        private String choiceTab, finalColonne, colonne, sqlP2;
         private int oldLength = 0;
         private displaySQLQuery sql;
         private Connexion conne;
@@ -26,7 +26,7 @@ public class AddElements extends JFrame {
         private ButtonGroup buttonGroup;
         private JLabel etat;
         private JRadioButton[] eta;
-        private boolean oldMalade=false;
+        private boolean oldMalade=false, doctor=false, nurse=false, heald = false, hospitalized =false;
 
     public AddElements(Connexion connexion){
         setTitle("Gestion d'un centre hospitalier");
@@ -38,7 +38,7 @@ public class AddElements extends JFrame {
 
         image = new JLabel(new ImageIcon("hopital.jpg"));
 
-        tab = new String[] {"service", "chambre", "employe", "malade"};
+        tab = new String[] {"None","service", "chambre", "employe", "malade"};
 
         chooseTab = new JComboBox(tab);
         chooseTab.setLocation(270,130);
@@ -110,7 +110,7 @@ public class AddElements extends JFrame {
 
                 for (int i = 0; i<myColumns.length; i++){
                     if (newEl[i].getText() != "") {
-                        finalColonne += newEl[i].getText() + ", ";
+                        finalColonne += "'" + newEl[i].getText() + "', ";
                         colonne += chooseColonne[i].getText().substring(0, chooseColonne[i].getText().length()-2) + ", ";
 
                         nbElem++;
@@ -120,19 +120,37 @@ public class AddElements extends JFrame {
                 if(finalColonne != ""){
                     finalColonne = finalColonne.substring(0,finalColonne.length()-2);
                     colonne = colonne.substring(0,colonne.length()-2);
-
                     connexion.ajoutDTBsimple(choiceTab, colonne, finalColonne);
 
-                    if(choiceTab.equals("service")){
+                    if(choiceTab.equals("service"))
                         panSuccess = succesfullConnexion (true, true, true,true,false,false,false);
 
-                    }
                     if(choiceTab.equals("chambre"))
                         panSuccess = succesfullConnexion (true, true, true,false,true,false,false);
-                    if(choiceTab.equals("employe"))
-                        panSuccess = succesfullConnexion (true, true, true,false,false,true,false);
-                    if(choiceTab.equals("malade"))
+
+                    if(choiceTab.equals("employe")) {
+                        panSuccess = succesfullConnexion(true, true, true, false, false, true, false);
+                        if (doctor){
+                            sqlP2 = "INSERT INTO docteur VALUES ('" + newEl[4].getText() + "', '" + docteur.getText() + "');";
+                            connexion.ajoutDTBALaMano(sqlP2);
+                        }
+                        if (nurse){
+                            sqlP2 = "INSERT INTO infirmier VALUES ('" + newEl[4].getText() + "', '" + infi.getText()+"', '"+ rota.getText() + "', '" + sala.getText() + "');";
+                            connexion.ajoutDTBALaMano(sqlP2);
+                        }
+                    }
+
+                    if(choiceTab.equals("malade")){
                         panSuccess = succesfullConnexion (true, true, true,false,false,false,true);
+                        if (heald){
+                            sqlP2 = "INSERT INTO soigne VALUES ('" + numdocteur.getText() + "', '" + newEl[5].getText() + "');";
+                            connexion.ajoutDTBALaMano(sqlP2);
+                        }
+                        if (hospitalized){
+                            sqlP2 = "INSERT INTO hospitalisation VALUES ('" + newEl[5].getText() + "', '" + malad.getText()+"', '"+ chamb.getText() + "', '" + lit.getText() + "');";
+                            connexion.ajoutDTBALaMano(sqlP2);
+                        }
+                    }
                 }
             }
         });
@@ -169,18 +187,26 @@ public class AddElements extends JFrame {
         this.add(bravo);
         this.add(chooseTab);
 
-            try {
-                inf.setVisible(false);
-                infi.setVisible(false);
-                rot.setVisible(false);
-                rota.setVisible(false);
-                sal.setVisible(false);
-                sala.setVisible(false);
-                docteur.setVisible(false);
-                doc.setVisible(false);
-            } catch (Exception e1) {
-                System.out.println(e1);
-            }
+        try {
+            inf.setVisible(false);
+            infi.setVisible(false);
+            rot.setVisible(false);
+            rota.setVisible(false);
+            sal.setVisible(false);
+            sala.setVisible(false);
+            docteur.setVisible(false);
+            doc.setVisible(false);
+            mala.setVisible(false);
+            malad.setVisible(false);
+            chambr.setVisible(false);
+            chamb.setVisible(false);
+            li.setVisible(false);
+            lit.setVisible(false);
+            numdoc.setVisible(false);
+            numdocteur.setVisible(false);
+        } catch (Exception e1) {
+            System.out.println(e1);
+        }
 
         if(oldEmp){
             profess[0].setVisible(false);
@@ -231,7 +257,7 @@ public class AddElements extends JFrame {
         if (chambre){
 
             //code_service = new JComboBox(conne.getSpecificElem("code_service","chambre"));
-            code_service = new JComboBox(new String []{"CAR", "CHG", "REA"});
+            code_service = new JTextField();
 
             code_service.setLocation(190,295);
             code_service.setSize(180,35);
@@ -262,19 +288,19 @@ public class AddElements extends JFrame {
                 @Override
                 public void actionPerformed(ActionEvent e) {
                     try {
+                            nurse = false;
+                        try {
+                            inf.setVisible(false);
+                            infi.setVisible(false);
+                            rot.setVisible(false);
+                            rota.setVisible(false);
+                            sal.setVisible(false);
+                            sala.setVisible(false);
+                        } catch (Exception e1) {
+                            System.out.println(e1);
+                        }
 
                         if (profess[0].isSelected()) {
-
-                            try {
-                                inf.setVisible(false);
-                                infi.setVisible(false);
-                                rot.setVisible(false);
-                                rota.setVisible(false);
-                                sal.setVisible(false);
-                                sala.setVisible(false);
-                            } catch (Exception e1) {
-                                System.out.println(e1);
-                            }
 
                             doc = new JLabel("spécialité :");
                             doc.setLocation(425, 258);
@@ -293,6 +319,8 @@ public class AddElements extends JFrame {
 
                             revalidate();
                             repaint();
+
+                            doctor = true;
                         }
 
 
@@ -310,6 +338,7 @@ public class AddElements extends JFrame {
                     try {
 
                         if (profess[1].isSelected()) {
+                            doctor =false ;
 
                             try {
                                 docteur.setVisible(false);
@@ -356,6 +385,8 @@ public class AddElements extends JFrame {
 
                             revalidate();
                             repaint();
+
+                            nurse=true;
                         }
                     } catch (Exception ex) {
 
@@ -396,41 +427,45 @@ public class AddElements extends JFrame {
             eta[1].setLocation(190+90,400);
             eta[1].setSize(120,35);
 
-            eta[1].addActionListener(new ActionListener() {
+            eta[0].addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
                     try {
 
-                        if (eta[1].isSelected()) {
+                        hospitalized = false;
+
+                        if (eta[0].isSelected()) {
 
                             try {
-                                inf.setVisible(false);
-                                infi.setVisible(false);
-                                rot.setVisible(false);
-                                rota.setVisible(false);
-                                sal.setVisible(false);
-                                sala.setVisible(false);
+                                mala.setVisible(false);
+                                malad.setVisible(false);
+                                chambr.setVisible(false);
+                                chamb.setVisible(false);
+                                li.setVisible(false);
+                                lit.setVisible(false);
                             } catch (Exception e1) {
                                 System.out.println(e1);
                             }
 
-                            doc = new JLabel("spécialité :");
-                            doc.setLocation(425, 258);
-                            doc.setSize(100, 35);
+                            numdoc = new JLabel("numero docteur :");
+                            numdoc.setLocation(425, 258);
+                            numdoc.setSize(140, 35);
 
-                            docteur = new JTextField();
-                            docteur.setLocation(525, 258);
-                            docteur.setSize(180, 35);
+                            numdocteur = new JTextField();
+                            numdocteur.setLocation(525+40, 258);
+                            numdocteur.setSize(180, 35);
 
-                            doc.setVisible(true);
-                            docteur.setVisible(true);
+                            numdoc.setVisible(true);
+                            numdocteur.setVisible(true);
                             image.setVisible(false);
-                            add(doc);
-                            add(docteur);
+                            add(numdoc);
+                            add(numdocteur);
                             add(image);
 
                             revalidate();
                             repaint();
+
+                            heald =true;
                         }
 
 
@@ -442,16 +477,18 @@ public class AddElements extends JFrame {
                 }
             });
 
-            eta[0].addActionListener(new ActionListener() {
+            eta[1].addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
                     try {
 
-                        if (eta[0].isSelected()) {
+                        heald = false;
+
+                        if (eta[1].isSelected()) {
 
                             try {
-                                docteur.setVisible(false);
-                                doc.setVisible(false);
+                                numdoc.setVisible(false);
+                                numdocteur.setVisible(false);
                             } catch (Exception e1) {
                                 System.out.println(e1);
                             }
@@ -494,6 +531,8 @@ public class AddElements extends JFrame {
 
                             revalidate();
                             repaint();
+
+                            hospitalized = true;
                         }
                     } catch (Exception ex) {
 
@@ -515,7 +554,7 @@ public class AddElements extends JFrame {
             eta[1].setVisible(malade);
             etat.setVisible(malade);
 
-            oldMalade =true;
+            oldMalade = true;
         }
 
 
