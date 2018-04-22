@@ -23,6 +23,9 @@ public class AddElements extends JFrame {
         private Connexion conne;
         private boolean oldEmp=false, oldCham=false;
         private ButtonGroup buttonGroup;
+    private JLabel etat;
+    private JRadioButton[] eta;
+    private boolean oldMalade=false;
 
     public AddElements(Connexion connexion){
         setTitle("Gestion d'un centre hospitalier");
@@ -117,7 +120,7 @@ public class AddElements extends JFrame {
                     finalColonne = finalColonne.substring(0,finalColonne.length()-2);
                     colonne = colonne.substring(0,colonne.length()-2);
 
-                    connexion.ajoutDTB(choiceTab, colonne, finalColonne);
+                    connexion.ajoutDTBsimple(choiceTab, colonne, finalColonne);
 
                     if(choiceTab.equals("service"))
                         panSuccess = succesfullConnexion (true, true, true,true,false,false,false);
@@ -151,9 +154,9 @@ public class AddElements extends JFrame {
                             doc.setSize(100, 35);
                             doc.setVisible(true);
                             panSuccess.add(doc);
-                            panSuccess = panSuccess;
                             panSuccess.setVisible(true);
-                            repaint();
+                            panSuccess.revalidate();
+                            panSuccess.repaint();
                         }
 
                     } catch (Exception ex) {
@@ -210,6 +213,11 @@ public class AddElements extends JFrame {
             profess[0].setVisible(false);
             profess[1].setVisible(false);
             metier.setVisible(false);
+        }
+        if(oldMalade){
+            eta[0].setVisible(false);
+            eta[1].setVisible(false);
+            etat.setVisible(false);
         }
         if(oldCham){
             code_service.setVisible(false);
@@ -291,6 +299,36 @@ public class AddElements extends JFrame {
             metier.setVisible(employe);
 
             oldEmp =true;
+        }
+
+        if (malade){
+            etat = new JLabel("état :");
+            etat.setLocation(80,400);
+            etat.setSize(150,35);
+
+            eta = new JRadioButton[2];
+
+            eta[0] = new JRadioButton ("soigné",true);
+            eta[1] = new JRadioButton ("hospitalisé",false);
+            eta[0].setLocation(190,400);
+            eta[0].setSize(90,35);
+            eta[1].setLocation(190+90,400);
+            eta[1].setSize(120,35);
+
+            buttonGroup = new ButtonGroup();
+
+            buttonGroup.add(eta[0]);
+            buttonGroup.add(eta[1]);
+
+            this.add(etat);
+            this.add(eta[0]);
+            this.add(eta[1]);
+
+            eta[0].setVisible(malade);
+            eta[1].setVisible(malade);
+            etat.setVisible(malade);
+
+            oldMalade =true;
         }
 
 

@@ -23,7 +23,8 @@ public class Statistique extends JFrame {
     public Statistique(Connexion a) throws SQLException {
         connect = a;
         setTitle("Statistique de la BDD");
-        setSize(800,600);
+        setSize(700,900);
+        setLocation(425, 50);
 
         fen = new JPanel();
         bas = new JPanel();

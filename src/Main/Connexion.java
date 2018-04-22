@@ -66,8 +66,8 @@ public class Connexion extends JFrame{
         Class.forName("com.mysql.jdbc.Driver");
 
         // url de connexion "jdbc:mysql://localhost:3305/usernameECE"
-       String urlDatabase = "jdbc:mysql://localhost/" + nameDatabase;
-       //String urlDatabase = "jdbc:mysql://127.0.0.1:8889/" + nameDatabase;
+       //String urlDatabase = "jdbc:mysql://localhost/" + nameDatabase;
+       String urlDatabase = "jdbc:mysql://127.0.0.1:8889/" + nameDatabase;
 
         //création d'une connexion JDBC à la base
         conn = DriverManager.getConnection(urlDatabase, loginDatabase, passwordDatabase);
@@ -397,14 +397,21 @@ public class Connexion extends JFrame{
         return tableRes;
     }
 
-    public void ajoutDTB(String Tab, String Colonnes, String Ajout){
+    public void ajoutDTBsimple(String Tab, String Colonnes, String Ajout){
         try {
-            /* Exécution d'une requête de lecture */
+            /* Exécution d'une requête d'ajout */
             stmt.executeUpdate("INSERT INTO " +  Tab + "(" + Colonnes + ") VALUES (" + Ajout + ");");
-            //stmt.executeUpdate("INSERT INTO docteur VALUES ('1','Orthopediste');");
-            //stmt.executeUpdate("INSERT INTO employe (numero, nom, prenom, adresse, tel) VALUES ('1','Clem','clem','ici','06 89 13 52 17');");
 
+        } catch (Exception  ex){
+            System.out.println(ex.getMessage());
+        }
+    }
 
+    public void ajoutDTBmultiple(String TabMain, String ColonnesMain, String AjoutMain,String TabSecond, String ColonnesSecond, String AjoutSecond){
+        try {
+            /* Exécution d'une requête d'ajout */
+            stmt.executeUpdate("INSERT INTO " +  TabMain + "(" + ColonnesMain + ") VALUES (" + AjoutMain + ");");
+            stmt.executeUpdate("INSERT INTO " +  TabSecond + "(" + ColonnesSecond + ") VALUES (" + AjoutSecond + ");");
 
         } catch (Exception  ex){
             System.out.println(ex.getMessage());
@@ -442,7 +449,6 @@ public class Connexion extends JFrame{
         return specificElem;
     }
 */
-
 
     public void rechercheDTB(String lol) {
         try {
