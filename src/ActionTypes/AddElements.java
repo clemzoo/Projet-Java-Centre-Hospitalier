@@ -11,11 +11,11 @@ public class AddElements extends JFrame {
 
         private final JButton valider, annuler;
         private JPanel panSuccess;
-        private JLabel bravo,image, ajoutSucces, metier, doc, inf, rot, sal;
+        private JLabel bravo,image, ajoutSucces, metier, doc, inf, rot, sal, mala, chambr, li;
         private JComboBox chooseTab, code_service;
         private JLabel [] chooseColonne, chooseColonneOld;
         private JTextField [] newEl, oldEl;
-        private JTextField docteur, infi, rota, sala;
+        private JTextField docteur, infi, rota, sala, malad, chamb, lit;
         private JRadioButton [] profess;
         private String [] myColumns , tab;
         private String choiceTab, finalColonne, colonne;
@@ -24,9 +24,9 @@ public class AddElements extends JFrame {
         private Connexion conne;
         private boolean oldEmp=false, oldCham=false;
         private ButtonGroup buttonGroup;
-    private JLabel etat;
-    private JRadioButton[] eta;
-    private boolean oldMalade=false;
+        private JLabel etat;
+        private JRadioButton[] eta;
+        private boolean oldMalade=false;
 
     public AddElements(Connexion connexion){
         setTitle("Gestion d'un centre hospitalier");
@@ -389,12 +389,118 @@ public class AddElements extends JFrame {
 
             eta = new JRadioButton[2];
 
-            eta[0] = new JRadioButton ("soigné",true);
+            eta[0] = new JRadioButton ("soigné",false);
             eta[1] = new JRadioButton ("hospitalisé",false);
             eta[0].setLocation(190,400);
             eta[0].setSize(90,35);
             eta[1].setLocation(190+90,400);
             eta[1].setSize(120,35);
+
+            eta[1].addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent e) {
+                    try {
+
+                        if (eta[1].isSelected()) {
+
+                            try {
+                                inf.setVisible(false);
+                                infi.setVisible(false);
+                                rot.setVisible(false);
+                                rota.setVisible(false);
+                                sal.setVisible(false);
+                                sala.setVisible(false);
+                            } catch (Exception e1) {
+                                System.out.println(e1);
+                            }
+
+                            doc = new JLabel("spécialité :");
+                            doc.setLocation(425, 258);
+                            doc.setSize(100, 35);
+
+                            docteur = new JTextField();
+                            docteur.setLocation(525, 258);
+                            docteur.setSize(180, 35);
+
+                            doc.setVisible(true);
+                            docteur.setVisible(true);
+                            image.setVisible(false);
+                            add(doc);
+                            add(docteur);
+                            add(image);
+
+                            revalidate();
+                            repaint();
+                        }
+
+
+                    } catch (Exception ex) {
+
+                        System.out.println(ex.getMessage());
+
+                    }
+                }
+            });
+
+            eta[0].addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent e) {
+                    try {
+
+                        if (eta[0].isSelected()) {
+
+                            try {
+                                docteur.setVisible(false);
+                                doc.setVisible(false);
+                            } catch (Exception e1) {
+                                System.out.println(e1);
+                            }
+
+                            mala = new JLabel("code du service :");
+                            mala.setLocation(425, 223 + 35);
+                            mala.setSize(130, 35);
+                            mala.setVisible(true);
+                            malad = new JTextField();
+                            malad.setLocation(525 + 40, 223 +35);
+                            malad.setSize(180, 35);
+                            malad.setVisible(true);
+
+                            chambr = new JLabel("numero de chambre :");
+                            chambr.setLocation(425, 223 + 70);
+                            chambr.setSize(140, 35);
+                            chambr.setVisible(true);
+                            chamb = new JTextField();
+                            chamb.setLocation(525 + 40, 223 + 70);
+                            chamb.setSize(180, 35);
+                            chamb.setVisible(true);
+
+                            li = new JLabel("lit :");
+                            li.setLocation(425, 223 + 105);
+                            li.setSize(100, 35);
+                            li.setVisible(true);
+                            lit = new JTextField();
+                            lit.setLocation(525 + 40, 223 + 105);
+                            lit.setSize(180, 35);
+                            lit.setVisible(true);
+
+                            image.setVisible(false);
+                            add(mala);
+                            add(malad);
+                            add(chambr);
+                            add(chamb);
+                            add(li);
+                            add(lit);
+                            add(image);
+
+                            revalidate();
+                            repaint();
+                        }
+                    } catch (Exception ex) {
+
+                        System.out.println(ex.getMessage());
+                    }
+                }
+            });
 
             buttonGroup = new ButtonGroup();
 
