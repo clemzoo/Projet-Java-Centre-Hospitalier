@@ -2,6 +2,7 @@ package Graphisms;
 
 import ActionTypes.BrowseElements;
 import Main.Connexion;
+import Main.Main;
 import Reporting.Statistique;
 
 import javax.swing.*;
@@ -143,12 +144,15 @@ public class Localhost extends Graphisme {
                 DBPW = new String(textpwDB.getPassword());
 
                 new ConnexionThread().start();
+                panLocalhost = connectionLocalhostGraphique(false);
+
             }
             });
 
         annuler.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                Main.mainWindow.afficherMenu(true);
 
                 panLocalhost = connectionLocalhostGraphique(false);
             }

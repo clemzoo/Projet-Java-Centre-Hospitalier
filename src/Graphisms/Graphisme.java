@@ -6,6 +6,8 @@ package Graphisms;
 //=======
 //>>>>>>> 4a994440d41a3209f5863599272a76151f241354
 
+import Main.Main;
+
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -63,19 +65,29 @@ public class Graphisme extends JFrame {
         buttonSSH.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+
                 SSH = new SSH();
+                Main.mainWindow.afficherMenu(false);
+
                 pan.add(SSH.connectionSSHGraphique(true));
                 SSH.getFields();
+
             }
         });
 
         buttonLocalhost.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+
                 Localhost = new Localhost();
+                Main.mainWindow.afficherMenu(false);
+
                 pan.add(Localhost.connectionLocalhostGraphique(true));
+                pan.setVisible(false);
                 Localhost.getFields();
-            }
+
+                }
         });
+
     }
 }
