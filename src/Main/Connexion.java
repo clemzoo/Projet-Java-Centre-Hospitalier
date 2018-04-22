@@ -66,8 +66,8 @@ public class Connexion extends JFrame{
         Class.forName("com.mysql.jdbc.Driver");
 
         // url de connexion "jdbc:mysql://localhost:3305/usernameECE"
-       //String urlDatabase = "jdbc:mysql://localhost/" + nameDatabase;
-       String urlDatabase = "jdbc:mysql://127.0.0.1:8889/" + nameDatabase;
+       String urlDatabase = "jdbc:mysql://localhost/" + nameDatabase;
+       //String urlDatabase = "jdbc:mysql://127.0.0.1:8889/" + nameDatabase;
 
         //création d'une connexion JDBC à la base
         conn = DriverManager.getConnection(urlDatabase, loginDatabase, passwordDatabase);
@@ -410,11 +410,7 @@ public class Connexion extends JFrame{
             System.out.println(ex.getMessage());
         }
     }
-<<<<<<< HEAD
 
-=======
-//<<<<<<< HEAD
->>>>>>> a80ea67b0ea89b32f9f80b00154132bf85ef6285
 /*
     public String [] getSpecificElem (String colonne, String table) {
         try {
@@ -447,30 +443,33 @@ public class Connexion extends JFrame{
     }
 */
 
-<<<<<<< HEAD
-
-=======
-//=======
->>>>>>> a80ea67b0ea89b32f9f80b00154132bf85ef6285
 
     public void rechercheDTB(String lol) {
         try {
             /* Exécution d'une requête de lecture */
             //stmt.executeUpdate("INSERT INTO " +  Tab + "(" + Colonnes + ") VALUES ('clem', '123');");
-            stmt.executeQuery("SELECT * FROM `hopital`.`malade` WHERE `nom` = '" + lol + "'");
-
 
         } catch (Exception ex) {
             System.out.println(ex.getMessage());
         }
     }
 
+    public void supprDTB(String table) {
+        try {
+            /* Exécution d'une requête de lecture */
+            //stmt.executeUpdate("INSERT INTO " +  Tab + "(" + Colonnes + ") VALUES ('clem', '123');");
+            stmt.executeQuery("DELETE FROM " +table+ "  WHERE ");
+
+            remplirChampsRequete(table);
+        } catch (Exception ex) {
+            System.out.println(ex.getMessage());
+        }
+    }
+
+
+
     public Statement getStmt(){
         return stmt;
     }
-<<<<<<< HEAD
 
-=======
-//>>>>>>> e11ac802daa848c98d851c045ec1e93d3410761b
->>>>>>> a80ea67b0ea89b32f9f80b00154132bf85ef6285
 }

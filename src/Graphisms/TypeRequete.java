@@ -113,9 +113,12 @@ public class TypeRequete extends JFrame{
         Supprimer.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-              //  suppr = new DeleteElements(connectMySQL);
+                /*bienOuej = new BrowseElements(connectMySQL);
                 panel = afficher(false);
-            //    suppr.setCheckbox(connectMySQL);
+                bienOuej.setCheckbox(connectMySQL);*/
+              suppr = new DeleteElements(connectMySQL);
+                panel = afficher(false);
+                suppr.setCheckbox(connectMySQL);
             }
         });
 
