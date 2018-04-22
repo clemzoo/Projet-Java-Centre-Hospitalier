@@ -99,7 +99,6 @@ public class DeleteElements extends JFrame  {
             @Override
             public void actionPerformed(ActionEvent e) {
 
-<<<<<<< HEAD
               /*  finalColonne = "";
                 int nbElem = 0;
 
@@ -124,11 +123,9 @@ public class DeleteElements extends JFrame  {
             @Override
             public void actionPerformed(ActionEvent e) {
 
-=======
                 connexion.supprDTB(choiceTab,ok);
                 System.out.println(ok);
                 //String cellvalue1 = ((TextBlock)cell1.Content).Text;
->>>>>>> 25340f9726a822973076f90464f55d097d8ba2d3
                 panSuccess = succesfullConnexion(false,false);
                 TypeRequete re = new TypeRequete(connexion);
 

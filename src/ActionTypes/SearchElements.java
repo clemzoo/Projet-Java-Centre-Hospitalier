@@ -41,12 +41,12 @@ public class SearchElements extends JFrame {
             bravo.setSize(500, 35);
 
             recherche = new JLabel();
-            recherche.setLocation(100, 30);
+            recherche.setLocation(100+100, 450);
             recherche.setText("Veuillez affiner votre recherche :");
             recherche.setSize(500, 35);
 
             maRecherche = new JTextField();
-            maRecherche.setLocation(350, 30);
+            maRecherche.setLocation(300+100, 450);
             maRecherche.setSize(150, 35);
 
             //Instanciation des Boutons

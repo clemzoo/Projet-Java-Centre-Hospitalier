@@ -120,14 +120,7 @@ public class Localhost extends Graphisme {
                     Connexion connectSQL = new Connexion(DBNAME,DBUSER,DBPW);
                     if(connectSQL.coco()){
                         rech = new TypeRequete(connectSQL);
-                        //rech.buttonAction();
-                        /*
-                        bienOuej = new SuccesfullConnexion(connectSQL);
-                        panLocalhost = connectionLocalhostGraphique(false);
-                        bienOuej.setCheckbox(connectSQL);
 
-                        */
-                        //Statistique stat = new Statistique(connectSQL);
                     }
                 }
                 catch (Exception  ex){
