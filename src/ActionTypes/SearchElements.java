@@ -68,13 +68,8 @@ protected String  mdr;
         newEl.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-               lol = newEl.getText();//Convert to string
-                System.out.println("Selected: " + lol);
 
                 try {
-                    myColumns = new String[connexion.getColumnValues(lol).length];
-                    myColumns = connexion.getColumnValues(lol);
-                   panSuccess = succesfullConnexion(true, true, false);
 
                 } catch (Exception ex) {
 
@@ -86,7 +81,8 @@ protected String  mdr;
         valider.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-               connexion.rechercheDTB(lol);
+
+
             }});
 
         annuler.addActionListener(new ActionListener() {

@@ -34,7 +34,7 @@ public class Connexion extends JFrame{
     private ResultSetMetaData rsetMeta;
     private boolean coco;
     private CheckboxGroup values;
-    private String [] myColomuns, nameOfColonnes, nameOfTables;
+    private String [] myColomuns, nameOfColonnes, nameOfTables, specificElem;
     private int i;
     private JTable myResults;
 
@@ -301,11 +301,11 @@ public class Connexion extends JFrame{
 
         try {
             /* Exécution d'une requête de lecture */
-           ResultSet resultat = stmt.executeQuery( "SELECT " +  colonne + " FROM " + table +";");
+            ResultSet resultat = stmt.executeQuery( "SELECT " +  colonne + " FROM " + table +";");
 
-           nameOfColonnes = colonne.split(",");
+            nameOfColonnes = colonne.split(",");
 
-           /* Récupération des données du résultat de la requête de lecture */
+            /* Récupération des données du résultat de la requête de lecture */
             int nbRes = 1;
 
             if(graphismes) {
@@ -323,7 +323,7 @@ public class Connexion extends JFrame{
                 for (int i = 1; i <= nbElem; i++){
                     System.out.println(nameOfColonnes[i-1].trim() + " : " + resultat.getString(i));
 
-                    }
+                }
 
                 System.out.println("\n");
 
@@ -397,31 +397,85 @@ public class Connexion extends JFrame{
         return tableRes;
     }
 
-    public void ajoutDTB(String Tab, String Colonnes, String Ajout){
+    public void ajoutDTBsimple(String Tab, String Colonnes, String Ajout){
         try {
-            /* Exécution d'une requête de lecture */
-            //stmt.executeUpdate("INSERT INTO " +  Tab + "(" + Colonnes + ") VALUES ('clem', '123');");
-            stmt.executeUpdate("INSERT INTO docteur(specialite, numero ) VALUES ('123', '123');");
-
+            /* Exécution d'une requête d'ajout */
+            stmt.executeUpdate("INSERT INTO " +  Tab + "(" + Colonnes + ") VALUES (" + Ajout + ");");
 
         } catch (Exception  ex){
             System.out.println(ex.getMessage());
         }
     }
 
+    public void ajoutDTBmultiple(String TabMain, String ColonnesMain, String AjoutMain,String TabSecond, String ColonnesSecond, String AjoutSecond){
+        try {
+            /* Exécution d'une requête d'ajout */
+            stmt.executeUpdate("INSERT INTO " +  TabMain + "(" + ColonnesMain + ") VALUES (" + AjoutMain + ");");
+            stmt.executeUpdate("INSERT INTO " +  TabSecond + "(" + ColonnesSecond + ") VALUES (" + AjoutSecond + ");");
+
+        } catch (Exception  ex){
+            System.out.println(ex.getMessage());
+        }
+    }
+
+/*
+    public String [] getSpecificElem (String colonne, String table) {
+        try {
+           // /* Exécution d'une requête de lecture
+            ResultSet resultat = stmt.executeQuery("SELECT " + colonne + " FROM " + table + ";");
+
+            int nbColonnes=0;
+            int i=0;
+
+            while ( resultat.next() ) {
+                nbColonnes++;
+            }
+
+            specificElem = new String[nbColonnes];
+
+            while (resultat.previous()) {
+                for (int j = 0; j<nbColonnes; j++){
+                    if(specificElem[j].contains(resultat.getString(1))){
+                    } else {
+                        specificElem[i] = resultat.getString(1);
+                    }
+                }
+
+                i++;
+            }
+        } catch (Exception ex) {
+            System.out.println(ex.getMessage());
+        }
+        return specificElem;
+    }
+*/
+
     public void rechercheDTB(String lol) {
         try {
             /* Exécution d'une requête de lecture */
             //stmt.executeUpdate("INSERT INTO " +  Tab + "(" + Colonnes + ") VALUES ('clem', '123');");
-            stmt.executeQuery("SELECT * FROM `hopital`.`malade` WHERE `nom` = '" + lol + "'");
-
 
         } catch (Exception ex) {
             System.out.println(ex.getMessage());
         }
     }
 
+    public void supprDTB(String table) {
+        try {
+            /* Exécution d'une requête de lecture */
+            //stmt.executeUpdate("INSERT INTO " +  Tab + "(" + Colonnes + ") VALUES ('clem', '123');");
+            stmt.executeQuery("DELETE FROM " +table+ "  WHERE ");
+
+            remplirChampsRequete(table);
+        } catch (Exception ex) {
+            System.out.println(ex.getMessage());
+        }
+    }
+
+
+
     public Statement getStmt(){
         return stmt;
     }
+
 }

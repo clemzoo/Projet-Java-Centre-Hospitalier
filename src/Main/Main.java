@@ -56,6 +56,7 @@ public class Main {
         boolean run = true;
 
         do {
+            /*
             char choice = menu();
 
             switch (choice) {
@@ -81,24 +82,27 @@ public class Main {
                     break;
 
                 case '3': // Afficher le menu en Graphique
+                */
+
                     mainWindow = new Graphisme (); // instancier graphisme
                     mainWindow.afficherMenu(true);
-                    //TypeRequete lol = new TypeRequete();
-                    //lol.afficher(true);
 
                     mainWindow.choixMenu();
 
-                    mainWindow.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-                    run =false;
-                    break;
 
+                    mainWindow.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+                    run = false;
+                    break;
+/*
                 case '0':
                     run = false;
                     System.exit(0);
                     break;
                 default:
                     System.out.println("Erreur de choix");
-            }
+              }
+                    */
+
         } while (run);
     }
 }

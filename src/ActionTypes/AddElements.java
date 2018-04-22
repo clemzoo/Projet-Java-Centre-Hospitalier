@@ -11,14 +11,22 @@ public class AddElements extends JFrame {
 
         private final JButton valider, annuler;
         private JPanel panSuccess;
-        private JLabel bravo,image, ajoutSucces;
-        private JComboBox chooseTab;
+        private JLabel bravo,image, ajoutSucces, metier, doc, inf, rot, sal;
+        private JComboBox chooseTab, code_service;
         private JLabel [] chooseColonne, chooseColonneOld;
-        private JTextField [] newEl, oldEl ;
-        private String [] myColumns;
+        private JTextField [] newEl, oldEl;
+        private JTextField docteur, infi, rota, sala;
+        private JRadioButton [] profess;
+        private String [] myColumns , tab;
         private String choiceTab, finalColonne, colonne;
         private int oldLength = 0;
         private displaySQLQuery sql;
+        private Connexion conne;
+        private boolean oldEmp=false, oldCham=false;
+        private ButtonGroup buttonGroup;
+    private JLabel etat;
+    private JRadioButton[] eta;
+    private boolean oldMalade=false;
 
     public AddElements(Connexion connexion){
         setTitle("Gestion d'un centre hospitalier");
@@ -26,9 +34,13 @@ public class AddElements extends JFrame {
         setLocation(425, 200);
         panSuccess = new JPanel(); // instancier le panneau
 
+        conne = connexion;
+
         image = new JLabel(new ImageIcon("hopital.jpg"));
 
-        chooseTab = new JComboBox(connexion.getTablesNames());
+        tab = new String[] {"service", "chambre", "employe", "malade"};
+
+        chooseTab = new JComboBox(tab);
         chooseTab.setLocation(270,130);
         chooseTab.setSize(250,30);
 
@@ -56,7 +68,7 @@ public class AddElements extends JFrame {
         annuler.setText("Annuler");
         annuler.setSize(100, 35);
 
-        panSuccess = succesfullConnexion(true,false, false);
+        panSuccess = succesfullConnexion(true,false, false, false,false,false,false);
     }
 
         public void setCheckbox(Connexion connexion) {
@@ -72,7 +84,15 @@ public class AddElements extends JFrame {
                     myColumns = new String[connexion.getColumnValues(choiceTab).length];
                     myColumns = connexion.getColumnValues(choiceTab);
                     afficherColonnes();
-                    panSuccess = succesfullConnexion (true, true, false);
+
+                    if(choiceTab.equals("service"))
+                        panSuccess = succesfullConnexion (true, true, false,true,false,false,false);
+                    if(choiceTab.equals("chambre"))
+                        panSuccess = succesfullConnexion (true, true, false,false,true,false,false);
+                    if(choiceTab.equals("employe"))
+                        panSuccess = succesfullConnexion (true, true, false,false,false,true,false);
+                    if(choiceTab.equals("malade"))
+                        panSuccess = succesfullConnexion (true, true, false,false,false,false,true);
 
                 } catch (Exception ex) {
 
@@ -101,10 +121,18 @@ public class AddElements extends JFrame {
                     finalColonne = finalColonne.substring(0,finalColonne.length()-2);
                     colonne = colonne.substring(0,colonne.length()-2);
 
-                    connexion.ajoutDTB(choiceTab, colonne, finalColonne);
+                    connexion.ajoutDTBsimple(choiceTab, colonne, finalColonne);
 
-                    panSuccess = succesfullConnexion(true,true,true);
+                    if(choiceTab.equals("service")){
+                        panSuccess = succesfullConnexion (true, true, true,true,false,false,false);
 
+                    }
+                    if(choiceTab.equals("chambre"))
+                        panSuccess = succesfullConnexion (true, true, true,false,true,false,false);
+                    if(choiceTab.equals("employe"))
+                        panSuccess = succesfullConnexion (true, true, true,false,false,true,false);
+                    if(choiceTab.equals("malade"))
+                        panSuccess = succesfullConnexion (true, true, true,false,false,false,true);
                 }
             }
         });
@@ -112,10 +140,18 @@ public class AddElements extends JFrame {
         annuler.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                panSuccess = succesfullConnexion(false,false, false);
+                panSuccess = succesfullConnexion(false,false, false, false, false, false,false);
             }
         });
-    }
+
+        try {
+
+
+        } catch (Exception ex) {
+
+            System.out.println(ex.getMessage());
+        }
+}
 
         private void afficherColonnes() {
         chooseColonne = new JLabel [myColumns.length];
@@ -127,11 +163,38 @@ public class AddElements extends JFrame {
         }
     }
 
-        public JPanel succesfullConnexion(boolean onAfficheouPas, boolean checkboxes, boolean succes) {
+        public JPanel succesfullConnexion(boolean onAfficheouPas, boolean checkboxes, boolean succes, boolean service, boolean chambre, boolean employe, boolean malade) {
 
 
         this.add(bravo);
         this.add(chooseTab);
+
+            try {
+                inf.setVisible(false);
+                infi.setVisible(false);
+                rot.setVisible(false);
+                rota.setVisible(false);
+                sal.setVisible(false);
+                sala.setVisible(false);
+                docteur.setVisible(false);
+                doc.setVisible(false);
+            } catch (Exception e1) {
+                System.out.println(e1);
+            }
+
+        if(oldEmp){
+            profess[0].setVisible(false);
+            profess[1].setVisible(false);
+            metier.setVisible(false);
+        }
+        if(oldMalade){
+            eta[0].setVisible(false);
+            eta[1].setVisible(false);
+            etat.setVisible(false);
+        }
+        if(oldCham){
+            code_service.setVisible(false);
+        }
 
         if(checkboxes){
 
@@ -148,10 +211,10 @@ public class AddElements extends JFrame {
             oldEl = new JTextField [100];
 
             for (int i = 0; i < myColumns.length; i++){
-                chooseColonne[i].setLocation(250,180+(i*35));
+                chooseColonne[i].setLocation(80,190+(i*35));
                 chooseColonne[i].setSize(150,35);
 
-                newEl[i].setLocation(360,180+(i*35));
+                newEl[i].setLocation(190,190+(i*35));
                 newEl[i].setSize(180,35);
 
                 this.add(chooseColonne[i]);
@@ -164,6 +227,191 @@ public class AddElements extends JFrame {
                 chooseColonneOld[i] = chooseColonne[i];
             }
         }
+
+        if (chambre){
+
+            //code_service = new JComboBox(conne.getSpecificElem("code_service","chambre"));
+            code_service = new JComboBox(new String []{"CAR", "CHG", "REA"});
+
+            code_service.setLocation(190,295);
+            code_service.setSize(180,35);
+            newEl[3].setVisible(false);
+            this.add(code_service);
+            code_service.setVisible(chambre);
+
+            oldCham = true;
+        }
+
+        if (employe){
+
+
+            metier = new JLabel("métier :");
+            metier.setLocation(80,365);
+            metier.setSize(150,35);
+
+            profess = new JRadioButton[2];
+
+            profess[0] = new JRadioButton ("docteur",false);
+            profess[1] = new JRadioButton ("infirmier",false);
+            profess[0].setLocation(190,365);
+            profess[0].setSize(90,35);
+            profess[1].setLocation(190+90,365);
+            profess[1].setSize(90,35);
+////
+            profess[0].addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent e) {
+                    try {
+
+                        if (profess[0].isSelected()) {
+
+                            try {
+                                inf.setVisible(false);
+                                infi.setVisible(false);
+                                rot.setVisible(false);
+                                rota.setVisible(false);
+                                sal.setVisible(false);
+                                sala.setVisible(false);
+                            } catch (Exception e1) {
+                                System.out.println(e1);
+                            }
+
+                            doc = new JLabel("spécialité :");
+                            doc.setLocation(425, 258);
+                            doc.setSize(100, 35);
+
+                            docteur = new JTextField();
+                            docteur.setLocation(525, 258);
+                            docteur.setSize(180, 35);
+
+                            doc.setVisible(true);
+                            docteur.setVisible(true);
+                            image.setVisible(false);
+                            add(doc);
+                            add(docteur);
+                            add(image);
+
+                            revalidate();
+                            repaint();
+                        }
+
+
+                    } catch (Exception ex) {
+
+                        System.out.println(ex.getMessage());
+
+                    }
+                }
+            });
+
+            profess[1].addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent e) {
+                    try {
+
+                        if (profess[1].isSelected()) {
+
+                            try {
+                                docteur.setVisible(false);
+                                doc.setVisible(false);
+                            } catch (Exception e1) {
+                                System.out.println(e1);
+                            }
+
+                            inf = new JLabel("code du service :");
+                            inf.setLocation(425, 223);
+                            inf.setSize(120, 35);
+                            inf.setVisible(true);
+                            infi = new JTextField();
+                            infi.setLocation(525 + 15, 223);
+                            infi.setSize(180, 35);
+                            infi.setVisible(true);
+
+                            rot = new JLabel("rotation :");
+                            rot.setLocation(425, 223 + 35);
+                            rot.setSize(100, 35);
+                            rot.setVisible(true);
+                            rota = new JTextField();
+                            rota.setLocation(525 + 15, 223 + 35);
+                            rota.setSize(180, 35);
+                            rota.setVisible(true);
+
+                            sal = new JLabel("salaire :");
+                            sal.setLocation(425, 223 + 70);
+                            sal.setSize(100, 35);
+                            sal.setVisible(true);
+                            sala = new JTextField();
+                            sala.setLocation(525 + 15, 223 + 70);
+                            sala.setSize(180, 35);
+                            sala.setVisible(true);
+
+                            image.setVisible(false);
+                            add(inf);
+                            add(infi);
+                            add(rot);
+                            add(rota);
+                            add(sal);
+                            add(sala);
+                            add(image);
+
+                            revalidate();
+                            repaint();
+                        }
+                    } catch (Exception ex) {
+
+                        System.out.println(ex.getMessage());
+                    }
+                }
+            });
+
+///////////////////
+
+            buttonGroup = new ButtonGroup();
+
+            buttonGroup.add(profess[0]);
+            buttonGroup.add(profess[1]);
+
+            this.add(metier);
+            this.add(profess[0]);
+            this.add(profess[1]);
+
+            profess[0].setVisible(employe);
+            profess[1].setVisible(employe);
+            metier.setVisible(employe);
+
+            oldEmp =true;
+        }
+
+        if (malade){
+            etat = new JLabel("état :");
+            etat.setLocation(80,400);
+            etat.setSize(150,35);
+
+            eta = new JRadioButton[2];
+
+            eta[0] = new JRadioButton ("soigné",true);
+            eta[1] = new JRadioButton ("hospitalisé",false);
+            eta[0].setLocation(190,400);
+            eta[0].setSize(90,35);
+            eta[1].setLocation(190+90,400);
+            eta[1].setSize(120,35);
+
+            buttonGroup = new ButtonGroup();
+
+            buttonGroup.add(eta[0]);
+            buttonGroup.add(eta[1]);
+
+            this.add(etat);
+            this.add(eta[0]);
+            this.add(eta[1]);
+
+            eta[0].setVisible(malade);
+            eta[1].setVisible(malade);
+            etat.setVisible(malade);
+
+            oldMalade =true;
+        }
+
 
         this.add(ajoutSucces);
         ajoutSucces.setVisible(succes);

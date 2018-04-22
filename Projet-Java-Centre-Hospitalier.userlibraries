@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eclipse-userlibraries>
+  <library name="lib">
+    <archive path="C:/Users/Myrna/Documents/GitHub/Projet-Java-Centre-Hospitalier/lib/jsch-0.1.51.jar" />
+    <archive path="C:/Users/Myrna/Documents/GitHub/Projet-Java-Centre-Hospitalier/lib/jcommon-1.0.23.jar" />
+    <archive path="C:/Users/Myrna/Documents/GitHub/Projet-Java-Centre-Hospitalier/lib/jfreechart-1.0.19.jar" />
+    <archive path="C:/Users/Myrna/Documents/GitHub/Projet-Java-Centre-Hospitalier/lib/mysql-connector-java-5.1.18-bin.jar" />
+  </library>
+</eclipse-userlibraries>
+

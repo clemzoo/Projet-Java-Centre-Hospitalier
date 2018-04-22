@@ -5,6 +5,8 @@ import ActionTypes.BrowseElements;
 import ActionTypes.DeleteElements;
 import ActionTypes.SearchElements;
 import Main.Connexion;
+import Main.Main;
+import Reporting.Statistique;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -12,6 +14,7 @@ import java.awt.event.ActionListener;
 
 public class TypeRequete extends JFrame{
 
+    private final JButton statistics;
     private JPanel panel; // panneau
     private JButton Consulter, Rechercher, Ajouter, Supprimer, annuler;
     private JLabel image,titre;
@@ -49,6 +52,11 @@ public class TypeRequete extends JFrame{
         Rechercher.setText("Rechercher");
         Rechercher.setSize(150, 40);
 
+        statistics = new JButton();
+        statistics.setLocation(300, 255);
+        statistics.setText("Statisiques");
+        statistics.setSize(150, 40);
+
         Ajouter = new JButton();
         Ajouter.setLocation(450, 180);
         Ajouter.setText("Ajouter");
@@ -79,6 +87,7 @@ public class TypeRequete extends JFrame{
         this.add(titre);
         this.add(Supprimer);
         this.add(annuler);
+        this.add(statistics);
 
         this.add(image);
 
@@ -110,12 +119,26 @@ public class TypeRequete extends JFrame{
             }
         });
 
+        statistics.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                try {
+                    Statistique stat = new Statistique(connectMySQL);
+                } catch (Exception  ex){
+                    System.out.println(ex.getMessage());
+                }
+            }
+        });
+
         Supprimer.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-              //  suppr = new DeleteElements(connectMySQL);
+                /*bienOuej = new BrowseElements(connectMySQL);
                 panel = afficher(false);
-            //    suppr.setCheckbox(connectMySQL);
+                bienOuej.setCheckbox(connectMySQL);*/
+              suppr = new DeleteElements(connectMySQL);
+                panel = afficher(false);
+                suppr.setCheckbox(connectMySQL);
             }
         });
 
@@ -125,6 +148,15 @@ public class TypeRequete extends JFrame{
                 chercher = new SearchElements(connectMySQL);
                 panel = afficher(false);
                 chercher.setCheckbox(connectMySQL);
+            }
+        });
+
+        annuler.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                afficher(false);
+                Main.mainWindow.afficherMenu(true);
+
             }
         });
     }
