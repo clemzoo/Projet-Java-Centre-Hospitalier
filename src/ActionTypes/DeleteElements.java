@@ -2,19 +2,22 @@ package ActionTypes;
 
 import Graphisms.displaySQLQuery;
 import Main.Connexion;
+import org.w3c.dom.events.MouseEvent;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.MouseListener;
 
-public class DeleteElements extends JFrame {
+public class DeleteElements extends JFrame  {
     private final JButton valider, annuler;
     private JPanel panSuccess;
     private JLabel bravo,image;
+    private JFormattedTextField lol;
     private JComboBox chooseTab;
     private JCheckBox [] chooseColonne, chooseColonneOld;
     private String [] myColumns;
-    private String choiceTab, finalColonne;
+    private String choiceTab, ok;
     private int oldLength = 0;
     private displaySQLQuery sql;
     private JButton suppr;
@@ -30,7 +33,10 @@ public class DeleteElements extends JFrame {
         chooseTab = new JComboBox(connexion.getTablesNames());
         chooseTab.setLocation(270,130);
         chooseTab.setSize(250,30);
-
+        lol = new JFormattedTextField();
+        lol.setLocation(270,300);
+        lol.setSize(150,50);
+        lol.setText("Entrez votre condition");
         bravo = new JLabel();
         bravo.setLocation(280, 80);
         bravo.setText("Veuillez composer votre recherche :");
@@ -44,10 +50,10 @@ public class DeleteElements extends JFrame {
         valider.setLocation(450, 500);
         valider.setText("Valider");
         valider.setSize(100, 35);
-suppr = new JButton();
-suppr.setLocation(10,10);
-suppr.setText("Suppr");
-suppr.setSize(100,35);
+        suppr = new JButton();
+        suppr.setLocation(10,10);
+        suppr.setText("Suppr");
+        suppr.setSize(100,35);
         //Bouton Annuler
         annuler.setLocation(250, 500);
         annuler.setText("Annuler");
@@ -63,12 +69,13 @@ suppr.setSize(100,35);
             public void actionPerformed(ActionEvent e) {
                 choiceTab = new String((String) chooseTab.getSelectedItem());//Convert to string
                 System.out.println("Selected: " + choiceTab);
+ok = lol.getText();
 
                 try{
 
                     myColumns = new String[connexion.getColumnValues(choiceTab).length];
                     myColumns = connexion.getColumnValues(choiceTab);
-                    afficherColonnes();
+                //    afficherColonnes();
 
                     panSuccess = succesfullConnexion (true, true);
 
@@ -83,7 +90,7 @@ suppr.setSize(100,35);
             @Override
             public void actionPerformed(ActionEvent e) {
 
-                finalColonne = "";
+              /*  finalColonne = "";
                 int nbElem = 0;
 
                 for (int i = 0; i<myColumns.length; i++){
@@ -99,7 +106,7 @@ suppr.setSize(100,35);
                     sql = new displaySQLQuery(connexion, choiceTab,finalColonne, nbElem);
                     panSuccess = succesfullConnexion(false,false);
 
-                }
+                }*/
             }
         });
 
@@ -113,21 +120,31 @@ suppr.setSize(100,35);
         suppr.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                connexion.supprDTB(choiceTab);
+                connexion.supprDTB(choiceTab,ok);
                 //String cellvalue1 = ((TextBlock)cell1.Content).Text;
                 panSuccess = succesfullConnexion(false,false);
+
             }
         });
+
+
+
     }
 
-    private void afficherColonnes() {
+ /*   private void afficherColonnes() {
         chooseColonne = new JCheckBox[myColumns.length];
 
         for (int i = 0; i < myColumns.length; i++) {
             chooseColonne[i] = new JCheckBox(myColumns[i]);
         }
 
-    }
+    }*/
+
+ private void AfficherCondition(){
+
+
+
+ }
 
     public JPanel succesfullConnexion(boolean onAfficheouPas, boolean checkboxes) {
 
@@ -155,7 +172,7 @@ suppr.setSize(100,35);
                 chooseColonneOld[i] = chooseColonne[i];
             }
         }
-
+        this.add(lol);
         this.add(valider);
         this.add(annuler);
         this.add(suppr);

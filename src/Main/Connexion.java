@@ -462,11 +462,11 @@ public class Connexion extends JFrame{
         }
     }
 
-    public void supprDTB(String table) {
+    public void supprDTB(String table,String cond) {
         try {
             /* Exécution d'une requête de lecture */
             //stmt.executeUpdate("INSERT INTO " +  Tab + "(" + Colonnes + ") VALUES ('clem', '123');");
-            stmt.executeQuery("DELETE FROM " +table+ "  WHERE ");
+            stmt.executeUpdate("DELETE FROM" + table + "WHERE " + cond + ";");
 
             remplirChampsRequete(table);
         } catch (Exception ex) {
