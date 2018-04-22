@@ -20,7 +20,8 @@ public class DeleteElements extends JFrame  {
     private String choiceTab, ok;
     private int oldLength = 0;
     private displaySQLQuery sql;
-private JButton suppr;
+    private JLabel hola;
+
     public DeleteElements(Connexion connexion){
         setTitle("Gestion d'un centre hospitalier");
         setSize(800, 600);
@@ -32,10 +33,16 @@ private JButton suppr;
         chooseTab = new JComboBox(connexion.getTablesNames());
         chooseTab.setLocation(270,130);
         chooseTab.setSize(250,30);
+
+        hola = new JLabel();
+        hola.setText("Veuillez entrer votre condition");
+        hola.setLocation(270, 250);
+        hola.setSize(300,50);
+
         lol = new JFormattedTextField();
         lol.setLocation(270,300);
         lol.setSize(150,50);
-        lol.setText("Entrez votre condition");
+
         bravo = new JLabel();
         bravo.setLocation(280, 80);
         bravo.setText("Veuillez composer votre recherche :");
@@ -49,10 +56,7 @@ private JButton suppr;
         valider.setLocation(450, 500);
         valider.setText("Valider");
         valider.setSize(100, 35);
-        suppr = new JButton();
-        suppr.setLocation(10,10);
-        suppr.setText("Suppr");
-        suppr.setSize(100,35);
+
         //Bouton Annuler
         annuler.setLocation(250, 500);
         annuler.setText("Annuler");
@@ -68,13 +72,14 @@ private JButton suppr;
             public void actionPerformed(ActionEvent e) {
                 choiceTab = new String((String) chooseTab.getSelectedItem());//Convert to string
                 System.out.println("Selected: " + choiceTab);
-ok = lol.getText();
+
+                ok = lol.getText();
 
                 try{
 
                     myColumns = new String[connexion.getColumnValues(choiceTab).length];
                     myColumns = connexion.getColumnValues(choiceTab);
-                //    afficherColonnes();
+                    //    afficherColonnes();
 
                     panSuccess = succesfullConnexion (true, true);
 
@@ -89,23 +94,10 @@ ok = lol.getText();
             @Override
             public void actionPerformed(ActionEvent e) {
 
-              /*  finalColonne = "";
-                int nbElem = 0;
-
-                for (int i = 0; i<myColumns.length; i++){
-                    if (chooseColonne[i].isSelected()) {
-                        finalColonne += chooseColonne[i].getText() + ", ";
-                        nbElem++;
-                    }
-                }
-
-                if(finalColonne != ""){
-                    finalColonne = finalColonne.substring(0,finalColonne.length()-2);
-
-                    sql = new displaySQLQuery(connexion, choiceTab,finalColonne, nbElem);
-                    panSuccess = succesfullConnexion(false,false);
-
-                }*/
+                connexion.supprDTB(choiceTab,ok);
+                System.out.println(ok);
+                //String cellvalue1 = ((TextBlock)cell1.Content).Text;
+                panSuccess = succesfullConnexion(false,false);
             }
         });
 
@@ -116,34 +108,13 @@ ok = lol.getText();
             }
         });
 
-        suppr.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                connexion.supprDTB(choiceTab,ok);
-                //String cellvalue1 = ((TextBlock)cell1.Content).Text;
-                panSuccess = succesfullConnexion(false,false);
 
-            }
-        });
 
 
 
     }
 
- /*   private void afficherColonnes() {
-        chooseColonne = new JCheckBox[myColumns.length];
 
-        for (int i = 0; i < myColumns.length; i++) {
-            chooseColonne[i] = new JCheckBox(myColumns[i]);
-        }
-
-    }*/
-
- private void AfficherCondition(){
-
-
-
- }
 
     public JPanel succesfullConnexion(boolean onAfficheouPas, boolean checkboxes) {
 
@@ -172,10 +143,9 @@ ok = lol.getText();
             }
         }
         this.add(lol);
+        this.add(hola);
         this.add(valider);
         this.add(annuler);
-        this.add(suppr);
-        suppr.setVisible(true);
 
         this.add(image);
         image.setVisible(false);
