@@ -37,7 +37,7 @@ public class AddElements extends JFrame {
 
         conne = connexion;
 
-        image = new JLabel(new ImageIcon("hopital.jpg"));
+        image = new JLabel(new ImageIcon("ajouter.jpg"));
 
         tab = new String[] {"None","service", "chambre", "employe", "malade"};
 
@@ -568,7 +568,7 @@ public class AddElements extends JFrame {
         this.add(annuler);
 
         this.add(image);
-        image.setVisible(false);
+        image.setVisible(true);
 
         this.setVisible(true);
 
