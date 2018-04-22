@@ -120,7 +120,7 @@ public class AddElements extends JFrame {
                     finalColonne = finalColonne.substring(0,finalColonne.length()-2);
                     colonne = colonne.substring(0,colonne.length()-2);
 
-                    connexion.ajoutDTB(choiceTab, colonne, finalColonne);
+                    connexion.ajoutDTBsimple(choiceTab, colonne, finalColonne);
 
                     if(choiceTab.equals("service"))
                         panSuccess = succesfullConnexion (true, true, true,true,false,false,false);
