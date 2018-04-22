@@ -1,5 +1,6 @@
 package ActionTypes;
 
+import Graphisms.TypeRequete;
 import Main.Connexion;
 import Graphisms.displaySQLQuery;
 
@@ -159,6 +160,8 @@ public class AddElements extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 panSuccess = succesfullConnexion(false,false, false, false, false, false,false);
+                TypeRequete re = new TypeRequete(connexion);
+
             }
         });
 

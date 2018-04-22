@@ -1,5 +1,6 @@
 package ActionTypes;
 
+import Graphisms.TypeRequete;
 import Graphisms.displaySQLQuery;
 import Main.Connexion;
 import org.w3c.dom.events.MouseEvent;
@@ -113,8 +114,12 @@ ok = lol.getText();
         annuler.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+
                 panSuccess = succesfullConnexion(false,false);
+                TypeRequete re = new TypeRequete(connexion);
+
             }
+
         });
 
         suppr.addActionListener(new ActionListener() {

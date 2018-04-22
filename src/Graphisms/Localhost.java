@@ -120,7 +120,7 @@ public class Localhost extends Graphisme {
                     Connexion connectSQL = new Connexion(DBNAME,DBUSER,DBPW);
                     if(connectSQL.coco()){
                         rech = new TypeRequete(connectSQL);
-                        rech.buttonAction();
+                        //rech.buttonAction();
                         /*
                         bienOuej = new SuccesfullConnexion(connectSQL);
                         panLocalhost = connectionLocalhostGraphique(false);
@@ -139,8 +139,8 @@ public class Localhost extends Graphisme {
         valider.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                DBNAME = "hopital";//textDB.getText();
-                DBUSER = "root";//textuserDB.getText();
+                DBNAME = textDB.getText();
+                DBUSER = textuserDB.getText();
                 DBPW = new String(textpwDB.getPassword());
 
                 new ConnexionThread().start();

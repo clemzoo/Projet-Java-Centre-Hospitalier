@@ -2,6 +2,7 @@ package ActionTypes;
 
 //import com.sun.org.apache.xerces.internal.impl.XMLEntityManager;
 
+import Graphisms.TypeRequete;
 import Graphisms.displaySQLQuery;
 import Main.Connexion;
 
@@ -104,6 +105,8 @@ public class BrowseElements extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 panSuccess = succesfullConnexion(false,false);
+            TypeRequete re = new TypeRequete(connexion);
+
             }
         });
     }

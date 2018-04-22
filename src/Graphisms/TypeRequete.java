@@ -77,6 +77,8 @@ public class TypeRequete extends JFrame{
 
         panel = afficher(true);
 
+        buttonAction();
+
     }
     public JPanel afficher(boolean affichage) {
 
